@@ -1,4 +1,4 @@
-name: Deploy to Production
+name: Deploy to Production Server
 
 on:
   workflow_dispatch:
@@ -9,11 +9,11 @@ on:
         default: "Manual deployment"
 
 jobs:
-  deploy:
+  deploy-production:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      packages: read # Only read is needed, as CI pushes
+      packages: read
 
     steps:
       - name: Checkout code
