@@ -63,10 +63,11 @@ jobs:
         env:
           DEPLOY_HOST: ${{ secrets.DEPLOY_HOST_STAGING }}
           DEPLOY_USER: ${{ secrets.DEPLOY_USER_STAGING }}
+          APP_PATH: ${{ secrets.APP_PATH_STAGING }}
         run: |
           echo "Deploying to Staging Server after successful build.."
           ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST << 'EOF'
-            cd /path/to/your/app # IMPORTANT: Replace with the actual path to your application on the server
+            cd $APP_PATH # Use the variable
             ./ci-pull.sh
             ./ci-start.sh staging swarm
           EOF
