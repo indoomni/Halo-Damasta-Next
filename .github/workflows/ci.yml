@@ -14,7 +14,7 @@ jobs:
     permissions:
       contents: read
       packages: write # Added for pushing to GitHub Packages
-      workflow: write # Added to allow triggering other workflows
+      actions: write # Correct permission to allow triggering other workflows
 
     steps:
       - name: Checkout code
