@@ -24,6 +24,14 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY_PRODUCTION }}
 
+      - name: Create target directory on Production Server
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST_PRODUCTION }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER_PRODUCTION }}
+          APP_PATH: ${{ secrets.APP_PATH_PRODUCTION }}
+        run: |
+          ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "mkdir -p $APP_PATH"
+
       - name: Copy deployment files to Production Server
         env:
           DEPLOY_HOST: ${{ secrets.DEPLOY_HOST_PRODUCTION }}
@@ -52,6 +60,7 @@ jobs:
           echo "Reason for deployment: ${{ github.event.inputs.reason }}"
           ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST << 'EOF'
             cd $APP_PATH # Use the variable
+            ls -l # Verify files are present and have permissions
             ./ci-pull.sh
             ./ci-start.sh production swarm
           EOF
