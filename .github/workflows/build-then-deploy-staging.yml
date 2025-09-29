@@ -42,6 +42,8 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: ghcr.io/indoomni/halo-damasta-next:latest
+          cache-from: type=registry,ref=ghcr.io/indoomni/halo-damasta-next:buildcache
+          cache-to: type=registry,ref=ghcr.io/indoomni/halo-damasta-next:buildcache,mode=max
 
   deploy-staging:
     runs-on: ubuntu-latest
@@ -68,6 +70,7 @@ jobs:
           echo "Deploying to Staging Server after successful build.."
           ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST << 'EOF'
             cd $APP_PATH # Use the variable
+            git pull # Pull the latest code, including CI scripts
             ./ci-pull.sh
             ./ci-start.sh staging swarm
           EOF

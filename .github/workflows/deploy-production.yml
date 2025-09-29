@@ -33,6 +33,7 @@ jobs:
           echo "Reason for deployment: ${{ github.event.inputs.reason }}"
           ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST << 'EOF'
             cd $APP_PATH # Use the variable
+            git pull # Pull the latest code, including CI scripts
             ./ci-pull.sh
             ./ci-start.sh production swarm
           EOF
