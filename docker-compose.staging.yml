@@ -17,8 +17,8 @@ services:
       - "traefik.http.routers.damasta-staging.tls.certresolver=cloudflare"
       - "traefik.http.services.damasta-staging.loadbalancer.server.port=3000"
     networks:
-      - traefik_proxy
+      - proxy
 
 networks:
-  traefik_proxy:
+  proxy:
     external: true
