@@ -76,8 +76,6 @@ jobs:
           APP_PATH: ${{ secrets.APP_PATH_STAGING }}
         run: |
           scp -o StrictHostKeyChecking=no -r \
-            ci-build-and-push.sh \
-            ci-build-locally.sh \
             ci-logs.sh \
             ci-pull.sh \
             ci-start.sh \
@@ -96,9 +94,8 @@ jobs:
         run: |
           echo "Deploying to Staging Server at $APP_PATH.."
           ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST << EOF
-            cd $APP_PATH # Use the variable
-            pwd
-            ls -l # Verify files are present and have permissions
+            cd $APP_PATH
             ./ci-pull.sh
+            ./ci-stop.sh staging swarm
             ./ci-start.sh staging swarm
           EOF

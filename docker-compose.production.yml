@@ -12,10 +12,10 @@ services:
         condition: on-failure
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.damasta-prod.rule=Host(`damastacoop.com`)"
-      - "traefik.http.routers.damasta-prod.entrypoints=https"
-      - "traefik.http.routers.damasta-prod.tls.certresolver=cloudflare"
-      - "traefik.http.services.damasta-prod.loadbalancer.server.port=3000"
+      - "traefik.http.routers.damasta-production.rule=Host(`damastacoop.com`)"
+      - "traefik.http.routers.damasta-production.entrypoints=https"
+      - "traefik.http.routers.damasta-production.tls.certresolver=cloudflare"
+      - "traefik.http.services.damasta-production.loadbalancer.server.port=3000"
     networks:
       - proxy
 
