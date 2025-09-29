@@ -1,4 +1,4 @@
-name: Deploy to Production
+name: Deploy to Production Server
 
 on:
   workflow_dispatch:
@@ -9,11 +9,11 @@ on:
         default: "Manual deployment"
 
 jobs:
-  deploy:
+  deploy-production:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      packages: read # Only read is needed, as CI pushes
+      packages: read
 
     steps:
       - name: Checkout code
@@ -24,14 +24,42 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY_PRODUCTION }}
 
+      - name: Create target directory on Production Server
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST_PRODUCTION }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER_PRODUCTION }}
+          APP_PATH: ${{ secrets.APP_PATH_PRODUCTION }}
+        run: |
+          ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "mkdir -p $APP_PATH"
+
+      - name: Copy deployment files to Production Server
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST_PRODUCTION }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER_PRODUCTION }}
+          APP_PATH: ${{ secrets.APP_PATH_PRODUCTION }}
+        run: |
+          scp -o StrictHostKeyChecking=no -r \
+            ci-logs.sh \
+            ci-pull.sh \
+            ci-start.sh \
+            ci-stop.sh \
+            Dockerfile \
+            docker-compose.yml \
+            docker-compose.staging.yml \
+            docker-compose.production.yml \
+            $DEPLOY_USER@$DEPLOY_HOST:$APP_PATH/
+
       - name: Deploy to Production Server
         env:
           DEPLOY_HOST: ${{ secrets.DEPLOY_HOST_PRODUCTION }}
           DEPLOY_USER: ${{ secrets.DEPLOY_USER_PRODUCTION }}
+          APP_PATH: ${{ secrets.APP_PATH_PRODUCTION }}
         run: |
+          echo "Deploying to Production Server at $APP_PATH.."
           echo "Reason for deployment: ${{ github.event.inputs.reason }}"
-          ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST << 'EOF'
-            cd /path/to/your/app # IMPORTANT: Replace with the actual path to your application on the server
+          ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST << EOF
+            cd $APP_PATH
             ./ci-pull.sh
+            ./ci-stop.sh production swarm
             ./ci-start.sh production swarm
           EOF
