@@ -92,12 +92,16 @@ jobs:
         env:
           DEPLOY_HOST: ${{ secrets.DEPLOY_HOST_STAGING }}
           DEPLOY_USER: ${{ secrets.DEPLOY_USER_STAGING }}
-          APP_PATH: ${{ secrets.APP_PATH_STAGING }} # New variable for app path
+          APP_PATH: ${{ secrets.APP_PATH_STAGING }}
         run: |
           echo "Deploying to Staging Server at $APP_PATH.."
           ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST << 'EOF'
-            cd $APP_PATH # Use the variable
-            pwd
+            set -e # Exit immediately if a command exits with a non-zero status.
+            echo "Target APP_PATH: $APP_PATH" # Debugging: print APP_PATH
+            mkdir -p $APP_PATH # Create target directory if it doesn't exist (redundant with previous step, but safe)
+            ls -ld $APP_PATH # Debugging: check permissions of APP_PATH
+            cd $APP_PATH || { echo "Failed to change directory to $APP_PATH"; exit 1; } # Change directory and exit if failed
+            echo "Current directory after cd: $(pwd)" # Debugging
             ls -l # Verify files are present and have permissions
             ./ci-pull.sh
             ./ci-start.sh staging swarm
