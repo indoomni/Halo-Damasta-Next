@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ghcr.io/indoomni/halo-damasta-next:staging
+    restart: always
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.damasta-staging.rule=Host(`damasta.indoomni.app`)"
+      - "traefik.http.routers.damasta-staging.entrypoints=https"
+      - "traefik.http.routers.damasta-staging.tls.certresolver=cloudflare"
+      - "traefik.http.services.damasta-staging.loadbalancer.server.port=3000"
+    networks:
+      - traefik_proxy
+
+networks:
+  traefik_proxy:
+    external: true
