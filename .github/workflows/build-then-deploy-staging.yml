@@ -94,9 +94,10 @@ jobs:
           DEPLOY_USER: ${{ secrets.DEPLOY_USER_STAGING }}
           APP_PATH: ${{ secrets.APP_PATH_STAGING }} # New variable for app path
         run: |
-          echo "Deploying to Staging Server after successful build.."
+          echo "Deploying to Staging Server at $APP_PATH.."
           ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST << 'EOF'
             cd $APP_PATH # Use the variable
+            pwd
             ls -l # Verify files are present and have permissions
             ./ci-pull.sh
             ./ci-start.sh staging swarm

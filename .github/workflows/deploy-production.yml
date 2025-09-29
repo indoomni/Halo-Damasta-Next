@@ -57,9 +57,11 @@ jobs:
           DEPLOY_USER: ${{ secrets.DEPLOY_USER_PRODUCTION }}
           APP_PATH: ${{ secrets.APP_PATH_PRODUCTION }}
         run: |
+          echo "Deploying to Production Server at $APP_PATH.."
           echo "Reason for deployment: ${{ github.event.inputs.reason }}"
           ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST << 'EOF'
             cd $APP_PATH # Use the variable
+            pwd
             ls -l # Verify files are present and have permissions
             ./ci-pull.sh
             ./ci-start.sh production swarm
