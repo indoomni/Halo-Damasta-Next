@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ghcr.io/indoomni/halo-damasta-next:latest
+    restart: always
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.damasta-prod.rule=Host(`damastacoop.com`)"
+      - "traefik.http.routers.damasta-prod.entrypoints=https"
+      - "traefik.http.routers.damasta-prod.tls.certresolver=cloudflare"
+      - "traefik.http.services.damasta-prod.loadbalancer.server.port=3000"
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
