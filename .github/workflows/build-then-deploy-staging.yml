@@ -61,16 +61,34 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY_STAGING }}
 
-      - name: Deploy to Staging Server
+      - name: Copy deployment files to Staging Server
         env:
           DEPLOY_HOST: ${{ secrets.DEPLOY_HOST_STAGING }}
           DEPLOY_USER: ${{ secrets.DEPLOY_USER_STAGING }}
           APP_PATH: ${{ secrets.APP_PATH_STAGING }}
         run: |
+          scp -o StrictHostKeyChecking=no -r \
+            ci-build-and-push.sh \
+            ci-build-locally.sh \
+            ci-logs.sh \
+            ci-pull.sh \
+            ci-start.sh \
+            ci-stop.sh \
+            Dockerfile \
+            docker-compose.yml \
+            docker-compose.staging.yml \
+            docker-compose.production.yml \
+            $DEPLOY_USER@$DEPLOY_HOST:$APP_PATH/
+
+      - name: Deploy to Staging Server
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST_STAGING }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER_STAGING }}
+          APP_PATH: ${{ secrets.APP_PATH_STAGING }} # New variable for app path
+        run: |
           echo "Deploying to Staging Server after successful build.."
           ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST << 'EOF'
             cd $APP_PATH # Use the variable
-            git pull # Pull the latest code, including CI scripts
             ./ci-pull.sh
             ./ci-start.sh staging swarm
           EOF
