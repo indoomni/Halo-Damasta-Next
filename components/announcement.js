@@ -59,6 +59,7 @@ const Announcement = (props) => {
           .announcementroot-class-name {
             flex: 0 0 auto;
             width: 100%;
+            display: none;
           }
           .announcementroot-class-name1 {
             flex: 0 0 auto;

@@ -34,24 +34,25 @@ const Navbar = (props) => {
               </Link>
             </div>
           </div>
-          <div className="navbar-quick-actions">
-            <Link href="/">
-              <a className="link navbar-link17">Sudah punya akun?</a>
-            </Link>
-            <Link href="/">
-              <a className="navbar-link18">
-                <div className="navbar-sign-up-btn">
-                  <span className="navbar-sign-up">Masuk</span>
-                </div>
-              </a>
-            </Link>
-            <img
-              id="open-mobile-menu"
-              alt={props.pastedImageAlt}
-              src={props.pastedImageSrc}
-              className="navbar-hamburger-menu"
-            />
-          </div>
+          <a
+            href="https://app.damastacoop.com/signup"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="navbar-link17"
+          >
+            <div className="navbar-quick-actions">
+              <span className="link navbar-log-in">Sudah punya akun?</span>
+              <div className="navbar-sign-up-btn">
+                <span className="navbar-sign-up">Masuk</span>
+              </div>
+              <img
+                id="open-mobile-menu"
+                alt={props.pastedImageAlt}
+                src={props.pastedImageSrc}
+                className="navbar-hamburger-menu"
+              />
+            </div>
+          </a>
         </div>
         <div id="mobile-menu" className="navbar-mobile">
           <div className="navbar-top">
@@ -70,27 +71,27 @@ const Navbar = (props) => {
           </div>
           <div className="navbar-links2">
             <Link href="/">
-              <a className="navbar-link19">{props.text1}</a>
+              <a className="navbar-link18">{props.text1}</a>
             </Link>
             <Link href="/">
-              <a className="navbar-link20">{props.text11}</a>
+              <a className="navbar-link19">{props.text11}</a>
             </Link>
             <Link href="/">
-              <a className="navbar-link21">{props.text12}</a>
+              <a className="navbar-link20">{props.text12}</a>
             </Link>
             <Link href="/">
-              <a className="navbar-link22">{props.text13}</a>
+              <a className="navbar-link21">{props.text13}</a>
             </Link>
             <div className="navbar-buttons">
               <Link href="/">
-                <a className="navbar-link23">
+                <a className="navbar-link22">
                   <div className="navbar-btn1">
                     <span className="navbar-text1">{props.text131}</span>
                   </div>
                 </a>
               </Link>
               <Link href="/">
-                <a className="navbar-link24">
+                <a className="navbar-link23">
                   <div className="navbar-btn2">
                     <span className="navbar-text2">{props.text1311}</span>
                   </div>
@@ -183,15 +184,16 @@ const Navbar = (props) => {
             padding-bottom: 12px;
             justify-content: center;
           }
+          .navbar-link17 {
+            display: contents;
+          }
           .navbar-quick-actions {
             gap: var(--dl-layout-space-oneandhalfunits);
             display: flex;
             align-items: center;
             flex-direction: row;
             justify-content: center;
-          }
-          .navbar-link18 {
-            display: contents;
+            text-decoration: none;
           }
           .navbar-sign-up-btn {
             display: flex;
@@ -204,7 +206,6 @@ const Navbar = (props) => {
             flex-direction: row;
             padding-bottom: var(--dl-layout-space-unit);
             justify-content: center;
-            text-decoration: none;
             background-color: #ade2df;
           }
           .navbar-sign-up-btn:hover {
@@ -258,6 +259,9 @@ const Navbar = (props) => {
             flex-direction: column;
             justify-content: center;
           }
+          .navbar-link18 {
+            text-decoration: none;
+          }
           .navbar-link19 {
             text-decoration: none;
           }
@@ -265,9 +269,6 @@ const Navbar = (props) => {
             text-decoration: none;
           }
           .navbar-link21 {
-            text-decoration: none;
-          }
-          .navbar-link22 {
             text-decoration: none;
           }
           .navbar-buttons {
@@ -280,7 +281,7 @@ const Navbar = (props) => {
             padding-bottom: var(--dl-layout-space-unit);
             justify-content: center;
           }
-          .navbar-link23 {
+          .navbar-link22 {
             display: contents;
           }
           .navbar-btn1 {
@@ -298,7 +299,7 @@ const Navbar = (props) => {
             font-style: normal;
             font-weight: 500;
           }
-          .navbar-link24 {
+          .navbar-link23 {
             display: contents;
           }
           .navbar-btn2 {
@@ -328,7 +329,7 @@ const Navbar = (props) => {
             .navbar-links1 {
               display: none;
             }
-            .navbar-link17 {
+            .navbar-log-in {
               display: none;
             }
             .navbar-sign-up-btn {

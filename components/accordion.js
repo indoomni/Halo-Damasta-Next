@@ -16,7 +16,7 @@ const Accordion = (props) => {
             <span className="accordion-text1">
               {props.text6 ?? (
                 <Fragment>
-                  <span className="accordion-text7">
+                  <span className="accordion-text8">
                     Aliquam quaerat voluptatem
                   </span>
                 </Fragment>
@@ -42,7 +42,7 @@ const Accordion = (props) => {
             <span className="accordion-text3">
               {props.text ?? (
                 <Fragment>
-                  <span className="accordion-text8">
+                  <span className="accordion-text7">
                     Nemo enim ipsam voluptatem quia voluptas
                   </span>
                 </Fragment>
@@ -290,6 +290,8 @@ const Accordion = (props) => {
 }
 
 Accordion.defaultProps = {
+  text: undefined,
+  text6: undefined,
   text1:
     'Sed do eiusmod tempor incididunt ut labore et dolore magna aliquat enim ad minim veniam, quis nostrud',
   text3:
@@ -297,17 +299,15 @@ Accordion.defaultProps = {
   text5:
     'Sed do eiusmod tempor incididunt ut labore et dolore magna aliquat enim ad minim veniam, quis nostrud',
   text4: 'Magnam aliquam quaerat voluptatem',
-  text6: undefined,
-  text: undefined,
 }
 
 Accordion.propTypes = {
+  text: PropTypes.element,
+  text6: PropTypes.element,
   text1: PropTypes.string,
   text3: PropTypes.string,
   text5: PropTypes.string,
   text4: PropTypes.string,
-  text6: PropTypes.element,
-  text: PropTypes.element,
 }
 
 export default Accordion

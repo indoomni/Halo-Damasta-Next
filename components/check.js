@@ -50,9 +50,17 @@ const Check = (props) => {
           .check-text2 {
             display: inline-block;
           }
+
           @media (max-width: 767px) {
+            .check-check {
+              width: 100%;
+              max-width: 100%;
+            }
             .check-text1 {
               line-height: 21px;
+            }
+            .checkroot-class-name2 {
+              width: 100%;
             }
           }
         `}
@@ -62,13 +70,13 @@ const Check = (props) => {
 }
 
 Check.defaultProps = {
-  rootClassName: '',
   text: undefined,
+  rootClassName: '',
 }
 
 Check.propTypes = {
-  rootClassName: PropTypes.string,
   text: PropTypes.element,
+  rootClassName: PropTypes.string,
 }
 
 export default Check
