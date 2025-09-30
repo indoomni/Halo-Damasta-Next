@@ -5,6 +5,7 @@ ENV=${1:-dev}
 
 case "$ENV" in
   dev)
+    echo "Showing logs for development environment..."
     docker compose logs -f
     ;;
   staging)

@@ -5,6 +5,7 @@ ENV=${1:-dev}
 
 case "$ENV" in
   dev)
+    echo "Stopping development environment..."
     docker compose down
     ;;
   staging)
