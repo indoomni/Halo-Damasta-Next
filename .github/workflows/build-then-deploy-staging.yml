@@ -95,7 +95,6 @@ jobs:
           echo "Deploying to Staging Server at $APP_PATH.."
           ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST << EOF
             cd $APP_PATH
-            export COMPOSE_PROJECT_NAME=damasta-staging # Set unique project name
             ./ci-pull.sh
             ./ci-stop.sh staging
             ./ci-start.sh staging standalone

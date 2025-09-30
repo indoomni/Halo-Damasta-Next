@@ -59,7 +59,6 @@ jobs:
           echo "Reason for deployment: ${{ github.event.inputs.reason }}"
           ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST << EOF
             cd $APP_PATH
-            export COMPOSE_PROJECT_NAME=damasta-production # Set unique project name
             ./ci-pull.sh
             ./ci-stop.sh production
             ./ci-start.sh production standalone
