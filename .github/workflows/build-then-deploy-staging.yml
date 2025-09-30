@@ -45,9 +45,10 @@ jobs:
           cache-from: type=registry,ref=ghcr.io/indoomni/halo-damasta-next:buildcache
           cache-to: type=registry,ref=ghcr.io/indoomni/halo-damasta-next:buildcache,mode=max
 
-  deploy-staging:
+  deploy:
     runs-on: ubuntu-latest
     needs: build
+    environment: staging # Use the 'staging' environment
     permissions:
       contents: read
       packages: read
@@ -59,23 +60,25 @@ jobs:
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.9.0
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY_STAGING }}
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Create target directory on Staging Server
         env:
-          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST_STAGING }}
-          DEPLOY_USER: ${{ secrets.DEPLOY_USER_STAGING }}
-          APP_PATH: ${{ secrets.APP_PATH_STAGING }}
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+          APP_PATH: ${{ vars.DEPLOY_PATH }}
         run: |
           ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "mkdir -p $APP_PATH"
 
       - name: Copy deployment files to Staging Server
         env:
-          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST_STAGING }}
-          DEPLOY_USER: ${{ secrets.DEPLOY_USER_STAGING }}
-          APP_PATH: ${{ secrets.APP_PATH_STAGING }}
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+          APP_PATH: ${{ vars.DEPLOY_PATH }}
         run: |
           scp -o StrictHostKeyChecking=no -r \
+            ci-build-and-push.sh \
+            ci-build-locally.sh \
             ci-logs.sh \
             ci-pull.sh \
             ci-start.sh \
@@ -88,9 +91,9 @@ jobs:
 
       - name: Deploy to Staging Server
         env:
-          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST_STAGING }}
-          DEPLOY_USER: ${{ secrets.DEPLOY_USER_STAGING }}
-          APP_PATH: ${{ secrets.APP_PATH_STAGING }}
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+          APP_PATH: ${{ vars.DEPLOY_PATH }}
         run: |
           echo "Deploying to Staging Server at $APP_PATH.."
           ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST << EOF

@@ -9,8 +9,9 @@ on:
         default: "Manual deployment"
 
 jobs:
-  deploy-production:
+  deploy:
     runs-on: ubuntu-latest
+    environment: production # Use the 'production' environment
     permissions:
       contents: read
       packages: read
@@ -22,23 +23,25 @@ jobs:
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.9.0
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY_PRODUCTION }}
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Create target directory on Production Server
         env:
-          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST_PRODUCTION }}
-          DEPLOY_USER: ${{ secrets.DEPLOY_USER_PRODUCTION }}
-          APP_PATH: ${{ secrets.APP_PATH_PRODUCTION }}
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+          APP_PATH: ${{ vars.DEPLOY_PATH }}
         run: |
           ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "mkdir -p $APP_PATH"
 
       - name: Copy deployment files to Production Server
         env:
-          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST_PRODUCTION }}
-          DEPLOY_USER: ${{ secrets.DEPLOY_USER_PRODUCTION }}
-          APP_PATH: ${{ secrets.APP_PATH_PRODUCTION }}
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+          APP_PATH: ${{ vars.DEPLOY_PATH }}
         run: |
           scp -o StrictHostKeyChecking=no -r \
+            ci-build-and-push.sh \
+            ci-build-locally.sh \
             ci-logs.sh \
             ci-pull.sh \
             ci-start.sh \
@@ -51,9 +54,9 @@ jobs:
 
       - name: Deploy to Production Server
         env:
-          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST_PRODUCTION }}
-          DEPLOY_USER: ${{ secrets.DEPLOY_USER_PRODUCTION }}
-          APP_PATH: ${{ secrets.APP_PATH_PRODUCTION }}
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+          APP_PATH: ${{ vars.DEPLOY_PATH }}
         run: |
           echo "Deploying to Production Server at $APP_PATH.."
           echo "Reason for deployment: ${{ github.event.inputs.reason }}"
@@ -61,5 +64,5 @@ jobs:
             cd $APP_PATH
             ./ci-pull.sh
             ./ci-stop.sh production swarm
-            ./ci-start.sh production swarm
+            ./ci-start.sh production standalone
           EOF
