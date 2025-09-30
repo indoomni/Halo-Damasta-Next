@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import Script from 'dangerous-html/react'
 import PropTypes from 'prop-types'
@@ -13,7 +13,15 @@ const Accordion = (props) => {
           className="accordion-element1 accordion-element"
         >
           <div className="accordion-details1">
-            <span className="accordion-text1">{props.text}</span>
+            <span className="accordion-text1">
+              {props.text6 ?? (
+                <Fragment>
+                  <span className="accordion-text7">
+                    Aliquam quaerat voluptatem
+                  </span>
+                </Fragment>
+              )}
+            </span>
             <span data-role="accordion-content" className="accordion-text2">
               {props.text1}
             </span>
@@ -31,7 +39,15 @@ const Accordion = (props) => {
           className="accordion-element2 accordion-element"
         >
           <div className="accordion-details2">
-            <span className="accordion-text3">{props.text2}</span>
+            <span className="accordion-text3">
+              {props.text ?? (
+                <Fragment>
+                  <span className="accordion-text8">
+                    Nemo enim ipsam voluptatem quia voluptas
+                  </span>
+                </Fragment>
+              )}
+            </span>
             <span data-role="accordion-content" className="accordion-text4">
               {props.text3}
             </span>
@@ -205,7 +221,7 @@ const Accordion = (props) => {
             font-size: 18px;
             max-width: 535px;
             font-style: normal;
-            font-family: Poppins;
+            font-family: 'Poppins';
             font-weight: 600;
             line-height: 27px;
           }
@@ -222,6 +238,12 @@ const Accordion = (props) => {
           }
           .accordion-container2 {
             display: contents;
+          }
+          .accordion-text7 {
+            display: inline-block;
+          }
+          .accordion-text8 {
+            display: inline-block;
           }
           @media (max-width: 767px) {
             .accordion-element1 {
@@ -272,20 +294,20 @@ Accordion.defaultProps = {
     'Sed do eiusmod tempor incididunt ut labore et dolore magna aliquat enim ad minim veniam, quis nostrud',
   text3:
     'Sed do eiusmod tempor incididunt ut labore et dolore magna aliquat enim ad minim veniam, quis nostrud',
-  text: 'Aliquam quaerat voluptatem',
   text5:
     'Sed do eiusmod tempor incididunt ut labore et dolore magna aliquat enim ad minim veniam, quis nostrud',
-  text2: 'Nemo enim ipsam voluptatem quia voluptas',
   text4: 'Magnam aliquam quaerat voluptatem',
+  text6: undefined,
+  text: undefined,
 }
 
 Accordion.propTypes = {
   text1: PropTypes.string,
   text3: PropTypes.string,
-  text: PropTypes.string,
   text5: PropTypes.string,
-  text2: PropTypes.string,
   text4: PropTypes.string,
+  text6: PropTypes.element,
+  text: PropTypes.element,
 }
 
 export default Accordion
