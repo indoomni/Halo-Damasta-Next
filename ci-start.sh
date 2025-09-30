@@ -13,14 +13,16 @@ case "$ENV" in
     if [ "$MODE" == "swarm" ]; then
       docker stack deploy -c docker-compose.staging.yml damasta-staging
     else
-      docker compose -f docker-compose.staging.yml up -d --build
+      docker compose -f docker-compose.staging.yml up -d
+      # --build
     fi
     ;;
   production)
     if [ "$MODE" == "swarm" ]; then
       docker stack deploy -c docker-compose.production.yml damasta-production
     else
-      docker compose -f docker-compose.production.yml up -d --build
+      docker compose -f docker-compose.production.yml up -d
+      # --build
     fi
     ;;
   *)

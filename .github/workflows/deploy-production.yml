@@ -44,7 +44,6 @@ jobs:
             ci-pull.sh \
             ci-start.sh \
             ci-stop.sh \
-            Dockerfile \
             docker-compose.yml \
             docker-compose.staging.yml \
             docker-compose.production.yml \
