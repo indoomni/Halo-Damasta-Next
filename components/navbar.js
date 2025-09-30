@@ -32,17 +32,14 @@ const Navbar = (props) => {
               <Link href="/">
                 <a className="link">{props.link3}</a>
               </Link>
-              <Link href="/">
-                <a className="link">{props.link4}</a>
-              </Link>
             </div>
           </div>
           <div className="navbar-quick-actions">
             <Link href="/">
-              <a className="link navbar-link19">Sudah punya akun?</a>
+              <a className="link navbar-link17">Sudah punya akun?</a>
             </Link>
             <Link href="/">
-              <a className="navbar-link20">
+              <a className="navbar-link18">
                 <div className="navbar-sign-up-btn">
                   <span className="navbar-sign-up">Masuk</span>
                 </div>
@@ -73,27 +70,27 @@ const Navbar = (props) => {
           </div>
           <div className="navbar-links2">
             <Link href="/">
-              <a className="navbar-link21">{props.text1}</a>
+              <a className="navbar-link19">{props.text1}</a>
             </Link>
             <Link href="/">
-              <a className="navbar-link22">{props.text11}</a>
+              <a className="navbar-link20">{props.text11}</a>
             </Link>
             <Link href="/">
-              <a className="navbar-link23">{props.text12}</a>
+              <a className="navbar-link21">{props.text12}</a>
             </Link>
             <Link href="/">
-              <a className="navbar-link24">{props.text13}</a>
+              <a className="navbar-link22">{props.text13}</a>
             </Link>
             <div className="navbar-buttons">
               <Link href="/">
-                <a className="navbar-link25">
+                <a className="navbar-link23">
                   <div className="navbar-btn1">
                     <span className="navbar-text1">{props.text131}</span>
                   </div>
                 </a>
               </Link>
               <Link href="/">
-                <a className="navbar-link26">
+                <a className="navbar-link24">
                   <div className="navbar-btn2">
                     <span className="navbar-text2">{props.text1311}</span>
                   </div>
@@ -193,7 +190,7 @@ const Navbar = (props) => {
             flex-direction: row;
             justify-content: center;
           }
-          .navbar-link20 {
+          .navbar-link18 {
             display: contents;
           }
           .navbar-sign-up-btn {
@@ -261,16 +258,16 @@ const Navbar = (props) => {
             flex-direction: column;
             justify-content: center;
           }
+          .navbar-link19 {
+            text-decoration: none;
+          }
+          .navbar-link20 {
+            text-decoration: none;
+          }
           .navbar-link21 {
             text-decoration: none;
           }
           .navbar-link22 {
-            text-decoration: none;
-          }
-          .navbar-link23 {
-            text-decoration: none;
-          }
-          .navbar-link24 {
             text-decoration: none;
           }
           .navbar-buttons {
@@ -283,7 +280,7 @@ const Navbar = (props) => {
             padding-bottom: var(--dl-layout-space-unit);
             justify-content: center;
           }
-          .navbar-link25 {
+          .navbar-link23 {
             display: contents;
           }
           .navbar-btn1 {
@@ -301,7 +298,7 @@ const Navbar = (props) => {
             font-style: normal;
             font-weight: 500;
           }
-          .navbar-link26 {
+          .navbar-link24 {
             display: contents;
           }
           .navbar-btn2 {
@@ -331,7 +328,7 @@ const Navbar = (props) => {
             .navbar-links1 {
               display: none;
             }
-            .navbar-link19 {
+            .navbar-link17 {
               display: none;
             }
             .navbar-sign-up-btn {
@@ -362,7 +359,6 @@ Navbar.defaultProps = {
   link3: 'Prices\n',
   text1: 'Features',
   text12: 'Prices',
-  link4: 'Contact\n',
   brandingSrc:
     'https://play.teleporthq.io/static/svg/placeholders/no-image.svg',
   link1: 'Features',
@@ -382,7 +378,6 @@ Navbar.propTypes = {
   link3: PropTypes.string,
   text1: PropTypes.string,
   text12: PropTypes.string,
-  link4: PropTypes.string,
   brandingSrc: PropTypes.string,
   link1: PropTypes.string,
   text131: PropTypes.string,

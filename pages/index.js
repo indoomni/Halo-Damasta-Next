@@ -11,8 +11,9 @@ import Highlight from '../components/highlight'
 import Point from '../components/point'
 import Accordion from '../components/accordion'
 import Feature from '../components/feature'
-import Check from '../components/check'
 import Quote from '../components/quote'
+import Question from '../components/question'
+import Check from '../components/check'
 import Footer from '../components/footer'
 
 const Home = (props) => {
@@ -47,11 +48,13 @@ const Home = (props) => {
               imageSrc="https://play.teleporthq.io/static/svg/placeholders/no-image.svg"
               brandingSrc="/Damasta/logo-damasta-without-tagline-200h.png"
               link1="Tentang Kami"
+              link2="Program"
+              link3="Persyaratan"
             ></Navbar>
           </header>
           <div className="home-content10">
             <div className="home-content11">
-              <h1 className="home-title1">
+              <h1 className="home-title">
                 <span className="home-text100">
                   Bukan sekedar platform digital.
                 </span>
@@ -206,7 +209,7 @@ const Home = (props) => {
             </span>
           </div>
         </div>
-        <div className="home-sections">
+        <div className="home-sections1">
           <div className="home-section1">
             <div className="home-image1">
               <div className="home-image-highlight">
@@ -250,7 +253,7 @@ const Home = (props) => {
                 </span>
               </div>
               <div className="home-content15">
-                <div className="home-points">
+                <div className="home-points1">
                   <Point></Point>
                   <Point text="Quis nostrud exercitation ullamco"></Point>
                   <Point text="Reprehenderit qui in ea voluptate velit"></Point>
@@ -258,7 +261,7 @@ const Home = (props) => {
                 <Link href="/">
                   <a className="home-link2">
                     <div className="home-get-started1">
-                      <span className="home-sign-up">Get started now</span>
+                      <span className="home-sign-up1">Get started now</span>
                     </div>
                   </a>
                 </Link>
@@ -275,18 +278,33 @@ const Home = (props) => {
                 <span>Create milestones</span>
                 <br></br>
               </h2>
-              <Accordion></Accordion>
+              <Accordion
+                text6={
+                  <Fragment>
+                    <span className="home-text125">
+                      Aliquam quaerat voluptatem
+                    </span>
+                  </Fragment>
+                }
+                text={
+                  <Fragment>
+                    <span className="home-text126">
+                      Nemo enim ipsam voluptatem quia voluptas
+                    </span>
+                  </Fragment>
+                }
+              ></Accordion>
             </div>
           </div>
         </div>
         <div className="home-banner-container">
           <div className="home-banner">
             <div className="home-overlay1">
-              <span className="home-text125">
+              <span className="home-text127">
                 Mulai perjalanan koperasi Anda.
               </span>
               <div className="home-book-btn">
-                <span className="home-text126">Hubungi kami</span>
+                <span className="home-text128">Hubungi kami</span>
               </div>
             </div>
             <img
@@ -299,11 +317,11 @@ const Home = (props) => {
         <div className="home-features">
           <div className="home-header2">
             <div className="home-tag1">
-              <span className="home-text127">Features</span>
+              <span className="home-text129">Features</span>
             </div>
             <div className="home-heading13">
-              <h2 className="home-text128">Everything you get with Finbest</h2>
-              <span className="home-text129">
+              <h2 className="home-text130">Everything you get with Finbest</h2>
+              <span className="home-text131">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt.
               </span>
@@ -335,276 +353,6 @@ const Home = (props) => {
             <Feature title="Wallet" thumbnail="/vector6113-lvvs.svg"></Feature>
           </div>
         </div>
-        <div className="home-pricing">
-          <div className="home-content17">
-            <div className="home-header3">
-              <div className="home-tag2">
-                <span className="home-text130">Pricing plans</span>
-              </div>
-              <div className="home-heading14">
-                <h2 className="home-text131">No setup cost or hidden fees.</h2>
-              </div>
-            </div>
-            <div className="home-pricing-plans">
-              <div className="home-plans1">
-                <div className="home-plan1">
-                  <div className="home-top1">
-                    <div className="home-heading15">
-                      <span className="home-text132">Standard</span>
-                      <span className="home-text133">
-                        Sed ut perspiciatis unde omnis iste natus error sit.
-                      </span>
-                    </div>
-                    <div className="home-cost1">
-                      <span className="home-text134">Free</span>
-                    </div>
-                  </div>
-                  <div className="home-bottom1">
-                    <div className="home-check-list1">
-                      <Check></Check>
-                      <Check feature="Quis nostrud exercitation ulla"></Check>
-                      <Check feature="Duis aute irure dolor intuit"></Check>
-                      <Check feature="Voluptas sit aspernatur aut odit"></Check>
-                      <Check feature="Corporis suscipit laboriosam"></Check>
-                    </div>
-                    <div className="home-button1">
-                      <span className="home-text135">Get Standard</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="home-plan2">
-                  <div className="home-top2">
-                    <div className="home-heading16">
-                      <span className="home-text136">Plus</span>
-                      <span className="home-text137">
-                        Sed ut perspiciatis unde omnis iste natus error sit.
-                      </span>
-                    </div>
-                    <div className="home-cost2">
-                      <span className="home-text138">$8</span>
-                      <span className="home-text139">/month</span>
-                    </div>
-                  </div>
-                  <div className="home-bottom2">
-                    <div className="home-check-list2">
-                      <Check></Check>
-                      <Check feature="Quis nostrud exercitation ulla"></Check>
-                      <Check feature="Duis aute irure dolor intuit"></Check>
-                      <Check feature="Voluptas sit aspernatur aut odit"></Check>
-                      <Check feature="Corporis suscipit laboriosam"></Check>
-                    </div>
-                    <div className="home-button2">
-                      <span className="home-text140">Get Standard</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="home-plan3">
-                  <div className="home-top3">
-                    <div className="home-heading17">
-                      <span className="home-text141">Premium</span>
-                      <span className="home-text142">
-                        Sed ut perspiciatis unde omnis iste natus error sit.
-                      </span>
-                    </div>
-                    <div className="home-cost3">
-                      <span className="home-text143">$16</span>
-                      <span className="home-text144">/month</span>
-                    </div>
-                  </div>
-                  <div className="home-bottom3">
-                    <div className="home-check-list3">
-                      <Check></Check>
-                      <Check feature="Quis nostrud exercitation ulla"></Check>
-                      <Check feature="Duis aute irure dolor intuit"></Check>
-                      <Check feature="Voluptas sit aspernatur aut odit"></Check>
-                      <Check feature="Corporis suscipit laboriosam"></Check>
-                    </div>
-                    <div className="home-button3">
-                      <span className="home-text145">Get Standard</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="home-expand1">
-                <div className="home-overlay2">
-                  <div className="home-header4">
-                    <div className="home-heading18">
-                      <span className="home-text146">Expand</span>
-                      <span className="home-text147">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt.
-                      </span>
-                    </div>
-                    <div className="home-check-list4">
-                      <div className="home-check1">
-                        <svg viewBox="0 0 1024 1024" className="home-icon10">
-                          <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
-                        </svg>
-                        <span className="home-text148">
-                          Sed ut perspiciatis unde
-                        </span>
-                      </div>
-                      <div className="home-check2">
-                        <svg viewBox="0 0 1024 1024" className="home-icon12">
-                          <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
-                        </svg>
-                        <span className="home-text149">
-                          Quis nostrud exercitation ulla
-                        </span>
-                      </div>
-                      <div className="home-check3">
-                        <svg viewBox="0 0 1024 1024" className="home-icon14">
-                          <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
-                        </svg>
-                        <span className="home-text150">
-                          Duis aute irure dolor intuit
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="home-button4">
-                    <span className="home-text151">
-                      <span>Contact us</span>
-                      <br></br>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="home-plans2">
-              <div className="home-plan4">
-                <div className="home-top4">
-                  <div className="home-heading19">
-                    <span className="home-text154">Standard</span>
-                    <span className="home-text155">
-                      Sed ut perspiciatis unde omnis iste natus error sit.
-                    </span>
-                  </div>
-                  <div className="home-cost4">
-                    <span className="home-text156">Free</span>
-                  </div>
-                </div>
-                <div className="home-bottom4">
-                  <div className="home-check-list5">
-                    <Check></Check>
-                    <Check feature="Quis nostrud exercitation ulla"></Check>
-                    <Check feature="Duis aute irure dolor intuit"></Check>
-                    <Check feature="Voluptas sit aspernatur aut odit"></Check>
-                    <Check feature="Corporis suscipit laboriosam"></Check>
-                  </div>
-                  <div className="home-button5">
-                    <span className="home-text157">Get Standard</span>
-                  </div>
-                </div>
-              </div>
-              <div className="home-plan5">
-                <div className="home-top5">
-                  <div className="home-heading20">
-                    <span className="home-text158">Plus</span>
-                    <span className="home-text159">
-                      Sed ut perspiciatis unde omnis iste natus error sit.
-                    </span>
-                  </div>
-                  <div className="home-cost5">
-                    <span className="home-text160">$8</span>
-                    <span className="home-text161">/month</span>
-                  </div>
-                </div>
-                <div className="home-bottom5">
-                  <div className="home-check-list6">
-                    <Check></Check>
-                    <Check feature="Quis nostrud exercitation ulla"></Check>
-                    <Check feature="Duis aute irure dolor intuit"></Check>
-                    <Check feature="Voluptas sit aspernatur aut odit"></Check>
-                    <Check feature="Corporis suscipit laboriosam"></Check>
-                  </div>
-                  <div className="home-button6">
-                    <span className="home-text162">Get Plus</span>
-                  </div>
-                </div>
-              </div>
-              <div className="home-plan6">
-                <div className="home-top6">
-                  <div className="home-heading21">
-                    <span className="home-text163">Premium</span>
-                    <span className="home-text164">
-                      Sed ut perspiciatis unde omnis iste natus error sit.
-                    </span>
-                  </div>
-                  <div className="home-cost6">
-                    <span className="home-text165">$16</span>
-                    <span className="home-text166">/month</span>
-                  </div>
-                </div>
-                <div className="home-bottom6">
-                  <div className="home-check-list7">
-                    <Check></Check>
-                    <Check feature="Quis nostrud exercitation ulla"></Check>
-                    <Check feature="Duis aute irure dolor intuit"></Check>
-                    <Check feature="Voluptas sit aspernatur aut odit"></Check>
-                    <Check feature="Corporis suscipit laboriosam"></Check>
-                  </div>
-                  <div className="home-button7">
-                    <span className="home-text167">Get Plus</span>
-                  </div>
-                </div>
-              </div>
-              <div className="home-expand2">
-                <div className="home-overlay3">
-                  <div className="home-header5">
-                    <div className="home-heading22">
-                      <span className="home-text168">Expand</span>
-                      <span className="home-text169">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt.
-                      </span>
-                    </div>
-                    <div className="home-check-list8">
-                      <div className="home-check4">
-                        <svg viewBox="0 0 1024 1024" className="home-icon16">
-                          <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
-                        </svg>
-                        <span className="home-text170">
-                          Sed ut perspiciatis unde
-                        </span>
-                      </div>
-                      <div className="home-check5">
-                        <svg viewBox="0 0 1024 1024" className="home-icon18">
-                          <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
-                        </svg>
-                        <span className="home-text171">
-                          Quis nostrud exercitation ulla
-                        </span>
-                      </div>
-                      <div className="home-check6">
-                        <svg viewBox="0 0 1024 1024" className="home-icon20">
-                          <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
-                        </svg>
-                        <span className="home-text172">
-                          Duis aute irure dolor intuit
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="home-button8">
-                    <span className="home-text173">
-                      <span>Contact us</span>
-                      <br></br>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="home-help">
-            <span className="home-text176">Need any help?</span>
-            <div className="home-explore3">
-              <span className="home-text177">
-                Get in touch with us right away -&gt;
-              </span>
-            </div>
-          </div>
-        </div>
         <div className="home-testimonials">
           <div className="home-logo-container">
             <img
@@ -613,7 +361,7 @@ const Home = (props) => {
               className="home-logo"
             />
           </div>
-          <div className="home-content18">
+          <div className="home-content17">
             <div id="quotes" className="home-quotes">
               <div className="quote active-quote">
                 <Quote rootClassName="quoteroot-class-name"></Quote>
@@ -636,12 +384,12 @@ const Home = (props) => {
             </div>
             <div className="home-buttons">
               <div id="quote-before" className="home-left">
-                <svg viewBox="0 0 1024 1024" className="home-icon22">
+                <svg viewBox="0 0 1024 1024" className="home-icon10">
                   <path d="M854 470v84h-520l238 240-60 60-342-342 342-342 60 60-238 240h520z"></path>
                 </svg>
               </div>
               <div id="quote-next" className="home-right">
-                <svg viewBox="0 0 1024 1024" className="home-icon24">
+                <svg viewBox="0 0 1024 1024" className="home-icon12">
                   <path d="M512 170l342 342-342 342-60-60 238-240h-520v-84h520l-238-240z"></path>
                 </svg>
               </div>
@@ -683,248 +431,1032 @@ const Home = (props) => {
             </div>
           </div>
         </div>
-        <div className="home-faq">
-          <div className="home-content19">
-            <div className="home-header6">
-              <div className="home-tag3">
-                <span className="home-text178">
-                  <span>FAQ</span>
+        <div className="home-program5-tahun">
+          <div className="home-content18">
+            <div className="home-header3">
+              <div className="home-tag2">
+                <span className="home-text132">
+                  <span>Program</span>
                   <br></br>
                 </span>
               </div>
-              <div className="home-heading23">
-                <h2 className="home-text181">Program 5 Tahun</h2>
+              <div className="home-heading14">
+                <h2 className="home-text135">Program 5 Tahun</h2>
               </div>
             </div>
             <div className="home-rows">
               <div className="home-column4">
-                <div className="Question">
-                  <span className="home-title2">Digitalisasi Koperasi</span>
-                  <span className="home-description4">
-                    <span>
-                      Bantuan teknologi untuk pelayanan, administrasi, pelaporan
-                      dan penerapan standar koperasi dengan teknologi informasi
-                      yang mencakup sistem pengelolaan (back end) dan sistem
-                      antar muka/user interface (front end) untuk koperasi
-                      melayani anggotanya. Platform Damasta adalah platform
-                      koperasi yang disediakan dan dikembangkan secara khusus
-                      oleh
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html: ' ',
-                        }}
-                      />
-                    </span>
-                    <span className="home-text183">
-                      PT Sinergitas Untuk Negeri
-                    </span>
-                    <span>
-                      {' '}
-                      dengan basis platform Jurnal Digital untuk jaringan
-                      Koperasi Damasta Abhipraya Mandiri (Skd).
-                    </span>
-                    <br></br>
-                    <br></br>
-                    <span>
-                      Platform Damasta inklusif, inovatif, dan menerapkan
-                      praktek bisnis terbaik (kami menempatkan koperasi sebagai
-                      mitra bukan vendor), biaya terjangkau dan mudah
-                      dikustomisasi dan dikonfigurasi. Selain itu proses migrasi
-                      data yang sangat simpel dan cepat. Dapat dioperasikan oleh
-                      siapa saja, dimana saja, kapan saja.
-                    </span>
-                    <br></br>
-                    <span>
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html: ' ',
-                        }}
-                      />
-                    </span>
-                  </span>
-                </div>
-                <div className="Question">
-                  <span className="home-title3">Pembiayaan</span>
-                  <span className="home-description5">
-                    <span>
-                      Adalah program bantuan finansial berupa pembinaan,
-                      pengembangan dan peningkatan kapasitas Koperasi Peserta
-                      Apex dalam bentuk pembiayaan atau pinjaman atau inter
-                      lending atau bantuan likuiditas penempatan dana untuk
-                      disalurkan kepada anggota koperasi DAM dengan memenuhi
-                      standar operasi yang ditetapkan. Untuk program ini,
-                      Koperasi DAM bekerja sama dengan beberapa lembaga
-                      keuangan, antara lain BPRS Patriot Kota Bekasi dan
-                      Koperasi-koperasi besar Kota Bekasi
-                    </span>
-                    <br></br>
-                    <span>
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html: ' ',
-                        }}
-                      />
-                    </span>
-                  </span>
-                </div>
-                <div className="home-question3 Question">
-                  <span className="home-title4">
-                    Logistik dan Distribusi
-                    <span
-                      dangerouslySetInnerHTML={{
-                        __html: ' ',
-                      }}
-                    />
-                  </span>
-                  <span className="home-description6">
-                    Adalah suatu program pengadaan, penyaluran, perdagangan dan
-                    penyimpanan suatu produk dengan pemanfaatan jaringan
-                    distribusi yang lebih efisien yang diwujudkan dalam
-                    perdagangan secara digital atau ecommerce sehingga dapat
-                    disalurkan kepada anggota koperasi dengan jenis, jumlah dan
-                    harga yang kompetitif sehingga barang atau jasa tersebut
-                    sampai ke konsumen
-                  </span>
-                </div>
+                <Question
+                  title={
+                    <Fragment>
+                      <span className="home-text136">
+                        Digitalisasi Koperasi
+                      </span>
+                    </Fragment>
+                  }
+                  description={
+                    <Fragment>
+                      <span className="home-description4">
+                        <span>
+                          Bantuan teknologi untuk pelayanan, administrasi,
+                          pelaporan dan penerapan standar koperasi dengan
+                          teknologi informasi yang mencakup sistem pengelolaan
+                          (back end) dan sistem antar muka/user interface (front
+                          end) untuk koperasi melayani anggotanya. Platform
+                          Damasta adalah platform koperasi yang disediakan dan
+                          dikembangkan secara khusus oleh
+                          <span
+                            dangerouslySetInnerHTML={{
+                              __html: ' ',
+                            }}
+                          />
+                        </span>
+                        <span className="home-text138">
+                          PT Sinergitas Untuk Negeri
+                        </span>
+                        <span>
+                          {' '}
+                          dengan basis platform Jurnal Digital untuk jaringan
+                          Koperasi Damasta Abhipraya Mandiri (Skd).
+                        </span>
+                        <br></br>
+                        <br></br>
+                        <span>
+                          Platform Damasta inklusif, inovatif, dan menerapkan
+                          praktek bisnis terbaik (kami menempatkan koperasi
+                          sebagai mitra bukan vendor), biaya terjangkau dan
+                          mudah dikustomisasi dan dikonfigurasi. Selain itu
+                          proses migrasi data yang sangat simpel dan cepat.
+                          Dapat dioperasikan oleh siapa saja, dimana saja, kapan
+                          saja.
+                        </span>
+                        <br></br>
+                        <span>
+                          <span
+                            dangerouslySetInnerHTML={{
+                              __html: ' ',
+                            }}
+                          />
+                        </span>
+                      </span>
+                    </Fragment>
+                  }
+                ></Question>
+                <Question
+                  title={
+                    <Fragment>
+                      <span className="home-text145">Pembiayaan</span>
+                    </Fragment>
+                  }
+                  description={
+                    <Fragment>
+                      <span className="home-description5">
+                        <span>
+                          Adalah program bantuan finansial berupa pembinaan,
+                          pengembangan dan peningkatan kapasitas Koperasi
+                          Peserta Apex dalam bentuk pembiayaan atau pinjaman
+                          atau inter lending atau bantuan likuiditas penempatan
+                          dana untuk disalurkan kepada anggota koperasi DAM
+                          dengan memenuhi standar operasi yang ditetapkan. Untuk
+                          program ini, Koperasi DAM bekerja sama dengan beberapa
+                          lembaga keuangan, antara lain BPRS Patriot Kota Bekasi
+                          dan Koperasi-koperasi besar Kota Bekasi
+                        </span>
+                        <br></br>
+                        <span>
+                          <span
+                            dangerouslySetInnerHTML={{
+                              __html: ' ',
+                            }}
+                          />
+                        </span>
+                      </span>
+                    </Fragment>
+                  }
+                ></Question>
+                <Question
+                  title={
+                    <Fragment>
+                      <span className="home-text149">
+                        Logistik dan Distribusi
+                        <span
+                          dangerouslySetInnerHTML={{
+                            __html: ' ',
+                          }}
+                        />
+                      </span>
+                    </Fragment>
+                  }
+                  description={
+                    <Fragment>
+                      <span className="home-description6">
+                        <span>
+                          Adalah suatu program pengadaan, penyaluran,
+                          perdagangan dan penyimpanan suatu produk dengan
+                          pemanfaatan jaringan distribusi yang lebih efisien
+                          yang diwujudkan dalam perdagangan secara digital atau
+                          ecommerce sehingga dapat disalurkan kepada anggota
+                          koperasi dengan jenis, jumlah dan harga yang
+                          kompetitif sehingga barang atau jasa tersebut sampai
+                          ke konsumen
+                        </span>
+                        <br></br>
+                        <span>
+                          <span
+                            dangerouslySetInnerHTML={{
+                              __html: ' ',
+                            }}
+                          />
+                        </span>
+                      </span>
+                    </Fragment>
+                  }
+                ></Question>
+                <Question
+                  title={
+                    <Fragment>
+                      <span className="home-text153">
+                        Pendampingan dan Penguatan Kelembagaan Koperasi dan UMKM
+                        <span
+                          dangerouslySetInnerHTML={{
+                            __html: ' ',
+                          }}
+                        />
+                      </span>
+                    </Fragment>
+                  }
+                  description={
+                    <Fragment>
+                      <span className="home-description7">
+                        <span>
+                          Dalam menjalankan fungsi Apex, Koperasi DAM turut
+                          membantu terselenggaranya kegiatan-kegiatan yang
+                          berkaitan dengan kebutuhan jaringan peserta apex.
+                          Misalkan kegiatan pelatihan dan pengembangan
+                          keterampilan bagi perangkat organisasi koperasi
+                          ataupun bagi anggota koperasi primer. Untuk
+                          menjalankan kegiatan ini, tidak semua koperasi
+                          memiliki kapabilitas dari sisi pendanaan dan
+                          kompetensi, maka koperasi perlu bersama-sama dengan
+                          koperasi lain yang ada dalam jaringan peserta apex
+                          untuk melaksanakannya. Koperasi DAM bekerja sama
+                          dengan LSP Dekopin dapat melaksanakan pendidikan,
+                          pelatihan dan uji kompetensi (bersertifikasi BNSP)
+                          bagi pengurus, pengawas, dan manajer koperasi.
+                          Koperasi DAM juga sedang mempersiapkan Team Inkubasi
+                          yang dapat membantu lahirnya wirausaha-wirausaha yang
+                          tangguh dan berdaya saing melalui PROGRAM INKUBASI.
+                          Begitu halnya dengan kegiatan lainnya yang bisa
+                          difasilitasi melalui program ini antara lain
+                          pelaksanaan bazaar UMKM, pembuatan filler atau video
+                          pendek (rumah produksi / PH), podcast dan event-event
+                          lainnya yang melibatkan massa.
+                        </span>
+                        <br></br>
+                        <span>
+                          <span
+                            dangerouslySetInnerHTML={{
+                              __html: ' ',
+                            }}
+                          />
+                        </span>
+                      </span>
+                    </Fragment>
+                  }
+                ></Question>
               </div>
               <div className="home-column5">
-                <div className="home-question4 Question">
-                  <span className="home-title5">
-                    Pendampingan dan Penguatan Kelembagaan Koperasi dan UMKM
-                  </span>
-                  <span className="home-description7">
-                    <span>
-                      Dalam menjalankan fungsi Apex, Koperasi DAM turut membantu
-                      terselenggaranya kegiatan-kegiatan yang berkaitan dengan
-                      kebutuhan jaringan peserta apex. Misalkan kegiatan
-                      pelatihan dan pengembangan keterampilan bagi perangkat
-                      organisasi koperasi ataupun bagi anggota koperasi primer.
-                      Untuk menjalankan kegiatan ini, tidak semua koperasi
-                      memiliki kapabilitas dari sisi pendanaan dan kompetensi,
-                      maka koperasi perlu bersama-sama dengan koperasi lain yang
-                      ada dalam jaringan peserta apex untuk melaksanakannya.
-                      Koperasi DAM bekerja sama dengan LSP Dekopin dapat
-                      melaksanakan pendidikan, pelatihan dan uji kompetensi
-                      (bersertifikasi BNSP) bagi pengurus, pengawas, dan manajer
-                      koperasi. Koperasi DAM juga sedang mempersiapkan Team
-                      Inkubasi yang dapat membantu lahirnya wirausaha-wirausaha
-                      yang tangguh dan berdaya saing melalui PROGRAM INKUBASI.
-                      Begitu halnya dengan kegiatan lainnya yang bisa
-                      difasilitasi melalui program ini antara lain pelaksanaan
-                      bazaar UMKM, pembuatan filler atau video pendek (rumah
-                      produksi / PH), podcast dan event-event lainnya yang
-                      melibatkan massa.
-                    </span>
-                    <br></br>
-                  </span>
+                <Question
+                  title={
+                    <Fragment>
+                      <span className="home-text157">
+                        Program Perlindungan Sosial Ketenagakerjaan
+                      </span>
+                    </Fragment>
+                  }
+                  description={
+                    <Fragment>
+                      <span className="home-description8">
+                        <span>
+                          Koperasi DAM adalah salah satu Lembaga yang ditunjuk
+                          sebagai Wadah/Kantor perisai BPJS Ketenagakerjaan
+                          sejak tahun 2021. Lembaga ini membantu dalam
+                          penyelenggaraan program Jaminan Sosial Ketenagakerjaan
+                          baik di jaringan Koperasi seluruh Kota Bekasi, maupun
+                          masyarakat umum. Organisasi ini bertugas sebagai
+                          koordinator dari para agen Perisai (Penggerak Jaminan
+                          Sosial Indonesia) BPJS Ketenagakerjaan melalui
+                          Perjanjian Kerjasama (PKS) yang sudah disepakti
+                          bersama. Kantor/Wadah Perisai juga bertugas memastikan
+                          agar seluruh perkerja Indonesia, khususnya pekerja
+                          informal (Bukan Penerima Upah/BPU) dalam komunitas
+                          gerakan koperasi dapat segera memperoleh akses jaminan
+                          sosial, yaitu Jaminan Kecelakaan Kerja (JKK), Jaminan
+                          Kematian (JKM) dan Jaminan Hari Tua (JHT). Koperasi
+                          DAM bersama Dekopinda Kota Bekasi juga turut
+                          mensosialisasikan kepesertaan BPJS Ketenagakerjaan di
+                          kalangan Pengurus dan Pengawas serta Karyawan
+                          Koperasi-koperasi di Kota Bekasi sebagai peserta PU
+                          (Penerima Upah). Hingga saat ini kami dibantu oleh 14
+                          orang agen Perisai aktif.
+                        </span>
+                        <br></br>
+                        <br></br>
+                        <span>
+                          JAMINAN KECELAKAAN KERJA (JKK) | JAMINAN KEMATIAN
+                          (JKM) | JAMINAN HARI TUA
+                          <span
+                            dangerouslySetInnerHTML={{
+                              __html: ' ',
+                            }}
+                          />
+                        </span>
+                        <br></br>
+                        <span>
+                          <span
+                            dangerouslySetInnerHTML={{
+                              __html: ' ',
+                            }}
+                          />
+                        </span>
+                      </span>
+                    </Fragment>
+                  }
+                ></Question>
+                <Question
+                  title={
+                    <Fragment>
+                      <span className="home-text164">Bisnis Sektor Riil</span>
+                    </Fragment>
+                  }
+                  description={
+                    <Fragment>
+                      <span className="home-description9">
+                        <span>
+                          Dalam menjalankan fungsi Apex, Koperasi DAM turut
+                          membantu terselenggaranya kegiatan-kegiatan yang
+                          berkaitan dengan kebutuhan jaringan peserta apex.
+                          Misalkan kegiatan pelatihan dan pengembangan
+                          keterampilan bagi perangkat organisasi koperasi
+                          ataupun bagi anggota koperasi primer. Untuk
+                          menjalankan kegiatan ini, tidak semua koperasi
+                          memiliki kapabilitas dari sisi pendanaan dan
+                          kompetensi, maka koperasi perlu bersama-sama dengan
+                          koperasi lain yang ada dalam jaringan peserta apex
+                          untuk melaksanakannya. Koperasi DAM bekerja sama
+                          dengan LSP Dekopin dapat melaksanakan pendidikan,
+                          pelatihan dan uji kompetensi (bersertifikasi BNSP)
+                          bagi pengurus, pengawas, dan manajer koperasi.
+                          Koperasi DAM juga sedang mempersiapkan Team Inkubasi
+                          yang dapat membantu lahirnya wirausaha-wirausaha yang
+                          tangguh dan berdaya saing melalui PROGRAM INKUBASI.
+                          Begitu halnya dengan kegiatan lainnya yang bisa
+                          difasilitasi melalui program ini antara lain
+                          pelaksanaan bazaar UMKM, pembuatan filler atau video
+                          pendek (rumah produksi / PH), podcast dan event-event
+                          lainnya yang melibatkan massa.
+                          <span
+                            dangerouslySetInnerHTML={{
+                              __html: ' ',
+                            }}
+                          />
+                        </span>
+                        <br></br>
+                        <span>
+                          <span
+                            dangerouslySetInnerHTML={{
+                              __html: ' ',
+                            }}
+                          />
+                        </span>
+                      </span>
+                    </Fragment>
+                  }
+                ></Question>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="home-roadmap">
+          <div className="home-content19">
+            <div className="home-header4">
+              <div className="home-tag3">
+                <span className="home-text168">Roadmap</span>
+              </div>
+              <div className="home-heading15">
+                <h2 className="home-text169">Rencana Bisnis 2025-2026 </h2>
+              </div>
+            </div>
+            <div className="home-pricing-plans">
+              <div className="home-plans1">
+                <div className="home-plan1">
+                  <div className="home-top1">
+                    <div className="home-heading16">
+                      <span className="home-text170">Semester I - 2025</span>
+                      <span className="home-text171">
+                        Sed ut perspiciatis unde omnis iste natus error sit.
+                      </span>
+                    </div>
+                    <div className="home-cost1">
+                      <span className="home-text172">Free</span>
+                    </div>
+                  </div>
+                  <div className="home-bottom1">
+                    <div className="home-check-list1">
+                      <Check
+                        feature="Penguatan infrastuktur Pemodalan dan Operasinal Koperasi DAM"
+                        text={
+                          <Fragment>
+                            <span className="home-text173">
+                              Penguatan infrastuktur Pemodalan dan Operasional
+                              Koperasi DAM.
+                            </span>
+                          </Fragment>
+                        }
+                      ></Check>
+                      <Check
+                        feature="Perencanaan dan Pengembangan IT Core System (Platform Digital Damasta) sebagai pendukung utama, bekerjasama dengan PT Sinergitas Untuk Negeri"
+                        text={
+                          <Fragment>
+                            <span className="home-text174">
+                              Perencanaan dan Pengembangan IT Core System
+                              (platform digital Damasta) sebagai pendukung
+                              utama, bekerjasama dengan PT Sinergitas Untuk
+                              Negeri.
+                            </span>
+                          </Fragment>
+                        }
+                      ></Check>
+                      <Check
+                        feature="Voluptas sit aspernatur aut odit"
+                        text={
+                          <Fragment>
+                            <span className="home-text175">
+                              <span>Penyusunan program prioritas DAM.</span>
+                              <br></br>
+                            </span>
+                          </Fragment>
+                        }
+                      ></Check>
+                    </div>
+                    <div className="home-button1">
+                      <span className="home-text178">Get Standard</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="home-question5 Question">
-                  <span className="home-title6">
-                    <span>Program Perlindungan Sosial Ketenagakerjaan</span>
-                    <br></br>
-                  </span>
-                  <span className="home-description8">
-                    <span>
-                      Koperasi DAM adalah salah satu Lembaga yang ditunjuk
-                      sebagai Wadah/Kantor perisai BPJS Ketenagakerjaan sejak
-                      tahun 2021. Lembaga ini membantu dalam penyelenggaraan
-                      program Jaminan Sosial Ketenagakerjaan baik di jaringan
-                      Koperasi seluruh Kota Bekasi, maupun masyarakat umum.
-                      Organisasi ini bertugas sebagai koordinator dari para agen
-                      Perisai (Penggerak Jaminan Sosial Indonesia) BPJS
-                      Ketenagakerjaan melalui Perjanjian Kerjasama (PKS) yang
-                      sudah disepakti bersama. Kantor/Wadah Perisai juga
-                      bertugas memastikan agar seluruh perkerja Indonesia,
-                      khususnya pekerja informal (Bukan Penerima Upah/BPU) dalam
-                      komunitas gerakan koperasi dapat segera memperoleh akses
-                      jaminan sosial, yaitu Jaminan Kecelakaan Kerja (JKK),
-                      Jaminan Kematian (JKM) dan Jaminan Hari Tua (JHT).
-                      Koperasi DAM bersama Dekopinda Kota Bekasi juga turut
-                      mensosialisasikan kepesertaan BPJS Ketenagakerjaan di
-                      kalangan Pengurus dan Pengawas serta Karyawan
-                      Koperasi-koperasi di Kota Bekasi sebagai peserta PU
-                      (Penerima Upah). Hingga saat ini kami dibantu oleh 14
-                      orang agen Perisai aktif.
-                    </span>
-                    <br></br>
-                    <br></br>
-                    <span>
-                      JAMINAN KECELAKAAN KERJA (JKK) | JAMINAN KEMATIAN (JKM) |
-                      JAMINAN HARI TUA
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html: ' ',
-                        }}
-                      />
-                    </span>
-                    <br></br>
-                    <br></br>
-                  </span>
+                <div className="home-plan2">
+                  <div className="home-top2">
+                    <div className="home-heading17">
+                      <span className="home-text179">Semester II - 2025</span>
+                      <span className="home-text180">
+                        Sed ut perspiciatis unde omnis iste natus error sit.
+                      </span>
+                    </div>
+                    <div className="home-cost2">
+                      <span className="home-text181">$8</span>
+                      <span className="home-text182">/month</span>
+                    </div>
+                  </div>
+                  <div className="home-bottom2">
+                    <div className="home-check-list2">
+                      <Check
+                        text={
+                          <Fragment>
+                            <span className="home-text183">
+                              <span>
+                                Penguatan Infrastruktur Lembaga Pendukung.
+                              </span>
+                              <br></br>
+                            </span>
+                          </Fragment>
+                        }
+                      ></Check>
+                      <Check
+                        feature="Quis nostrud exercitation ulla"
+                        text={
+                          <Fragment>
+                            <span className="home-text186">
+                              <span>
+                                Sosialisasi Program kepada Calon Anggota dan
+                                Mitra.
+                              </span>
+                              <br></br>
+                            </span>
+                          </Fragment>
+                        }
+                      ></Check>
+                      <Check
+                        feature="Duis aute irure dolor intuit"
+                        text={
+                          <Fragment>
+                            <span className="home-text189">
+                              <span>
+                                Fasilitasi Non Keuangan kepada Anggota.
+                              </span>
+                              <br></br>
+                            </span>
+                          </Fragment>
+                        }
+                      ></Check>
+                      <Check
+                        feature="Voluptas sit aspernatur aut odit"
+                        text={
+                          <Fragment>
+                            <span className="home-text192">
+                              <span>Fasilitasi Pembiayaan.</span>
+                              <br></br>
+                            </span>
+                          </Fragment>
+                        }
+                      ></Check>
+                      <Check
+                        feature="Corporis suscipit laboriosam"
+                        text={
+                          <Fragment>
+                            <span className="home-text195">
+                              <span>
+                                Fasilitasi Distribusi Barang dan Jasa.
+                              </span>
+                              <br></br>
+                            </span>
+                          </Fragment>
+                        }
+                      ></Check>
+                      <Check
+                        feature="Corporis suscipit laboriosam"
+                        text={
+                          <Fragment>
+                            <span className="home-text198">
+                              <span>
+                                Pendampingan Teknis dan Inkubasi kepada Anggota.
+                              </span>
+                              <br></br>
+                            </span>
+                          </Fragment>
+                        }
+                      ></Check>
+                    </div>
+                    <div className="home-button2">
+                      <span className="home-text201">Get Standard</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="home-question6 Question">
-                  <span className="home-title7">Bisnis Sektor Riil</span>
-                  <span className="home-description9">
-                    <span>
-                      Adalah program usaha nyata dalam rangka meningkatkan
-                      pendapatan koperasi, serta untuk menunjang terlaksananya 5
-                      program-lainnya, dengan mengoptimalkan kekuatan bersama
-                      dari anggota. Saat ini jumlah koperasi yang bergerak di
-                      Sektor Riil masih rendah, kurang dari 20% dari total
-                      koperasi yang ada di Indonesia. Diharapkan model bisnis
-                      sektor riil yang dijalankan Koperasi DAM menjadi salah
-                      satu alternatif dalam rangka mewujudkan program Pemerintah
-                      saat ini, yaitu swasembada pangan, sehingga diharapkan
-                      akan mendapat dukungan penuh dari pemerintah. Program
-                      Bisnis di sektor riil ini bisa bergerak di bidang
-                      pariwisata-agro, industri kecil, pertanian, dan peternakan
-                      dengan memanfaatkan lahan seluas 1 hektar milik Koperasi
-                      Damasta Abhipraya Mandiri (Skd), yang terletak di desa
-                      Mekargalih, Kecamatan Cikalong Kulon, Kabupaten Cianjur.
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html: ' ',
-                        }}
-                      />
+                <div className="home-plan3">
+                  <div className="home-top3">
+                    <div className="home-heading18">
+                      <span className="home-text202">Semester II - 2025</span>
+                      <span className="home-text203">
+                        Sed ut perspiciatis unde omnis iste natus error sit.
+                      </span>
+                    </div>
+                    <div className="home-cost3">
+                      <span className="home-text204">$8</span>
+                      <span className="home-text205">/month</span>
+                    </div>
+                  </div>
+                  <div className="home-bottom3">
+                    <div className="home-check-list3">
+                      <Check
+                        text={
+                          <Fragment>
+                            <span className="home-text206">
+                              <span>
+                                Penguatan Infrastruktur Lembaga Pendukung.
+                              </span>
+                              <br></br>
+                            </span>
+                          </Fragment>
+                        }
+                      ></Check>
+                      <Check
+                        feature="Quis nostrud exercitation ulla"
+                        text={
+                          <Fragment>
+                            <span className="home-text209">
+                              <span>
+                                Sosialisasi Program kepada Calon Anggota dan
+                                Mitra.
+                              </span>
+                              <br></br>
+                            </span>
+                          </Fragment>
+                        }
+                      ></Check>
+                      <Check
+                        feature="Duis aute irure dolor intuit"
+                        text={
+                          <Fragment>
+                            <span className="home-text212">
+                              <span>
+                                Fasilitasi Non Keuangan kepada Anggota.
+                              </span>
+                              <br></br>
+                            </span>
+                          </Fragment>
+                        }
+                      ></Check>
+                      <Check
+                        feature="Voluptas sit aspernatur aut odit"
+                        text={
+                          <Fragment>
+                            <span className="home-text215">
+                              <span>Fasilitasi Pembiayaan.</span>
+                              <br></br>
+                            </span>
+                          </Fragment>
+                        }
+                      ></Check>
+                      <Check
+                        feature="Corporis suscipit laboriosam"
+                        text={
+                          <Fragment>
+                            <span className="home-text218">
+                              <span>
+                                Fasilitasi Distribusi Barang dan Jasa.
+                              </span>
+                              <br></br>
+                            </span>
+                          </Fragment>
+                        }
+                      ></Check>
+                      <Check
+                        feature="Corporis suscipit laboriosam"
+                        text={
+                          <Fragment>
+                            <span className="home-text221">
+                              <span>
+                                Pendampingan Teknis dan Inkubasi kepada Anggota.
+                              </span>
+                              <br></br>
+                            </span>
+                          </Fragment>
+                        }
+                      ></Check>
+                    </div>
+                    <div className="home-button3">
+                      <span className="home-text224">Get Standard</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="home-plan4">
+                  <div className="home-top4">
+                    <div className="home-heading19">
+                      <span className="home-text225">Semester II - 2026</span>
+                      <span className="home-text226">
+                        Sed ut perspiciatis unde omnis iste natus error sit.
+                      </span>
+                    </div>
+                    <div className="home-cost4">
+                      <span className="home-text227">$16</span>
+                      <span className="home-text228">/month</span>
+                    </div>
+                  </div>
+                  <div className="home-bottom4">
+                    <div className="home-check-list4">
+                      <Check
+                        text={
+                          <Fragment>
+                            <span className="home-text229">
+                              <span>
+                                Fasilitasi dan Koordinasi : Pembiayaan,
+                                Distribusi Barang dan Jasa, Peningkatan SDM
+                                melalui Sertifikasi Kompetensi.
+                              </span>
+                              <br></br>
+                            </span>
+                          </Fragment>
+                        }
+                      ></Check>
+                      <Check
+                        feature="Quis nostrud exercitation ulla"
+                        text={
+                          <Fragment>
+                            <span className="home-text232">
+                              <span>
+                                Perencanaan dan Persiapan Bisnis Sektor Riil
+                                melibatkan jaringan Apex, memanfaatkan lahan
+                                seluas 1 hektar di Cikalong Kulon, Cianjur.
+                              </span>
+                              <br></br>
+                            </span>
+                          </Fragment>
+                        }
+                      ></Check>
+                      <Check
+                        feature="Duis aute irure dolor intuit"
+                        text={
+                          <Fragment>
+                            <span className="home-text235">
+                              <span>
+                                Menjadi Pilot Project Apex Koperasi di
+                                Indonesia.
+                              </span>
+                              <br></br>
+                            </span>
+                          </Fragment>
+                        }
+                      ></Check>
+                    </div>
+                    <div className="home-button4">
+                      <span className="home-text238">Get Standard</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="home-expand1">
+                <div className="home-overlay2">
+                  <div className="home-header5">
+                    <div className="home-heading20">
+                      <span className="home-text239">Expand</span>
+                      <span className="home-text240">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt.
+                      </span>
+                    </div>
+                    <div className="home-check-list5">
+                      <div className="home-check1">
+                        <svg viewBox="0 0 1024 1024" className="home-icon14">
+                          <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+                        </svg>
+                        <span className="home-text241">
+                          Sed ut perspiciatis unde
+                        </span>
+                      </div>
+                      <div className="home-check2">
+                        <svg viewBox="0 0 1024 1024" className="home-icon16">
+                          <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+                        </svg>
+                        <span className="home-text242">
+                          Quis nostrud exercitation ulla
+                        </span>
+                      </div>
+                      <div className="home-check3">
+                        <svg viewBox="0 0 1024 1024" className="home-icon18">
+                          <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+                        </svg>
+                        <span className="home-text243">
+                          Duis aute irure dolor intuit
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="home-button5">
+                    <span className="home-text244">
+                      <span>Contact us</span>
+                      <br></br>
                     </span>
-                    <br></br>
-                    <br></br>
-                    <span>
-                      Dalam waktu dekat rencana usaha yang akan dijalankan
-                      adalah penggemukan sapi potong, dengan melibatkan
-                      koperasi-koperasi primer sebagai investor dan Berkah
-                      Bersama Sejahtera (BBS-Farm) sebagai tenaga ahli.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="home-plans2">
+              <div className="home-plan5">
+                <div className="home-top5">
+                  <div className="home-heading21">
+                    <span className="home-text247">Standard</span>
+                    <span className="home-text248">
+                      Sed ut perspiciatis unde omnis iste natus error sit.
                     </span>
-                    <br></br>
-                    <span>
-                      lokasi lahan : https://maps.app.goo.gl/ztSH12RS5HsW8Tmi6
+                  </div>
+                  <div className="home-cost5">
+                    <span className="home-text249">Free</span>
+                  </div>
+                </div>
+                <div className="home-bottom5">
+                  <div className="home-check-list6">
+                    <Check
+                      text={
+                        <Fragment>
+                          <span className="home-text250">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore
+                            eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.
+                          </span>
+                        </Fragment>
+                      }
+                    ></Check>
+                    <Check
+                      feature="Quis nostrud exercitation ulla"
+                      text={
+                        <Fragment>
+                          <span className="home-text251">
+                            Quis nostrud exercitation ulla
+                          </span>
+                        </Fragment>
+                      }
+                    ></Check>
+                    <Check
+                      feature="Duis aute irure dolor intuit"
+                      text={
+                        <Fragment>
+                          <span className="home-text252">
+                            Duis aute irure dolor intuit
+                          </span>
+                        </Fragment>
+                      }
+                    ></Check>
+                    <Check
+                      feature="Voluptas sit aspernatur aut odit"
+                      text={
+                        <Fragment>
+                          <span className="home-text253">
+                            Voluptas sit aspernatur aut odit
+                          </span>
+                        </Fragment>
+                      }
+                    ></Check>
+                    <Check
+                      feature="Corporis suscipit laboriosam"
+                      text={
+                        <Fragment>
+                          <span className="home-text254">
+                            Corporis suscipit laboriosam
+                          </span>
+                        </Fragment>
+                      }
+                    ></Check>
+                  </div>
+                  <div className="home-button6">
+                    <span className="home-text255">Get Standard</span>
+                  </div>
+                </div>
+              </div>
+              <div className="home-plan6">
+                <div className="home-top6">
+                  <div className="home-heading22">
+                    <span className="home-text256">Plus</span>
+                    <span className="home-text257">
+                      Sed ut perspiciatis unde omnis iste natus error sit.
                     </span>
-                    <br></br>
-                    <br></br>
-                    <span>
-                      Juga berencana memanfaatkan tenant premium di Rest Area Km
-                      39 di Tol Jakarta-Cikampek untuk digunakan sebagai usaha
-                      bersama milik jaringan apex Damasta
+                  </div>
+                  <div className="home-cost6">
+                    <span className="home-text258">$8</span>
+                    <span className="home-text259">/month</span>
+                  </div>
+                </div>
+                <div className="home-bottom6">
+                  <div className="home-check-list7">
+                    <Check
+                      text={
+                        <Fragment>
+                          <span className="home-text260">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore
+                            eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.
+                          </span>
+                        </Fragment>
+                      }
+                    ></Check>
+                    <Check
+                      feature="Quis nostrud exercitation ulla"
+                      text={
+                        <Fragment>
+                          <span className="home-text261">
+                            Quis nostrud exercitation ulla
+                          </span>
+                        </Fragment>
+                      }
+                    ></Check>
+                    <Check
+                      feature="Duis aute irure dolor intuit"
+                      text={
+                        <Fragment>
+                          <span className="home-text262">
+                            Duis aute irure dolor intuit
+                          </span>
+                        </Fragment>
+                      }
+                    ></Check>
+                    <Check
+                      feature="Voluptas sit aspernatur aut odit"
+                      text={
+                        <Fragment>
+                          <span className="home-text263">
+                            Voluptas sit aspernatur aut odit
+                          </span>
+                        </Fragment>
+                      }
+                    ></Check>
+                    <Check
+                      feature="Corporis suscipit laboriosam"
+                      text={
+                        <Fragment>
+                          <span className="home-text264">
+                            Corporis suscipit laboriosam
+                          </span>
+                        </Fragment>
+                      }
+                    ></Check>
+                  </div>
+                  <div className="home-button7">
+                    <span className="home-text265">Get Plus</span>
+                  </div>
+                </div>
+              </div>
+              <div className="home-plan7">
+                <div className="home-top7">
+                  <div className="home-heading23">
+                    <span className="home-text266">Premium</span>
+                    <span className="home-text267">
+                      Sed ut perspiciatis unde omnis iste natus error sit.
                     </span>
-                    <br></br>
-                    <br></br>
-                    <span>
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html: ' ',
-                        }}
-                      />
+                  </div>
+                  <div className="home-cost7">
+                    <span className="home-text268">$16</span>
+                    <span className="home-text269">/month</span>
+                  </div>
+                </div>
+                <div className="home-bottom7">
+                  <div className="home-check-list8">
+                    <Check
+                      text={
+                        <Fragment>
+                          <span className="home-text270">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore
+                            eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.
+                          </span>
+                        </Fragment>
+                      }
+                    ></Check>
+                    <Check
+                      feature="Quis nostrud exercitation ulla"
+                      text={
+                        <Fragment>
+                          <span className="home-text271">
+                            Quis nostrud exercitation ulla
+                          </span>
+                        </Fragment>
+                      }
+                    ></Check>
+                    <Check
+                      feature="Duis aute irure dolor intuit"
+                      text={
+                        <Fragment>
+                          <span className="home-text272">
+                            Duis aute irure dolor intuit
+                          </span>
+                        </Fragment>
+                      }
+                    ></Check>
+                    <Check
+                      feature="Voluptas sit aspernatur aut odit"
+                      text={
+                        <Fragment>
+                          <span className="home-text273">
+                            Voluptas sit aspernatur aut odit
+                          </span>
+                        </Fragment>
+                      }
+                    ></Check>
+                    <Check
+                      feature="Corporis suscipit laboriosam"
+                      text={
+                        <Fragment>
+                          <span className="home-text274">
+                            Corporis suscipit laboriosam
+                          </span>
+                        </Fragment>
+                      }
+                    ></Check>
+                  </div>
+                  <div className="home-button8">
+                    <span className="home-text275">Get Plus</span>
+                  </div>
+                </div>
+              </div>
+              <div className="home-expand2">
+                <div className="home-overlay3">
+                  <div className="home-header6">
+                    <div className="home-heading24">
+                      <span className="home-text276">Expand</span>
+                      <span className="home-text277">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt.
+                      </span>
+                    </div>
+                    <div className="home-check-list9">
+                      <div className="home-check4">
+                        <svg viewBox="0 0 1024 1024" className="home-icon20">
+                          <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+                        </svg>
+                        <span className="home-text278">
+                          Sed ut perspiciatis unde
+                        </span>
+                      </div>
+                      <div className="home-check5">
+                        <svg viewBox="0 0 1024 1024" className="home-icon22">
+                          <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+                        </svg>
+                        <span className="home-text279">
+                          Quis nostrud exercitation ulla
+                        </span>
+                      </div>
+                      <div className="home-check6">
+                        <svg viewBox="0 0 1024 1024" className="home-icon24">
+                          <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+                        </svg>
+                        <span className="home-text280">
+                          Duis aute irure dolor intuit
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="home-button9">
+                    <span className="home-text281">
+                      <span>Contact us</span>
+                      <br></br>
                     </span>
-                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="home-help">
+            <span className="home-text284">Ingin membantu?</span>
+            <div className="home-explore3">
+              <span className="home-text285">Bergabung dengan kami -&gt;</span>
+            </div>
+          </div>
+        </div>
+        <div className="home-sections2">
+          <div className="home-section4">
+            <div className="home-content20">
+              <div className="home-heading25">
+                <h2 className="home-text286">Syarat Keanggotaan</h2>
+                <span className="home-text287">
+                  Sesuai Pasal 10 AD Koperasi Damasta Abhipraya Mandiri (Skd),
+                  Anggota Koperasi DAM adalah Koperasi Primer yang telah
+                  berbadan Hukum, dan berdomisili di Kota Bekasi
+                </span>
+              </div>
+              <div className="home-content21">
+                <div className="home-points2">
+                  <Point></Point>
+                  <Point text=" Membayar Simpanan Pokok sebesar Rp.5.000.000 dan Simpanan Wajib minimal sebesar Rp.100.000 per bulan."></Point>
+                  <Point text=" Berlangganan platform koperasi digital Damasta."></Point>
+                  <Point text="  Menyetujui AD/ART serta peraturan-peraturan yang berlaku di Koperasi Damasta Abhipraya Mandiri (Skd)."></Point>
+                </div>
+                <Link href="/">
+                  <a className="home-link3">
+                    <div className="home-get-started2">
+                      <span className="home-sign-up2">Bergabung sekarang</span>
+                    </div>
+                  </a>
+                </Link>
+              </div>
+            </div>
+            <div className="home-image4"></div>
+          </div>
+          <div className="home-section5">
+            <div className="home-content22">
+              <div className="home-heading26">
+                <h2 className="home-text288">Syarat Kemitraan</h2>
+                <span className="home-text289">
+                  Fungsi Apex DAM bertujuan untuk mewujudkan tata kelola
+                  koperasi yang baik dan sehat, serta dapat menolong dirinya
+                  sendiri. Kerja sama antar koperasi dan/dengan lembaga lainnya
+                  yang memilikii visi yang sama, menjadi bagian penting untuk
+                  koperasi ke depannya menjadi mandiri dan kokoh dalam
+                  menghadapi dinamika ke depan.
+                </span>
+              </div>
+              <div className="home-content23">
+                <div className="home-points3">
+                  <Point text=" Organisasi atau Badan Usaha yang memiliki  legalitas yang jelas."></Point>
+                  <Point text="   Mempunyai tujuan umum yang sama."></Point>
+                  <Point text="   Kesetaraan."></Point>
+                  <Point text="     Saling menghargai dan saling memberi kontribusi."></Point>
+                  <Point text="       Sinergi program-programnya."></Point>
+                  <Point text="       Saling menguntungkan."></Point>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="home-get-started2">
-          <div className="home-content20">
-            <div className="home-heading24">
-              <h2 className="home-text215">Jadi bagian gerakan ini!</h2>
-              <span className="home-text216">
+        <div className="home-get-started3">
+          <div className="home-content24">
+            <div className="home-heading27">
+              <h2 className="home-text290">Jadi bagian gerakan ini!</h2>
+              <span className="home-text291">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore magna.
               </span>
@@ -952,7 +1484,7 @@ const Home = (props) => {
         <Footer
           text2={
             <Fragment>
-              <span className="home-text217">
+              <span className="home-text292">
                 <span>KOPERASI DAMASTA ABHIPRAYA MANDIRI (Skd)</span>
                 <br></br>
               </span>
@@ -960,7 +1492,7 @@ const Home = (props) => {
           }
           text21={
             <Fragment>
-              <span className="home-text220">
+              <span className="home-text295">
                 <span>Jl. Letnan Arsyad No. 23 RT006/012</span>
                 <br></br>
                 <span>Kel. Kayuringin Jaya</span>
@@ -973,7 +1505,6 @@ const Home = (props) => {
             </Fragment>
           }
           pastedImageSrc="/Damasta/logo-damasta-without-tagline-white-200h.png"
-          text="© 2025 Damasta. All Rights Reserved."
         ></Footer>
       </div>
       <style jsx>
@@ -1030,7 +1561,7 @@ const Home = (props) => {
             padding-bottom: var(--dl-layout-space-sixunits);
             justify-content: center;
           }
-          .home-title1 {
+          .home-title {
             font-size: 64px;
             font-style: normal;
             font-family: 'Poppins';
@@ -1366,7 +1897,7 @@ const Home = (props) => {
             font-family: Poppins;
             line-height: 27px;
           }
-          .home-sections {
+          .home-sections1 {
             width: 100%;
             display: flex;
             max-width: 1200px;
@@ -1498,7 +2029,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .home-points {
+          .home-points1 {
             gap: var(--dl-layout-space-unit);
             display: flex;
             align-items: flex-start;
@@ -1525,7 +2056,7 @@ const Home = (props) => {
           .home-get-started1:hover {
             background-color: rgba(173, 226, 223, 0.5);
           }
-          .home-sign-up {
+          .home-sign-up1 {
             font-style: normal;
             font-weight: 500;
           }
@@ -1595,6 +2126,12 @@ const Home = (props) => {
             font-weight: 600;
             line-height: 56px;
           }
+          .home-text125 {
+            display: inline-block;
+          }
+          .home-text126 {
+            display: inline-block;
+          }
           .home-banner-container {
             width: 100%;
             display: flex;
@@ -1630,7 +2167,7 @@ const Home = (props) => {
             justify-content: center;
             background-image: url('/mask%20group.svg');
           }
-          .home-text125 {
+          .home-text127 {
             color: rgb(193, 255, 252);
             width: 100%;
             font-size: 40px;
@@ -1656,7 +2193,7 @@ const Home = (props) => {
           .home-book-btn:hover {
             background-color: rgba(0, 0, 0, 0.5);
           }
-          .home-text126 {
+          .home-text128 {
             color: rgb(255, 255, 255);
             width: 100%;
             max-width: 490px;
@@ -1699,7 +2236,7 @@ const Home = (props) => {
             justify-content: center;
             background-color: #d6f1f0;
           }
-          .home-text127 {
+          .home-text129 {
             font-style: normal;
             font-weight: 500;
           }
@@ -1710,7 +2247,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .home-text128 {
+          .home-text130 {
             width: 100%;
             font-size: 40px;
             max-width: 400px;
@@ -1718,7 +2255,7 @@ const Home = (props) => {
             font-weight: 600;
             line-height: 56px;
           }
-          .home-text129 {
+          .home-text131 {
             width: 100%;
             font-size: 18px;
             max-width: 600px;
@@ -1731,977 +2268,6 @@ const Home = (props) => {
             align-items: flex-start;
             flex-direction: row;
             justify-content: flex-start;
-          }
-          .home-pricing {
-            width: 100%;
-            display: none;
-            align-items: center;
-            padding-top: var(--dl-layout-space-sixunits);
-            padding-left: var(--dl-layout-space-oneandhalfunits);
-            border-radius: 16px;
-            padding-right: var(--dl-layout-space-oneandhalfunits);
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-sixunits);
-            background-color: #f3f5fa;
-          }
-          .home-content17 {
-            gap: var(--dl-layout-space-fiveunits);
-            width: 100%;
-            display: flex;
-            max-width: 1200px;
-            align-items: center;
-            flex-direction: column;
-          }
-          .home-header3 {
-            gap: var(--dl-layout-space-oneandhalfunits);
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: flex-start;
-          }
-          .home-tag2 {
-            display: flex;
-            align-items: center;
-            padding-top: var(--dl-layout-space-halfunit);
-            padding-left: var(--dl-layout-space-unit);
-            border-radius: var(--dl-layout-radius-radius8);
-            padding-right: var(--dl-layout-space-unit);
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-halfunit);
-            justify-content: center;
-            background-color: #d6f1f0;
-          }
-          .home-text130 {
-            font-style: normal;
-            font-weight: 500;
-          }
-          .home-heading14 {
-            gap: var(--dl-layout-space-unit);
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: flex-start;
-          }
-          .home-text131 {
-            width: 100%;
-            font-size: 40px;
-            max-width: 600px;
-            font-style: normal;
-            text-align: center;
-            font-family: Poppins;
-            font-weight: 600;
-            line-height: 56px;
-          }
-          .home-pricing-plans {
-            flex: 1;
-            width: 100%;
-            display: grid;
-            overflow: hidden;
-            align-items: flex-start;
-            border-color: #dbdbdb;
-            border-width: 1px;
-            border-radius: 16px;
-            flex-direction: row;
-            justify-content: flex-start;
-            background-color: #375ee0;
-            grid-template-columns: auto auto;
-          }
-          .home-plans1 {
-            flex: 1;
-            height: 100%;
-            display: grid;
-            padding-top: var(--dl-layout-space-twounits);
-            padding-left: TwoUnits;
-            padding-bottom: var(--dl-layout-space-twounits);
-            background-color: #ffffff;
-            grid-template-columns: auto auto auto;
-          }
-          .home-plan1 {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            max-width: 300px;
-            align-items: flex-start;
-            border-color: #dbdbdb;
-            padding-left: var(--dl-layout-space-twounits);
-            padding-right: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            justify-content: flex-start;
-            border-right-width: 1px;
-          }
-          .home-top1 {
-            gap: var(--dl-layout-space-oneandhalfunits);
-            display: flex;
-            align-items: flex-start;
-            border-color: #dbdbdb;
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-twounits);
-            justify-content: flex-start;
-            border-bottom-width: 1px;
-          }
-          .home-heading15 {
-            gap: var(--dl-layout-space-unit);
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: flex-start;
-          }
-          .home-text132 {
-            font-size: 20px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 600;
-          }
-          .home-text133 {
-            font-family: Poppins;
-            line-height: 24px;
-          }
-          .home-cost1 {
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: flex-start;
-          }
-          .home-text134 {
-            font-size: 40px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 600;
-            line-height: 40px;
-          }
-          .home-bottom1 {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: flex-start;
-            padding-top: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            justify-content: space-between;
-          }
-          .home-check-list1 {
-            gap: var(--dl-layout-space-halfunit);
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-threeunits);
-            justify-content: flex-start;
-          }
-          .home-button1 {
-            width: 100%;
-            cursor: pointer;
-            display: flex;
-            transition: 0.3s;
-            align-items: center;
-            padding-top: var(--dl-layout-space-oneandhalfunits);
-            padding-left: var(--dl-layout-space-twounits);
-            border-radius: var(--dl-layout-radius-radius8);
-            padding-right: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-oneandhalfunits);
-            justify-content: center;
-            background-color: #ade2df;
-          }
-          .home-button1:hover {
-            background-color: rgba(173, 226, 223, 0.5);
-          }
-          .home-text135 {
-            font-style: normal;
-            font-weight: 500;
-          }
-          .home-plan2 {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            max-width: 300px;
-            align-items: flex-start;
-            border-color: #dbdbdb;
-            padding-left: var(--dl-layout-space-twounits);
-            padding-right: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            justify-content: space-between;
-            border-right-width: 1px;
-          }
-          .home-top2 {
-            gap: var(--dl-layout-space-oneandhalfunits);
-            display: flex;
-            align-items: flex-start;
-            border-color: #dbdbdb;
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-twounits);
-            justify-content: flex-start;
-            border-bottom-width: 1px;
-          }
-          .home-heading16 {
-            gap: var(--dl-layout-space-unit);
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: flex-start;
-          }
-          .home-text136 {
-            font-size: 20px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 600;
-          }
-          .home-text137 {
-            font-family: Poppins;
-            line-height: 24px;
-          }
-          .home-cost2 {
-            gap: var(--dl-layout-space-halfunit);
-            width: 100%;
-            display: flex;
-            align-items: flex-end;
-            flex-direction: row;
-            justify-content: flex-start;
-          }
-          .home-text138 {
-            font-size: 40px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 600;
-            line-height: 40px;
-          }
-          .home-text139 {
-            font-family: Poppins;
-          }
-          .home-bottom2 {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: flex-start;
-            padding-top: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            justify-content: space-between;
-          }
-          .home-check-list2 {
-            gap: var(--dl-layout-space-halfunit);
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-threeunits);
-            justify-content: flex-start;
-          }
-          .home-button2 {
-            width: 100%;
-            cursor: pointer;
-            display: flex;
-            transition: 0.3s;
-            align-items: center;
-            padding-top: var(--dl-layout-space-oneandhalfunits);
-            padding-left: var(--dl-layout-space-twounits);
-            border-radius: var(--dl-layout-radius-radius8);
-            padding-right: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-oneandhalfunits);
-            justify-content: center;
-            background-color: #ade2df;
-          }
-          .home-button2:hover {
-            background-color: rgba(173, 226, 223, 0.5);
-          }
-          .home-text140 {
-            font-style: normal;
-            font-weight: 500;
-          }
-          .home-plan3 {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            max-width: 300px;
-            align-items: flex-start;
-            padding-left: var(--dl-layout-space-twounits);
-            padding-right: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            justify-content: space-between;
-          }
-          .home-top3 {
-            gap: var(--dl-layout-space-oneandhalfunits);
-            display: flex;
-            align-items: flex-start;
-            border-color: #dbdbdb;
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-twounits);
-            justify-content: flex-start;
-            border-bottom-width: 1px;
-          }
-          .home-heading17 {
-            gap: var(--dl-layout-space-unit);
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: flex-start;
-          }
-          .home-text141 {
-            font-size: 20px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 600;
-          }
-          .home-text142 {
-            font-family: Poppins;
-            line-height: 24px;
-          }
-          .home-cost3 {
-            gap: var(--dl-layout-space-halfunit);
-            width: 100%;
-            display: flex;
-            align-items: flex-end;
-            flex-direction: row;
-            justify-content: flex-start;
-          }
-          .home-text143 {
-            font-size: 40px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 600;
-            line-height: 40px;
-          }
-          .home-text144 {
-            font-family: Poppins;
-          }
-          .home-bottom3 {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: flex-start;
-            padding-top: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            justify-content: space-between;
-          }
-          .home-check-list3 {
-            gap: var(--dl-layout-space-halfunit);
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-threeunits);
-            justify-content: flex-start;
-          }
-          .home-button3 {
-            width: 100%;
-            cursor: pointer;
-            display: flex;
-            transition: 0.3s;
-            align-items: center;
-            padding-top: var(--dl-layout-space-oneandhalfunits);
-            padding-left: var(--dl-layout-space-twounits);
-            border-radius: var(--dl-layout-radius-radius8);
-            padding-right: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-oneandhalfunits);
-            justify-content: center;
-            background-color: #ade2df;
-          }
-          .home-button3:hover {
-            background-color: rgba(173, 226, 223, 0.5);
-          }
-          .home-text145 {
-            font-style: normal;
-            font-weight: 500;
-          }
-          .home-expand1 {
-            flex: 0.3;
-            height: 100%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: space-between;
-          }
-          .home-overlay2 {
-            flex: 1;
-            display: flex;
-            padding: var(--dl-layout-space-twounits);
-            align-items: center;
-            flex-direction: column;
-            background-size: cover;
-            justify-content: space-between;
-            background-image: url('/planbackground.svg');
-          }
-          .home-header4 {
-            gap: var(--dl-layout-space-twounits);
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: flex-start;
-          }
-          .home-heading18 {
-            gap: var(--dl-layout-space-unit);
-            width: 100%;
-            display: flex;
-            max-width: 256px;
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: flex-start;
-          }
-          .home-text146 {
-            color: #ffffff;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 600;
-          }
-          .home-text147 {
-            color: #c1fffc;
-            font-size: 24px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 500;
-            line-height: 31px;
-          }
-          .home-check-list4 {
-            gap: var(--dl-layout-space-halfunit);
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: flex-start;
-          }
-          .home-check1 {
-            gap: var(--dl-layout-space-halfunit);
-            display: flex;
-            position: relative;
-            align-items: center;
-            flex-direction: row;
-            justify-content: flex-start;
-          }
-          .home-icon10 {
-            fill: #ffffff;
-            width: 18px;
-            height: 18px;
-          }
-          .home-text148 {
-            color: #ffffff;
-            font-size: 14px;
-            font-family: Poppins;
-            line-height: 24px;
-          }
-          .home-check2 {
-            gap: var(--dl-layout-space-halfunit);
-            display: flex;
-            position: relative;
-            align-items: center;
-            flex-direction: row;
-            justify-content: flex-start;
-          }
-          .home-icon12 {
-            fill: #ffffff;
-            width: 18px;
-            height: 18px;
-          }
-          .home-text149 {
-            color: rgb(255, 255, 255);
-            font-size: 14px;
-            font-family: Poppins;
-            line-height: 24px;
-          }
-          .home-check3 {
-            gap: var(--dl-layout-space-halfunit);
-            display: flex;
-            position: relative;
-            align-items: center;
-            flex-direction: row;
-            justify-content: flex-start;
-          }
-          .home-icon14 {
-            fill: #ffffff;
-            width: 18px;
-            height: 18px;
-          }
-          .home-text150 {
-            color: rgb(255, 255, 255);
-            font-size: 14px;
-            font-family: Poppins;
-            line-height: 24px;
-          }
-          .home-button4 {
-            width: 100%;
-            cursor: pointer;
-            display: flex;
-            transition: 0.3s;
-            align-items: center;
-            padding-top: var(--dl-layout-space-oneandhalfunits);
-            padding-left: var(--dl-layout-space-twounits);
-            border-radius: var(--dl-layout-radius-radius8);
-            padding-right: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-oneandhalfunits);
-            justify-content: center;
-            background-color: #000000;
-          }
-          .home-button4:hover {
-            background-color: rgba(0, 0, 0, 0.5);
-          }
-          .home-text151 {
-            color: rgb(255, 255, 255);
-            font-style: normal;
-            font-weight: 500;
-          }
-          .home-plans2 {
-            width: 100%;
-            height: 100%;
-            display: none;
-            align-items: center;
-            flex-direction: column;
-          }
-          .home-plan4 {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            max-width: 300px;
-            align-items: flex-start;
-            border-color: #dbdbdb;
-            padding-left: var(--dl-layout-space-twounits);
-            padding-right: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            justify-content: flex-start;
-            border-right-width: 1px;
-          }
-          .home-top4 {
-            gap: var(--dl-layout-space-oneandhalfunits);
-            display: flex;
-            align-items: flex-start;
-            border-color: #dbdbdb;
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-twounits);
-            justify-content: flex-start;
-            border-bottom-width: 1px;
-          }
-          .home-heading19 {
-            gap: var(--dl-layout-space-unit);
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: flex-start;
-          }
-          .home-text154 {
-            font-size: 20px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 600;
-          }
-          .home-text155 {
-            font-family: Poppins;
-            line-height: 24px;
-          }
-          .home-cost4 {
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: flex-start;
-          }
-          .home-text156 {
-            font-size: 40px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 600;
-            line-height: 40px;
-          }
-          .home-bottom4 {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: flex-start;
-            padding-top: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            justify-content: space-between;
-          }
-          .home-check-list5 {
-            gap: var(--dl-layout-space-halfunit);
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-threeunits);
-            justify-content: flex-start;
-          }
-          .home-button5 {
-            width: 100%;
-            cursor: pointer;
-            display: flex;
-            transition: 0.3s;
-            align-items: center;
-            padding-top: var(--dl-layout-space-oneandhalfunits);
-            padding-left: var(--dl-layout-space-twounits);
-            border-radius: var(--dl-layout-radius-radius8);
-            padding-right: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-oneandhalfunits);
-            justify-content: center;
-            background-color: #ade2df;
-          }
-          .home-button5:hover {
-            background-color: rgba(173, 226, 223, 0.5);
-          }
-          .home-text157 {
-            font-style: normal;
-            font-weight: 500;
-          }
-          .home-plan5 {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            max-width: 300px;
-            align-items: flex-start;
-            border-color: #dbdbdb;
-            padding-left: var(--dl-layout-space-twounits);
-            padding-right: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            justify-content: space-between;
-            border-right-width: 1px;
-          }
-          .home-top5 {
-            gap: var(--dl-layout-space-oneandhalfunits);
-            display: flex;
-            align-items: flex-start;
-            border-color: #dbdbdb;
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-twounits);
-            justify-content: flex-start;
-            border-bottom-width: 1px;
-          }
-          .home-heading20 {
-            gap: var(--dl-layout-space-unit);
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: flex-start;
-          }
-          .home-text158 {
-            font-size: 20px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 600;
-          }
-          .home-text159 {
-            font-family: Poppins;
-            line-height: 24px;
-          }
-          .home-cost5 {
-            gap: var(--dl-layout-space-halfunit);
-            width: 100%;
-            display: flex;
-            align-items: flex-end;
-            flex-direction: row;
-            justify-content: flex-start;
-          }
-          .home-text160 {
-            font-size: 40px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 600;
-            line-height: 40px;
-          }
-          .home-text161 {
-            font-family: Poppins;
-          }
-          .home-bottom5 {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: flex-start;
-            padding-top: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            justify-content: space-between;
-          }
-          .home-check-list6 {
-            gap: var(--dl-layout-space-halfunit);
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-threeunits);
-            justify-content: flex-start;
-          }
-          .home-button6 {
-            width: 100%;
-            cursor: pointer;
-            display: flex;
-            transition: 0.3s;
-            align-items: center;
-            padding-top: var(--dl-layout-space-oneandhalfunits);
-            padding-left: var(--dl-layout-space-twounits);
-            border-radius: var(--dl-layout-radius-radius8);
-            padding-right: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-oneandhalfunits);
-            justify-content: center;
-            background-color: #ade2df;
-          }
-          .home-button6:hover {
-            background-color: rgba(173, 226, 223, 0.5);
-          }
-          .home-text162 {
-            font-style: normal;
-            font-weight: 500;
-          }
-          .home-plan6 {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            max-width: 300px;
-            align-items: flex-start;
-            border-color: #dbdbdb;
-            padding-left: var(--dl-layout-space-twounits);
-            padding-right: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            justify-content: space-between;
-            border-right-width: 1px;
-          }
-          .home-top6 {
-            gap: var(--dl-layout-space-oneandhalfunits);
-            display: flex;
-            align-items: flex-start;
-            border-color: #dbdbdb;
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-twounits);
-            justify-content: flex-start;
-            border-bottom-width: 1px;
-          }
-          .home-heading21 {
-            gap: var(--dl-layout-space-unit);
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: flex-start;
-          }
-          .home-text163 {
-            font-size: 20px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 600;
-          }
-          .home-text164 {
-            font-family: Poppins;
-            line-height: 24px;
-          }
-          .home-cost6 {
-            gap: var(--dl-layout-space-halfunit);
-            width: 100%;
-            display: flex;
-            align-items: flex-end;
-            flex-direction: row;
-            justify-content: flex-start;
-          }
-          .home-text165 {
-            font-size: 40px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 600;
-            line-height: 40px;
-          }
-          .home-text166 {
-            font-family: Poppins;
-          }
-          .home-bottom6 {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: flex-start;
-            padding-top: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            justify-content: space-between;
-          }
-          .home-check-list7 {
-            gap: var(--dl-layout-space-halfunit);
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-threeunits);
-            justify-content: flex-start;
-          }
-          .home-button7 {
-            width: 100%;
-            cursor: pointer;
-            display: flex;
-            transition: 0.3s;
-            align-items: center;
-            padding-top: var(--dl-layout-space-oneandhalfunits);
-            padding-left: var(--dl-layout-space-twounits);
-            border-radius: var(--dl-layout-radius-radius8);
-            padding-right: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-oneandhalfunits);
-            justify-content: center;
-            background-color: #ade2df;
-          }
-          .home-button7:hover {
-            background-color: rgba(173, 226, 223, 0.5);
-          }
-          .home-text167 {
-            font-style: normal;
-            font-weight: 500;
-          }
-          .home-expand2 {
-            flex: 0.3;
-            height: 100%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: space-between;
-          }
-          .home-overlay3 {
-            flex: 1;
-            display: flex;
-            padding: var(--dl-layout-space-twounits);
-            align-items: center;
-            flex-direction: column;
-            background-size: cover;
-            justify-content: space-between;
-            background-image: url('/planbackground.svg');
-          }
-          .home-header5 {
-            gap: var(--dl-layout-space-twounits);
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: flex-start;
-          }
-          .home-heading22 {
-            gap: var(--dl-layout-space-unit);
-            width: 100%;
-            display: flex;
-            max-width: 256px;
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: flex-start;
-          }
-          .home-text168 {
-            color: #ffffff;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 600;
-          }
-          .home-text169 {
-            color: #c1fffc;
-            font-size: 24px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 500;
-            line-height: 31px;
-          }
-          .home-check-list8 {
-            gap: var(--dl-layout-space-halfunit);
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: flex-start;
-          }
-          .home-check4 {
-            gap: var(--dl-layout-space-halfunit);
-            display: flex;
-            position: relative;
-            align-items: center;
-            flex-direction: row;
-            justify-content: flex-start;
-          }
-          .home-icon16 {
-            fill: #ffffff;
-            width: 18px;
-            height: 18px;
-          }
-          .home-text170 {
-            color: #ffffff;
-            font-size: 14px;
-            font-family: Poppins;
-            line-height: 24px;
-          }
-          .home-check5 {
-            gap: var(--dl-layout-space-halfunit);
-            display: flex;
-            position: relative;
-            align-items: center;
-            flex-direction: row;
-            justify-content: flex-start;
-          }
-          .home-icon18 {
-            fill: #ffffff;
-            width: 18px;
-            height: 18px;
-          }
-          .home-text171 {
-            color: rgb(255, 255, 255);
-            font-size: 14px;
-            font-family: Poppins;
-            line-height: 24px;
-          }
-          .home-check6 {
-            gap: var(--dl-layout-space-halfunit);
-            display: flex;
-            position: relative;
-            align-items: center;
-            flex-direction: row;
-            justify-content: flex-start;
-          }
-          .home-icon20 {
-            fill: #ffffff;
-            width: 18px;
-            height: 18px;
-          }
-          .home-text172 {
-            color: rgb(255, 255, 255);
-            font-size: 14px;
-            font-family: Poppins;
-            line-height: 24px;
-          }
-          .home-button8 {
-            width: 100%;
-            cursor: pointer;
-            display: flex;
-            transition: 0.3s;
-            align-items: center;
-            padding-top: var(--dl-layout-space-oneandhalfunits);
-            padding-left: var(--dl-layout-space-twounits);
-            border-radius: var(--dl-layout-radius-radius8);
-            padding-right: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-oneandhalfunits);
-            justify-content: center;
-            background-color: #000000;
-          }
-          .home-button8:hover {
-            background-color: rgba(0, 0, 0, 0.5);
-          }
-          .home-text173 {
-            color: rgb(255, 255, 255);
-            font-style: normal;
-            font-weight: 500;
-          }
-          .home-help {
-            gap: var(--dl-layout-space-halfunit);
-            display: flex;
-            align-items: flex-start;
-            padding-top: var(--dl-layout-space-threeunits);
-            flex-direction: row;
-          }
-          .home-text176 {
-            font-family: Poppins;
-          }
-          .home-explore3 {
-            cursor: pointer;
-            display: flex;
-            transition: 0.3s;
-            align-items: flex-start;
-            border-width: 0px;
-            flex-direction: column;
-            padding-bottom: 4px;
-            border-bottom-width: 1px;
-          }
-          .home-explore3:hover {
-            color: rgba(0, 0, 0, 0.5);
-            border-color: rgba(0, 0, 0, 0.3);
-          }
-          .home-text177 {
-            font-style: normal;
-            font-weight: 600;
           }
           .home-testimonials {
             width: 100%;
@@ -2728,7 +2294,7 @@ const Home = (props) => {
             width: 25px;
             height: 24px;
           }
-          .home-content18 {
+          .home-content17 {
             display: flex;
             position: relative;
             align-items: stretch;
@@ -2766,7 +2332,7 @@ const Home = (props) => {
             fill: #000;
             border-color: #000;
           }
-          .home-icon22 {
+          .home-icon10 {
             width: 19px;
             height: 19px;
           }
@@ -2786,14 +2352,14 @@ const Home = (props) => {
             fill: #000;
             border-color: #000;
           }
-          .home-icon24 {
+          .home-icon12 {
             width: 19px;
             height: 19px;
           }
           .home-container3 {
             display: contents;
           }
-          .home-faq {
+          .home-program5-tahun {
             width: 100%;
             display: flex;
             align-items: center;
@@ -2805,7 +2371,7 @@ const Home = (props) => {
             padding-bottom: var(--dl-layout-space-sixunits);
             background-color: #f3f5fa;
           }
-          .home-content19 {
+          .home-content18 {
             gap: var(--dl-layout-space-fiveunits);
             width: 100%;
             display: flex;
@@ -2813,14 +2379,14 @@ const Home = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .home-header6 {
+          .home-header3 {
             gap: var(--dl-layout-space-oneandhalfunits);
             display: flex;
             align-items: center;
             flex-direction: column;
             justify-content: flex-start;
           }
-          .home-tag3 {
+          .home-tag2 {
             display: flex;
             align-items: center;
             padding-top: var(--dl-layout-space-halfunit);
@@ -2832,18 +2398,18 @@ const Home = (props) => {
             justify-content: center;
             background-color: #d6f1f0;
           }
-          .home-text178 {
+          .home-text132 {
             font-style: normal;
             font-weight: 500;
           }
-          .home-heading23 {
+          .home-heading14 {
             gap: var(--dl-layout-space-unit);
             display: flex;
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
           }
-          .home-text181 {
+          .home-text135 {
             width: 100%;
             font-size: 40px;
             max-width: 600px;
@@ -2865,42 +2431,43 @@ const Home = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .home-title2 {
-            font-size: 18px;
-            font-style: normal;
-            font-family: 'Poppins';
-            font-weight: 500;
+          .home-text136 {
+            display: inline-block;
           }
           .home-description4 {
+            display: inline-block;
             font-size: 14px;
             font-family: Poppins;
             line-height: 24px;
           }
-          .home-text183 {
+          .home-text138 {
             font-weight: 700;
           }
-          .home-title3 {
-            font-size: 18px;
-            font-style: normal;
-            font-family: 'Poppins';
-            font-weight: 500;
+          .home-text145 {
+            display: inline-block;
           }
           .home-description5 {
+            display: inline-block;
             font-size: 14px;
             font-family: Poppins;
             line-height: 24px;
           }
-          .home-question3 {
-            border-bottom-width: 0px;
-          }
-          .home-title4 {
-            font-size: 18px;
-            font-style: normal;
-            font-family: 'Poppins';
-            font-weight: 500;
+          .home-text149 {
+            display: inline-block;
           }
           .home-description6 {
-            font-family: 'Poppins';
+            display: inline-block;
+            font-size: 14px;
+            font-family: Poppins;
+            line-height: 24px;
+          }
+          .home-text153 {
+            display: inline-block;
+          }
+          .home-description7 {
+            display: inline-block;
+            font-size: 14px;
+            font-family: Poppins;
             line-height: 24px;
           }
           .home-column5 {
@@ -2909,49 +2476,1355 @@ const Home = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .home-question4 {
-            border-right-width: 0px;
-          }
-          .home-title5 {
-            font-size: 18px;
-            font-style: normal;
-            font-family: 'Poppins';
-            font-weight: 500;
-          }
-          .home-description7 {
-            font-size: 14px;
-            font-family: Poppins;
-            line-height: 24px;
-          }
-          .home-question5 {
-            border-right-width: 0px;
-          }
-          .home-title6 {
-            font-size: 18px;
-            font-style: normal;
-            font-family: 'Poppins';
-            font-weight: 500;
+          .home-text157 {
+            display: inline-block;
           }
           .home-description8 {
+            display: inline-block;
             font-size: 14px;
             font-family: Poppins;
             line-height: 24px;
           }
-          .home-question6 {
-            border-right-width: 0px;
-            border-bottom-width: 0px;
-          }
-          .home-title7 {
-            font-size: 18px;
-            font-style: normal;
-            font-family: 'Poppins';
-            font-weight: 500;
+          .home-text164 {
+            display: inline-block;
           }
           .home-description9 {
+            display: inline-block;
+            font-size: 14px;
             font-family: Poppins;
             line-height: 24px;
           }
+          .home-roadmap {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding-top: var(--dl-layout-space-sixunits);
+            padding-left: var(--dl-layout-space-oneandhalfunits);
+            border-radius: 16px;
+            padding-right: var(--dl-layout-space-oneandhalfunits);
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-sixunits);
+            background-color: #f3f5fa;
+          }
+          .home-content19 {
+            gap: var(--dl-layout-space-fiveunits);
+            width: 100%;
+            display: flex;
+            max-width: 1200px;
+            align-items: center;
+            flex-direction: column;
+          }
+          .home-header4 {
+            gap: var(--dl-layout-space-oneandhalfunits);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .home-tag3 {
+            display: flex;
+            align-items: center;
+            padding-top: var(--dl-layout-space-halfunit);
+            padding-left: var(--dl-layout-space-unit);
+            border-radius: var(--dl-layout-radius-radius8);
+            padding-right: var(--dl-layout-space-unit);
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-halfunit);
+            justify-content: center;
+            background-color: #d6f1f0;
+          }
+          .home-text168 {
+            font-style: normal;
+            font-weight: 500;
+          }
+          .home-heading15 {
+            gap: var(--dl-layout-space-unit);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .home-text169 {
+            width: 100%;
+            font-size: 40px;
+            max-width: 600px;
+            font-style: normal;
+            text-align: center;
+            font-family: 'Poppins';
+            font-weight: 600;
+            line-height: 56px;
+          }
+          .home-pricing-plans {
+            flex: 1;
+            width: 100%;
+            display: grid;
+            overflow: hidden;
+            align-items: flex-start;
+            border-color: #dbdbdb;
+            border-width: 1px;
+            border-radius: 16px;
+            flex-direction: row;
+            justify-content: flex-start;
+            background-color: #375ee0;
+            grid-template-columns: auto auto;
+          }
+          .home-plans1 {
+            flex: 1;
+            height: 100%;
+            display: grid;
+            padding-top: var(--dl-layout-space-twounits);
+            padding-left: TwoUnits;
+            padding-bottom: var(--dl-layout-space-twounits);
+            background-color: #ffffff;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+          }
+          .home-plan1 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            max-width: 300px;
+            align-items: flex-start;
+            border-color: #dbdbdb;
+            padding-left: var(--dl-layout-space-twounits);
+            padding-right: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            justify-content: flex-start;
+            border-right-width: 1px;
+          }
+          .home-top1 {
+            gap: var(--dl-layout-space-oneandhalfunits);
+            display: flex;
+            align-items: flex-start;
+            border-color: #dbdbdb;
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-twounits);
+            justify-content: flex-start;
+            border-bottom-width: 1px;
+          }
+          .home-heading16 {
+            gap: var(--dl-layout-space-unit);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .home-text170 {
+            font-size: 20px;
+            font-style: normal;
+            font-family: 'Poppins';
+            font-weight: 600;
+          }
+          .home-text171 {
+            display: none;
+            font-family: 'Poppins';
+            line-height: 24px;
+          }
+          .home-cost1 {
+            width: 100%;
+            display: none;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .home-text172 {
+            font-size: 40px;
+            font-style: normal;
+            font-family: 'Poppins';
+            font-weight: 600;
+            line-height: 40px;
+          }
+          .home-bottom1 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+            padding-top: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .home-check-list1 {
+            gap: var(--dl-layout-space-halfunit);
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-threeunits);
+            justify-content: flex-start;
+          }
+          .home-text173 {
+            display: inline-block;
+          }
+          .home-text174 {
+            display: inline-block;
+          }
+          .home-text175 {
+            display: inline-block;
+          }
+          .home-button1 {
+            width: 100%;
+            cursor: pointer;
+            display: none;
+            transition: 0.3s;
+            align-items: center;
+            padding-top: var(--dl-layout-space-oneandhalfunits);
+            padding-left: var(--dl-layout-space-twounits);
+            border-radius: var(--dl-layout-radius-radius8);
+            padding-right: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-oneandhalfunits);
+            justify-content: center;
+            background-color: #ade2df;
+          }
+          .home-button1:hover {
+            background-color: rgba(173, 226, 223, 0.5);
+          }
+          .home-text178 {
+            font-style: normal;
+            font-weight: 500;
+          }
+          .home-plan2 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            max-width: 300px;
+            align-items: flex-start;
+            border-color: #dbdbdb;
+            padding-left: var(--dl-layout-space-twounits);
+            padding-right: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            justify-content: space-between;
+            border-right-width: 1px;
+          }
+          .home-top2 {
+            gap: var(--dl-layout-space-oneandhalfunits);
+            display: flex;
+            align-items: flex-start;
+            border-color: #dbdbdb;
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-twounits);
+            justify-content: flex-start;
+            border-bottom-width: 1px;
+          }
+          .home-heading17 {
+            gap: var(--dl-layout-space-unit);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .home-text179 {
+            font-size: 20px;
+            font-style: normal;
+            font-family: 'Poppins';
+            font-weight: 600;
+          }
+          .home-text180 {
+            display: none;
+            font-family: Poppins;
+            line-height: 24px;
+          }
+          .home-cost2 {
+            gap: var(--dl-layout-space-halfunit);
+            width: 100%;
+            display: none;
+            align-items: flex-end;
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+          .home-text181 {
+            font-size: 40px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 600;
+            line-height: 40px;
+          }
+          .home-text182 {
+            font-family: Poppins;
+          }
+          .home-bottom2 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+            padding-top: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .home-check-list2 {
+            gap: var(--dl-layout-space-halfunit);
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-threeunits);
+            justify-content: flex-start;
+          }
+          .home-text183 {
+            display: inline-block;
+          }
+          .home-text186 {
+            display: inline-block;
+          }
+          .home-text189 {
+            display: inline-block;
+          }
+          .home-text192 {
+            display: inline-block;
+          }
+          .home-text195 {
+            display: inline-block;
+          }
+          .home-text198 {
+            display: inline-block;
+          }
+          .home-button2 {
+            width: 100%;
+            cursor: pointer;
+            display: none;
+            transition: 0.3s;
+            align-items: center;
+            padding-top: var(--dl-layout-space-oneandhalfunits);
+            padding-left: var(--dl-layout-space-twounits);
+            border-radius: var(--dl-layout-radius-radius8);
+            padding-right: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-oneandhalfunits);
+            justify-content: center;
+            background-color: #ade2df;
+          }
+          .home-button2:hover {
+            background-color: rgba(173, 226, 223, 0.5);
+          }
+          .home-text201 {
+            font-style: normal;
+            font-weight: 500;
+          }
+          .home-plan3 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            max-width: 300px;
+            align-items: flex-start;
+            border-color: #dbdbdb;
+            padding-left: var(--dl-layout-space-twounits);
+            padding-right: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            justify-content: space-between;
+            border-right-width: 1px;
+          }
+          .home-top3 {
+            gap: var(--dl-layout-space-oneandhalfunits);
+            display: flex;
+            align-items: flex-start;
+            border-color: #dbdbdb;
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-twounits);
+            justify-content: flex-start;
+            border-bottom-width: 1px;
+          }
+          .home-heading18 {
+            gap: var(--dl-layout-space-unit);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .home-text202 {
+            font-size: 20px;
+            font-style: normal;
+            font-family: 'Poppins';
+            font-weight: 600;
+          }
+          .home-text203 {
+            display: none;
+            font-family: Poppins;
+            line-height: 24px;
+          }
+          .home-cost3 {
+            gap: var(--dl-layout-space-halfunit);
+            width: 100%;
+            display: none;
+            align-items: flex-end;
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+          .home-text204 {
+            font-size: 40px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 600;
+            line-height: 40px;
+          }
+          .home-text205 {
+            font-family: Poppins;
+          }
+          .home-bottom3 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+            padding-top: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .home-check-list3 {
+            gap: var(--dl-layout-space-halfunit);
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-threeunits);
+            justify-content: flex-start;
+          }
+          .home-text206 {
+            display: inline-block;
+          }
+          .home-text209 {
+            display: inline-block;
+          }
+          .home-text212 {
+            display: inline-block;
+          }
+          .home-text215 {
+            display: inline-block;
+          }
+          .home-text218 {
+            display: inline-block;
+          }
+          .home-text221 {
+            display: inline-block;
+          }
+          .home-button3 {
+            width: 100%;
+            cursor: pointer;
+            display: none;
+            transition: 0.3s;
+            align-items: center;
+            padding-top: var(--dl-layout-space-oneandhalfunits);
+            padding-left: var(--dl-layout-space-twounits);
+            border-radius: var(--dl-layout-radius-radius8);
+            padding-right: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-oneandhalfunits);
+            justify-content: center;
+            background-color: #ade2df;
+          }
+          .home-button3:hover {
+            background-color: rgba(173, 226, 223, 0.5);
+          }
+          .home-text224 {
+            font-style: normal;
+            font-weight: 500;
+          }
+          .home-plan4 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            max-width: 300px;
+            align-items: flex-start;
+            padding-left: var(--dl-layout-space-twounits);
+            padding-right: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .home-top4 {
+            gap: var(--dl-layout-space-oneandhalfunits);
+            display: flex;
+            align-items: flex-start;
+            border-color: #dbdbdb;
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-twounits);
+            justify-content: flex-start;
+            border-bottom-width: 1px;
+          }
+          .home-heading19 {
+            gap: var(--dl-layout-space-unit);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .home-text225 {
+            font-size: 20px;
+            font-style: normal;
+            font-family: 'Poppins';
+            font-weight: 600;
+          }
+          .home-text226 {
+            display: none;
+            font-family: Poppins;
+            line-height: 24px;
+          }
+          .home-cost4 {
+            gap: var(--dl-layout-space-halfunit);
+            width: 100%;
+            display: none;
+            align-items: flex-end;
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+          .home-text227 {
+            font-size: 40px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 600;
+            line-height: 40px;
+          }
+          .home-text228 {
+            font-family: Poppins;
+          }
+          .home-bottom4 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+            padding-top: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .home-check-list4 {
+            gap: var(--dl-layout-space-halfunit);
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-threeunits);
+            justify-content: flex-start;
+          }
+          .home-text229 {
+            display: inline-block;
+          }
+          .home-text232 {
+            display: inline-block;
+          }
+          .home-text235 {
+            display: inline-block;
+          }
+          .home-button4 {
+            width: 100%;
+            cursor: pointer;
+            display: none;
+            transition: 0.3s;
+            align-items: center;
+            padding-top: var(--dl-layout-space-oneandhalfunits);
+            padding-left: var(--dl-layout-space-twounits);
+            border-radius: var(--dl-layout-radius-radius8);
+            padding-right: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-oneandhalfunits);
+            justify-content: center;
+            background-color: #ade2df;
+          }
+          .home-button4:hover {
+            background-color: rgba(173, 226, 223, 0.5);
+          }
+          .home-text238 {
+            font-style: normal;
+            font-weight: 500;
+          }
+          .home-expand1 {
+            flex: 0.3;
+            height: 100%;
+            display: none;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .home-overlay2 {
+            flex: 1;
+            display: flex;
+            padding: var(--dl-layout-space-twounits);
+            align-items: center;
+            flex-direction: column;
+            background-size: cover;
+            justify-content: space-between;
+            background-image: url('/planbackground.svg');
+          }
+          .home-header5 {
+            gap: var(--dl-layout-space-twounits);
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .home-heading20 {
+            gap: var(--dl-layout-space-unit);
+            width: 100%;
+            display: flex;
+            max-width: 256px;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .home-text239 {
+            color: #ffffff;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+          }
+          .home-text240 {
+            color: #c1fffc;
+            font-size: 24px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 500;
+            line-height: 31px;
+          }
+          .home-check-list5 {
+            gap: var(--dl-layout-space-halfunit);
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .home-check1 {
+            gap: var(--dl-layout-space-halfunit);
+            display: flex;
+            position: relative;
+            align-items: center;
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+          .home-icon14 {
+            fill: #ffffff;
+            width: 18px;
+            height: 18px;
+          }
+          .home-text241 {
+            color: #ffffff;
+            font-size: 14px;
+            font-family: Poppins;
+            line-height: 24px;
+          }
+          .home-check2 {
+            gap: var(--dl-layout-space-halfunit);
+            display: flex;
+            position: relative;
+            align-items: center;
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+          .home-icon16 {
+            fill: #ffffff;
+            width: 18px;
+            height: 18px;
+          }
+          .home-text242 {
+            color: rgb(255, 255, 255);
+            font-size: 14px;
+            font-family: Poppins;
+            line-height: 24px;
+          }
+          .home-check3 {
+            gap: var(--dl-layout-space-halfunit);
+            display: flex;
+            position: relative;
+            align-items: center;
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+          .home-icon18 {
+            fill: #ffffff;
+            width: 18px;
+            height: 18px;
+          }
+          .home-text243 {
+            color: rgb(255, 255, 255);
+            font-size: 14px;
+            font-family: Poppins;
+            line-height: 24px;
+          }
+          .home-button5 {
+            width: 100%;
+            cursor: pointer;
+            display: flex;
+            transition: 0.3s;
+            align-items: center;
+            padding-top: var(--dl-layout-space-oneandhalfunits);
+            padding-left: var(--dl-layout-space-twounits);
+            border-radius: var(--dl-layout-radius-radius8);
+            padding-right: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-oneandhalfunits);
+            justify-content: center;
+            background-color: #000000;
+          }
+          .home-button5:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+          }
+          .home-text244 {
+            color: rgb(255, 255, 255);
+            font-style: normal;
+            font-weight: 500;
+          }
+          .home-plans2 {
+            width: 100%;
+            height: 100%;
+            display: none;
+            align-items: center;
+            flex-direction: column;
+          }
+          .home-plan5 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            max-width: 300px;
+            align-items: flex-start;
+            border-color: #dbdbdb;
+            padding-left: var(--dl-layout-space-twounits);
+            padding-right: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            justify-content: flex-start;
+            border-right-width: 1px;
+          }
+          .home-top5 {
+            gap: var(--dl-layout-space-oneandhalfunits);
+            display: flex;
+            align-items: flex-start;
+            border-color: #dbdbdb;
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-twounits);
+            justify-content: flex-start;
+            border-bottom-width: 1px;
+          }
+          .home-heading21 {
+            gap: var(--dl-layout-space-unit);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .home-text247 {
+            font-size: 20px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 600;
+          }
+          .home-text248 {
+            font-family: Poppins;
+            line-height: 24px;
+          }
+          .home-cost5 {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .home-text249 {
+            font-size: 40px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 600;
+            line-height: 40px;
+          }
+          .home-bottom5 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+            padding-top: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .home-check-list6 {
+            gap: var(--dl-layout-space-halfunit);
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-threeunits);
+            justify-content: flex-start;
+          }
+          .home-text250 {
+            display: inline-block;
+          }
+          .home-text251 {
+            display: inline-block;
+          }
+          .home-text252 {
+            display: inline-block;
+          }
+          .home-text253 {
+            display: inline-block;
+          }
+          .home-text254 {
+            display: inline-block;
+          }
+          .home-button6 {
+            width: 100%;
+            cursor: pointer;
+            display: flex;
+            transition: 0.3s;
+            align-items: center;
+            padding-top: var(--dl-layout-space-oneandhalfunits);
+            padding-left: var(--dl-layout-space-twounits);
+            border-radius: var(--dl-layout-radius-radius8);
+            padding-right: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-oneandhalfunits);
+            justify-content: center;
+            background-color: #ade2df;
+          }
+          .home-button6:hover {
+            background-color: rgba(173, 226, 223, 0.5);
+          }
+          .home-text255 {
+            font-style: normal;
+            font-weight: 500;
+          }
+          .home-plan6 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            max-width: 300px;
+            align-items: flex-start;
+            border-color: #dbdbdb;
+            padding-left: var(--dl-layout-space-twounits);
+            padding-right: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            justify-content: space-between;
+            border-right-width: 1px;
+          }
+          .home-top6 {
+            gap: var(--dl-layout-space-oneandhalfunits);
+            display: flex;
+            align-items: flex-start;
+            border-color: #dbdbdb;
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-twounits);
+            justify-content: flex-start;
+            border-bottom-width: 1px;
+          }
+          .home-heading22 {
+            gap: var(--dl-layout-space-unit);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .home-text256 {
+            font-size: 20px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 600;
+          }
+          .home-text257 {
+            font-family: Poppins;
+            line-height: 24px;
+          }
+          .home-cost6 {
+            gap: var(--dl-layout-space-halfunit);
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+          .home-text258 {
+            font-size: 40px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 600;
+            line-height: 40px;
+          }
+          .home-text259 {
+            font-family: Poppins;
+          }
+          .home-bottom6 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+            padding-top: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .home-check-list7 {
+            gap: var(--dl-layout-space-halfunit);
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-threeunits);
+            justify-content: flex-start;
+          }
+          .home-text260 {
+            display: inline-block;
+          }
+          .home-text261 {
+            display: inline-block;
+          }
+          .home-text262 {
+            display: inline-block;
+          }
+          .home-text263 {
+            display: inline-block;
+          }
+          .home-text264 {
+            display: inline-block;
+          }
+          .home-button7 {
+            width: 100%;
+            cursor: pointer;
+            display: flex;
+            transition: 0.3s;
+            align-items: center;
+            padding-top: var(--dl-layout-space-oneandhalfunits);
+            padding-left: var(--dl-layout-space-twounits);
+            border-radius: var(--dl-layout-radius-radius8);
+            padding-right: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-oneandhalfunits);
+            justify-content: center;
+            background-color: #ade2df;
+          }
+          .home-button7:hover {
+            background-color: rgba(173, 226, 223, 0.5);
+          }
+          .home-text265 {
+            font-style: normal;
+            font-weight: 500;
+          }
+          .home-plan7 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            max-width: 300px;
+            align-items: flex-start;
+            border-color: #dbdbdb;
+            padding-left: var(--dl-layout-space-twounits);
+            padding-right: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            justify-content: space-between;
+            border-right-width: 1px;
+          }
+          .home-top7 {
+            gap: var(--dl-layout-space-oneandhalfunits);
+            display: flex;
+            align-items: flex-start;
+            border-color: #dbdbdb;
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-twounits);
+            justify-content: flex-start;
+            border-bottom-width: 1px;
+          }
+          .home-heading23 {
+            gap: var(--dl-layout-space-unit);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .home-text266 {
+            font-size: 20px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 600;
+          }
+          .home-text267 {
+            font-family: Poppins;
+            line-height: 24px;
+          }
+          .home-cost7 {
+            gap: var(--dl-layout-space-halfunit);
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+          .home-text268 {
+            font-size: 40px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 600;
+            line-height: 40px;
+          }
+          .home-text269 {
+            font-family: Poppins;
+          }
+          .home-bottom7 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+            padding-top: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .home-check-list8 {
+            gap: var(--dl-layout-space-halfunit);
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-threeunits);
+            justify-content: flex-start;
+          }
+          .home-text270 {
+            display: inline-block;
+          }
+          .home-text271 {
+            display: inline-block;
+          }
+          .home-text272 {
+            display: inline-block;
+          }
+          .home-text273 {
+            display: inline-block;
+          }
+          .home-text274 {
+            display: inline-block;
+          }
+          .home-button8 {
+            width: 100%;
+            cursor: pointer;
+            display: flex;
+            transition: 0.3s;
+            align-items: center;
+            padding-top: var(--dl-layout-space-oneandhalfunits);
+            padding-left: var(--dl-layout-space-twounits);
+            border-radius: var(--dl-layout-radius-radius8);
+            padding-right: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-oneandhalfunits);
+            justify-content: center;
+            background-color: #ade2df;
+          }
+          .home-button8:hover {
+            background-color: rgba(173, 226, 223, 0.5);
+          }
+          .home-text275 {
+            font-style: normal;
+            font-weight: 500;
+          }
+          .home-expand2 {
+            flex: 0.3;
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .home-overlay3 {
+            flex: 1;
+            display: flex;
+            padding: var(--dl-layout-space-twounits);
+            align-items: center;
+            flex-direction: column;
+            background-size: cover;
+            justify-content: space-between;
+            background-image: url('/planbackground.svg');
+          }
+          .home-header6 {
+            gap: var(--dl-layout-space-twounits);
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .home-heading24 {
+            gap: var(--dl-layout-space-unit);
+            width: 100%;
+            display: flex;
+            max-width: 256px;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .home-text276 {
+            color: #ffffff;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+          }
+          .home-text277 {
+            color: #c1fffc;
+            font-size: 24px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 500;
+            line-height: 31px;
+          }
+          .home-check-list9 {
+            gap: var(--dl-layout-space-halfunit);
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .home-check4 {
+            gap: var(--dl-layout-space-halfunit);
+            display: flex;
+            position: relative;
+            align-items: center;
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+          .home-icon20 {
+            fill: #ffffff;
+            width: 18px;
+            height: 18px;
+          }
+          .home-text278 {
+            color: #ffffff;
+            font-size: 14px;
+            font-family: Poppins;
+            line-height: 24px;
+          }
+          .home-check5 {
+            gap: var(--dl-layout-space-halfunit);
+            display: flex;
+            position: relative;
+            align-items: center;
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+          .home-icon22 {
+            fill: #ffffff;
+            width: 18px;
+            height: 18px;
+          }
+          .home-text279 {
+            color: rgb(255, 255, 255);
+            font-size: 14px;
+            font-family: Poppins;
+            line-height: 24px;
+          }
+          .home-check6 {
+            gap: var(--dl-layout-space-halfunit);
+            display: flex;
+            position: relative;
+            align-items: center;
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+          .home-icon24 {
+            fill: #ffffff;
+            width: 18px;
+            height: 18px;
+          }
+          .home-text280 {
+            color: rgb(255, 255, 255);
+            font-size: 14px;
+            font-family: Poppins;
+            line-height: 24px;
+          }
+          .home-button9 {
+            width: 100%;
+            cursor: pointer;
+            display: flex;
+            transition: 0.3s;
+            align-items: center;
+            padding-top: var(--dl-layout-space-oneandhalfunits);
+            padding-left: var(--dl-layout-space-twounits);
+            border-radius: var(--dl-layout-radius-radius8);
+            padding-right: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-oneandhalfunits);
+            justify-content: center;
+            background-color: #000000;
+          }
+          .home-button9:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+          }
+          .home-text281 {
+            color: rgb(255, 255, 255);
+            font-style: normal;
+            font-weight: 500;
+          }
+          .home-help {
+            gap: var(--dl-layout-space-halfunit);
+            display: flex;
+            align-items: flex-start;
+            padding-top: var(--dl-layout-space-threeunits);
+            flex-direction: row;
+          }
+          .home-text284 {
+            font-family: 'Poppins';
+          }
+          .home-explore3 {
+            cursor: pointer;
+            display: flex;
+            transition: 0.3s;
+            align-items: flex-start;
+            border-width: 0px;
+            flex-direction: column;
+            padding-bottom: 4px;
+            border-bottom-width: 1px;
+          }
+          .home-explore3:hover {
+            color: rgba(0, 0, 0, 0.5);
+            border-color: rgba(0, 0, 0, 0.3);
+          }
+          .home-text285 {
+            font-style: normal;
+            font-weight: 600;
+          }
+          .home-sections2 {
+            width: 100%;
+            display: flex;
+            max-width: 1200px;
+            align-items: center;
+            padding-top: var(--dl-layout-space-sixunits);
+            padding-left: var(--dl-layout-space-oneandhalfunits);
+            padding-right: var(--dl-layout-space-oneandhalfunits);
+            flex-direction: column;
+            background-color: #f3f5fa;
+          }
+          .home-section4 {
+            gap: var(--dl-layout-space-sixunits);
+            width: 100%;
+            display: flex;
+            z-index: 10;
+            align-items: center;
+            padding-top: var(--dl-layout-space-sixunits);
+            flex-direction: row;
+            justify-content: center;
+          }
+          .home-content20 {
+            gap: var(--dl-layout-space-oneandhalfunits);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .home-heading25 {
+            gap: var(--dl-layout-space-unit);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .home-text286 {
+            font-size: 40px;
+            max-width: 535px;
+            font-style: normal;
+            font-family: 'Poppins';
+            font-weight: 600;
+            line-height: 56px;
+          }
+          .home-text287 {
+            font-size: 18px;
+            max-width: 535px;
+            font-family: 'Poppins';
+            line-height: 27px;
+          }
+          .home-content21 {
+            gap: var(--dl-layout-space-threeunits);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .home-points2 {
+            gap: var(--dl-layout-space-unit);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .home-link3 {
+            display: contents;
+          }
           .home-get-started2 {
+            display: flex;
+            transition: 0.3s;
+            align-items: flex-start;
+            padding-top: var(--dl-layout-space-oneandhalfunits);
+            padding-left: var(--dl-layout-space-twounits);
+            border-radius: var(--dl-layout-radius-radius8);
+            padding-right: var(--dl-layout-space-twounits);
+            flex-direction: row;
+            padding-bottom: var(--dl-layout-space-oneandhalfunits);
+            justify-content: center;
+            text-decoration: none;
+            background-color: #ade2df;
+          }
+          .home-get-started2:hover {
+            background-color: rgba(173, 226, 223, 0.5);
+          }
+          .home-sign-up2 {
+            font-style: normal;
+            font-weight: 500;
+          }
+          .home-image4 {
+            width: 370px;
+            height: 600px;
+            display: flex;
+            position: relative;
+            align-items: center;
+            flex-direction: row;
+            background-size: contain;
+            justify-content: flex-end;
+            background-image: url('/Damasta/core-handphone-1500h.png');
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+          .home-section5 {
+            gap: var(--dl-layout-space-sixunits);
+            width: 100%;
+            display: flex;
+            z-index: 10;
+            align-items: center;
+            padding-top: var(--dl-layout-space-sixunits);
+            padding-left: var(--dl-layout-space-fourunits);
+            padding-right: var(--dl-layout-space-fourunits);
+            flex-direction: row;
+            padding-bottom: var(--dl-layout-space-sixunits);
+            justify-content: center;
+          }
+          .home-content22 {
+            gap: var(--dl-layout-space-oneandhalfunits);
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .home-heading26 {
+            gap: var(--dl-layout-space-unit);
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .home-text288 {
+            font-size: 40px;
+            max-width: 535px;
+            font-style: normal;
+            font-family: 'Poppins';
+            font-weight: 600;
+            line-height: 56px;
+          }
+          .home-text289 {
+            width: 100%;
+            font-size: 18px;
+            font-family: 'Poppins';
+            line-height: 27px;
+          }
+          .home-content23 {
+            gap: var(--dl-layout-space-threeunits);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .home-points3 {
+            gap: var(--dl-layout-space-unit);
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .home-get-started3 {
             width: 100%;
             display: flex;
             align-items: center;
@@ -2962,20 +3835,20 @@ const Home = (props) => {
             padding-bottom: var(--dl-layout-space-sixunits);
             background-color: #375ee0;
           }
-          .home-content20 {
+          .home-content24 {
             gap: var(--dl-layout-space-threeunits);
             display: flex;
             max-width: 600px;
             align-items: center;
             flex-direction: column;
           }
-          .home-heading24 {
+          .home-heading27 {
             gap: var(--dl-layout-space-unit);
             display: flex;
             align-items: center;
             flex-direction: column;
           }
-          .home-text215 {
+          .home-text290 {
             color: rgb(193, 255, 252);
             font-size: 64px;
             font-style: normal;
@@ -2983,7 +3856,7 @@ const Home = (props) => {
             font-family: 'Poppins';
             font-weight: 600;
           }
-          .home-text216 {
+          .home-text291 {
             color: #ffffff;
             font-size: 20px;
             text-align: center;
@@ -3056,10 +3929,10 @@ const Home = (props) => {
             font-family: Poppins;
             font-weight: 500;
           }
-          .home-text217 {
+          .home-text292 {
             display: inline-block;
           }
-          .home-text220 {
+          .home-text295 {
             display: inline-block;
           }
           @media (max-width: 991px) {
@@ -3072,7 +3945,7 @@ const Home = (props) => {
               padding-top: var(--dl-layout-space-unit);
               padding-bottom: 0px;
             }
-            .home-title1 {
+            .home-title {
               font-size: 50px;
               text-align: left;
               line-height: 58px;
@@ -3190,14 +4063,14 @@ const Home = (props) => {
             .home-content16 {
               margin-top: 0px;
             }
-            .home-pricing {
+            .home-roadmap {
               padding-top: var(--dl-layout-space-fourunits);
               padding-bottom: var(--dl-layout-space-fourunits);
             }
-            .home-content17 {
+            .home-content19 {
               gap: var(--dl-layout-space-threeunits);
             }
-            .home-header3 {
+            .home-header4 {
               gap: var(--dl-layout-space-unit);
             }
             .home-pricing-plans {
@@ -3214,81 +4087,105 @@ const Home = (props) => {
               background-repeat: no-repeat;
               background-position: right;
             }
-            .home-header4 {
+            .home-header5 {
               gap: var(--dl-layout-space-oneandhalfunits);
             }
-            .home-heading18 {
+            .home-heading20 {
               gap: var(--dl-layout-space-halfunit);
               max-width: 600px;
             }
-            .home-text146 {
+            .home-text239 {
               font-size: 18px;
             }
-            .home-text147 {
+            .home-text240 {
               font-size: 20px;
               line-height: 26px;
             }
-            .home-text148 {
+            .home-text241 {
               line-height: 21px;
             }
-            .home-text149 {
+            .home-text242 {
               line-height: 21px;
             }
-            .home-text150 {
+            .home-text243 {
               line-height: 21px;
             }
-            .home-button4 {
+            .home-button5 {
               margin-top: var(--dl-layout-space-threeunits);
             }
             .home-overlay3 {
               width: 100%;
               justify-content: space-between;
             }
-            .home-header5 {
-              gap: var(--dl-layout-space-oneandhalfunits);
-            }
-            .home-heading22 {
-              gap: var(--dl-layout-space-halfunit);
-              max-width: 600px;
-            }
-            .home-text168 {
-              font-size: 18px;
-            }
-            .home-text169 {
-              font-size: 20px;
-              line-height: 26px;
-            }
-            .home-text170 {
-              line-height: 21px;
-            }
-            .home-text171 {
-              line-height: 21px;
-            }
-            .home-text172 {
-              line-height: 21px;
-            }
-            .home-button8 {
-              margin-top: var(--dl-layout-space-threeunits);
-            }
-            .home-get-started2 {
-              padding-top: var(--dl-layout-space-fourunits);
-              padding-bottom: var(--dl-layout-space-fourunits);
-            }
-            .home-content20 {
+            .home-header6 {
               gap: var(--dl-layout-space-oneandhalfunits);
             }
             .home-heading24 {
               gap: var(--dl-layout-space-halfunit);
+              max-width: 600px;
             }
-            .home-text215 {
+            .home-text276 {
+              font-size: 18px;
+            }
+            .home-text277 {
+              font-size: 20px;
+              line-height: 26px;
+            }
+            .home-text278 {
+              line-height: 21px;
+            }
+            .home-text279 {
+              line-height: 21px;
+            }
+            .home-text280 {
+              line-height: 21px;
+            }
+            .home-button9 {
+              margin-top: var(--dl-layout-space-threeunits);
+            }
+            .home-section4 {
+              padding-top: var(--dl-layout-space-fourunits);
+              border-color: #dbdbdb;
+              flex-direction: column;
+              border-top-width: 1px;
+            }
+            .home-content20 {
+              gap: var(--dl-layout-space-unit);
+            }
+            .home-content21 {
+              gap: var(--dl-layout-space-twounits);
+            }
+            .home-section5 {
+              padding-top: var(--dl-layout-space-fourunits);
+              border-color: #dbdbdb;
+              flex-direction: column;
+              border-top-width: 1px;
+            }
+            .home-content22 {
+              gap: var(--dl-layout-space-unit);
+            }
+            .home-content23 {
+              gap: var(--dl-layout-space-twounits);
+            }
+            .home-get-started3 {
+              padding-top: var(--dl-layout-space-fourunits);
+              padding-bottom: var(--dl-layout-space-fourunits);
+            }
+            .home-content24 {
+              gap: var(--dl-layout-space-oneandhalfunits);
+            }
+            .home-heading27 {
+              gap: var(--dl-layout-space-halfunit);
+            }
+            .home-text290 {
               font-size: 40px;
             }
-            .home-text216 {
+            .home-text291 {
               font-size: 18px;
             }
           }
           @media (max-width: 767px) {
-            .home-title1 {
+            .home-title {
               font-size: 40px;
               line-height: 48px;
             }
@@ -3381,7 +4278,7 @@ const Home = (props) => {
               justify-content: flex-start;
               background-image: none;
             }
-            .home-text125 {
+            .home-text127 {
               font-size: 32px;
             }
             .home-pasted-image6 {
@@ -3398,14 +4295,14 @@ const Home = (props) => {
             .home-header2 {
               gap: var(--dl-layout-space-unit);
             }
-            .home-text127 {
+            .home-text129 {
               font-size: 14px;
             }
-            .home-text128 {
+            .home-text130 {
               font-size: 32px;
               line-height: 44px;
             }
-            .home-text129 {
+            .home-text131 {
               font-size: 16px;
               line-height: 24px;
             }
@@ -3413,116 +4310,6 @@ const Home = (props) => {
               gap: var(--dl-layout-space-twounits);
               width: 100%;
               flex-direction: column;
-            }
-            .home-text131 {
-              font-size: 32px;
-              line-height: 44px;
-            }
-            .home-pricing-plans {
-              display: none;
-            }
-            .home-plans2 {
-              gap: var(--dl-layout-space-oneandhalfunits);
-              display: flex;
-            }
-            .home-plan4 {
-              max-width: 100%;
-              padding-top: var(--dl-layout-space-threeunits);
-              border-width: 1px;
-              padding-left: var(--dl-layout-space-oneandhalfunits);
-              border-radius: 16px;
-              padding-right: var(--dl-layout-space-oneandhalfunits);
-              padding-bottom: var(--dl-layout-space-threeunits);
-              background-color: #ffffff;
-            }
-            .home-top4 {
-              width: 100%;
-              padding-bottom: var(--dl-layout-space-oneandhalfunits);
-            }
-            .home-heading19 {
-              gap: var(--dl-layout-space-halfunit);
-            }
-            .home-text154 {
-              font-size: 18px;
-            }
-            .home-text156 {
-              font-size: 32px;
-              line-height: 32px;
-            }
-            .home-plan5 {
-              max-width: 100%;
-              padding-top: var(--dl-layout-space-threeunits);
-              border-width: 1px;
-              padding-left: var(--dl-layout-space-oneandhalfunits);
-              border-radius: 16px;
-              padding-right: var(--dl-layout-space-oneandhalfunits);
-              padding-bottom: var(--dl-layout-space-threeunits);
-              background-color: #ffffff;
-              border-right-width: 1px;
-            }
-            .home-top5 {
-              width: 100%;
-              padding-bottom: var(--dl-layout-space-oneandhalfunits);
-            }
-            .home-heading20 {
-              gap: var(--dl-layout-space-halfunit);
-            }
-            .home-text158 {
-              font-size: 18px;
-            }
-            .home-text160 {
-              font-size: 32px;
-              line-height: 32px;
-            }
-            .home-text162 {
-              font-weight: 500;
-            }
-            .home-plan6 {
-              max-width: 100%;
-              padding-top: var(--dl-layout-space-threeunits);
-              border-width: 1px;
-              padding-left: var(--dl-layout-space-oneandhalfunits);
-              border-radius: 16px;
-              padding-right: var(--dl-layout-space-oneandhalfunits);
-              padding-bottom: var(--dl-layout-space-threeunits);
-              background-color: #ffffff;
-              border-right-width: 1px;
-            }
-            .home-top6 {
-              width: 100%;
-              padding-bottom: var(--dl-layout-space-oneandhalfunits);
-            }
-            .home-heading21 {
-              gap: var(--dl-layout-space-halfunit);
-            }
-            .home-text163 {
-              font-size: 18px;
-              font-style: normal;
-              font-family: Poppins;
-              font-weight: 600;
-            }
-            .home-text165 {
-              font-size: 32px;
-              font-style: normal;
-              font-family: Poppins;
-              font-weight: 600;
-              line-height: 32px;
-            }
-            .home-text167 {
-              font-weight: 500;
-            }
-            .home-expand2 {
-              flex: 0 0 auto;
-              width: 100%;
-              border-radius: 16px;
-              background-color: #375ee0;
-            }
-            .home-overlay3 {
-              align-items: center;
-              background-size: contain;
-              justify-content: center;
-              background-repeat: no-repeat;
-              background-position: top right;
             }
             .home-testimonials {
               width: 100%;
@@ -3543,26 +4330,152 @@ const Home = (props) => {
             .home-right {
               display: flex;
             }
-            .home-faq {
+            .home-program5-tahun {
               width: 100%;
             }
-            .home-content19 {
+            .home-content18 {
               gap: var(--dl-layout-space-twounits);
             }
-            .home-text178 {
+            .home-text132 {
               font-size: 14px;
             }
-            .home-text181 {
+            .home-text135 {
               font-size: 32px;
               line-height: 44px;
             }
             .home-rows {
               flex-direction: column;
             }
-            .home-title2 {
+            .home-text169 {
+              font-size: 32px;
+              line-height: 44px;
+            }
+            .home-pricing-plans {
+              display: none;
+            }
+            .home-plans2 {
+              gap: var(--dl-layout-space-oneandhalfunits);
+              display: flex;
+            }
+            .home-plan5 {
+              max-width: 100%;
+              padding-top: var(--dl-layout-space-threeunits);
+              border-width: 1px;
+              padding-left: var(--dl-layout-space-oneandhalfunits);
+              border-radius: 16px;
+              padding-right: var(--dl-layout-space-oneandhalfunits);
+              padding-bottom: var(--dl-layout-space-threeunits);
+              background-color: #ffffff;
+            }
+            .home-top5 {
+              width: 100%;
+              padding-bottom: var(--dl-layout-space-oneandhalfunits);
+            }
+            .home-heading21 {
+              gap: var(--dl-layout-space-halfunit);
+            }
+            .home-text247 {
+              font-size: 18px;
+            }
+            .home-text249 {
+              font-size: 32px;
+              line-height: 32px;
+            }
+            .home-plan6 {
+              max-width: 100%;
+              padding-top: var(--dl-layout-space-threeunits);
+              border-width: 1px;
+              padding-left: var(--dl-layout-space-oneandhalfunits);
+              border-radius: 16px;
+              padding-right: var(--dl-layout-space-oneandhalfunits);
+              padding-bottom: var(--dl-layout-space-threeunits);
+              background-color: #ffffff;
+              border-right-width: 1px;
+            }
+            .home-top6 {
+              width: 100%;
+              padding-bottom: var(--dl-layout-space-oneandhalfunits);
+            }
+            .home-heading22 {
+              gap: var(--dl-layout-space-halfunit);
+            }
+            .home-text256 {
+              font-size: 18px;
+            }
+            .home-text258 {
+              font-size: 32px;
+              line-height: 32px;
+            }
+            .home-text265 {
+              font-weight: 500;
+            }
+            .home-plan7 {
+              max-width: 100%;
+              padding-top: var(--dl-layout-space-threeunits);
+              border-width: 1px;
+              padding-left: var(--dl-layout-space-oneandhalfunits);
+              border-radius: 16px;
+              padding-right: var(--dl-layout-space-oneandhalfunits);
+              padding-bottom: var(--dl-layout-space-threeunits);
+              background-color: #ffffff;
+              border-right-width: 1px;
+            }
+            .home-top7 {
+              width: 100%;
+              padding-bottom: var(--dl-layout-space-oneandhalfunits);
+            }
+            .home-heading23 {
+              gap: var(--dl-layout-space-halfunit);
+            }
+            .home-text266 {
+              font-size: 18px;
+              font-style: normal;
+              font-family: Poppins;
+              font-weight: 600;
+            }
+            .home-text268 {
+              font-size: 32px;
+              font-style: normal;
+              font-family: Poppins;
+              font-weight: 600;
+              line-height: 32px;
+            }
+            .home-text275 {
+              font-weight: 500;
+            }
+            .home-expand2 {
+              flex: 0 0 auto;
+              width: 100%;
+              border-radius: 16px;
+              background-color: #375ee0;
+            }
+            .home-overlay3 {
+              align-items: center;
+              background-size: contain;
+              justify-content: center;
+              background-repeat: no-repeat;
+              background-position: top right;
+            }
+            .home-text286 {
+              font-size: 32px;
+              line-height: 44px;
+            }
+            .home-text287 {
               font-size: 16px;
+              line-height: 24px;
             }
             .home-get-started2 {
+              display: none;
+            }
+            .home-text288 {
+              font-size: 32px;
+              line-height: 44px;
+            }
+            .home-text289 {
+              font-size: 16px;
+              line-height: 24px;
+            }
+            .home-get-started3 {
               display: none;
             }
           }
@@ -3606,11 +4519,6 @@ const Home = (props) => {
             .home-pasted-image6 {
               height: 225px;
             }
-            .home-help {
-              align-items: center;
-              padding-top: var(--dl-layout-space-twounits);
-              flex-direction: column;
-            }
             .home-buttons {
               margin-top: -40px;
             }
@@ -3619,6 +4527,11 @@ const Home = (props) => {
             }
             .home-right {
               padding: var(--dl-layout-space-halfunit);
+            }
+            .home-help {
+              align-items: center;
+              padding-top: var(--dl-layout-space-twounits);
+              flex-direction: column;
             }
             .home-hero-buttons2 {
               width: 100%;

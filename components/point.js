@@ -40,7 +40,7 @@ const Point = (props) => {
           .point-text {
             max-width: 535px;
             font-style: normal;
-            font-family: Poppins;
+            font-family: 'Poppins';
             font-weight: 600;
             line-height: 24px;
           }
@@ -51,7 +51,7 @@ const Point = (props) => {
 }
 
 Point.defaultProps = {
-  text: 'Duis aute irure dolor in reprehenderit',
+  text: '     5.   Sinergi program-programnya.',
 }
 
 Point.propTypes = {
