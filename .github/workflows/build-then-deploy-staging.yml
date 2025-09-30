@@ -98,5 +98,5 @@ jobs:
             cd $APP_PATH
             ./ci-pull.sh
             ./ci-stop.sh staging
-            ./ci-start.sh staging swarm
+            ./ci-start.sh staging standalone
           EOF
