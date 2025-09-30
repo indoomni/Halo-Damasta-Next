@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import PropTypes from 'prop-types'
 import { useTranslations } from 'next-intl'
@@ -17,7 +17,32 @@ const Footer = (props) => {
                 src={props.pastedImageSrc}
                 className="footer-pasted-image"
               />
-              <span className="footer-text1">{props.text1}</span>
+              <span className="footer-text10">
+                {props.text2 ?? (
+                  <Fragment>
+                    <span className="footer-text13">
+                      <span>KOPERASI DAMASTA ABHIPRAYA MANDIRI (Skd)</span>
+                      <br></br>
+                    </span>
+                  </Fragment>
+                )}
+              </span>
+              <span className="footer-text11">
+                {props.text21 ?? (
+                  <Fragment>
+                    <span className="footer-text16">
+                      <span>Jl. Letnan Arsyad No. 23 RT006/012</span>
+                      <br></br>
+                      <span>Kel. Kayuringin Jaya</span>
+                      <br></br>
+                      <span>Kec. Bekasi Selatan, Kota Bekasi</span>
+                      <br></br>
+                      <span>Email : kop.DAM@gmail.com</span>
+                      <br></br>
+                    </span>
+                  </Fragment>
+                )}
+              </span>
             </div>
             <div className="footer-socials">
               <Social rootClassName="socialroot-class-name"></Social>
@@ -51,7 +76,7 @@ const Footer = (props) => {
             </div>
           </div>
         </div>
-        <span className="footer-text2">{props.text}</span>
+        <span className="footer-text12">{props.text}</span>
       </div>
       <style jsx>
         {`
@@ -81,7 +106,7 @@ const Footer = (props) => {
             gap: var(--dl-layout-space-unit);
             height: 100%;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             flex-direction: column;
             justify-content: center;
           }
@@ -90,7 +115,7 @@ const Footer = (props) => {
             flex: 0 0 auto;
             width: 100%;
             display: flex;
-            max-width: 265px;
+            max-width: 400px;
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
@@ -98,7 +123,13 @@ const Footer = (props) => {
           .footer-pasted-image {
             width: 150px;
           }
-          .footer-text1 {
+          .footer-text10 {
+            font-size: 16px;
+            font-family: Poppins;
+            font-weight: bold;
+            line-height: 21px;
+          }
+          .footer-text11 {
             font-size: 14px;
             font-family: Poppins;
             line-height: 21px;
@@ -259,12 +290,18 @@ const Footer = (props) => {
           .footer-link20:hover {
             color: rgba(196, 196, 196, 0.5);
           }
-          .footer-text2 {
-            color: #c4c4c4;
+          .footer-text12 {
+            color: rgb(196, 196, 196);
             width: 100%;
             font-size: 14px;
             max-width: 1200px;
             line-height: 21px;
+          }
+          .footer-text13 {
+            display: inline-block;
+          }
+          .footer-text16 {
+            display: inline-block;
           }
           @media (max-width: 991px) {
             .footer-footer {
@@ -292,7 +329,11 @@ const Footer = (props) => {
             .footer-pasted-image {
               width: 100px;
             }
-            .footer-text1 {
+            .footer-text10 {
+              font-size: 12px;
+              line-height: 18px;
+            }
+            .footer-text11 {
               font-size: 12px;
               line-height: 18px;
             }
@@ -332,17 +373,18 @@ Footer.defaultProps = {
   link8: 'Partners',
   link3: 'Static Website Builder',
   link10: 'Press & Media',
-  text1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   header1: 'Company',
-  pastedImageSrc: '/pastedimage-qqc.svg',
+  pastedImageSrc: '/Damasta/logo-damasta-without-tagline-white-200h.png',
   pastedImageAlt: 'pastedImage',
   link7: 'News',
   link2: 'Design to Code',
   link5: 'About',
-  text: '© 2022 finbest. All Rights Reserved.',
+  text: '© 2025 Damasta. All Rights Reserved.',
   header: 'Solutions',
   link6: 'Team',
   link4: 'Static Website Generator',
+  text2: undefined,
+  text21: undefined,
 }
 
 Footer.propTypes = {
@@ -352,7 +394,6 @@ Footer.propTypes = {
   link8: PropTypes.string,
   link3: PropTypes.string,
   link10: PropTypes.string,
-  text1: PropTypes.string,
   header1: PropTypes.string,
   pastedImageSrc: PropTypes.string,
   pastedImageAlt: PropTypes.string,
@@ -363,6 +404,8 @@ Footer.propTypes = {
   header: PropTypes.string,
   link6: PropTypes.string,
   link4: PropTypes.string,
+  text2: PropTypes.element,
+  text21: PropTypes.element,
 }
 
 export default Footer
