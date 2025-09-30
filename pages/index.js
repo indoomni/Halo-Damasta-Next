@@ -74,7 +74,7 @@ const Home = (props) => {
                     href="https://app.damastacoop.com/signup"
                     className="home-log-in link"
                   >
-                    Sudah punya akun?
+                    Belum punya akun?
                   </a>
                   <a href="https://app.damastacoop.com" className="home-link16">
                     <div className="home-sign-up-btn">
@@ -183,7 +183,7 @@ const Home = (props) => {
                 Kota Bekasi khususnya dan seluruh Indonesia umumnya.DAMASTA
                 bukan sekadar nama — ini adalah sebuah GERAKAN. Gerakan untuk
                 membuka akses, memperluas peluang dan menciptakan kemakmuran
-                bersama bagiseluruh koperasi di Kota Bekasi.
+                bersama bagi seluruh koperasi di Kota Bekasi.
               </span>
               <div className="home-hero-buttons1">
                 <div className="home-ios-btn1">
@@ -1353,9 +1353,9 @@ const Home = (props) => {
                           <Fragment>
                             <span className="home-text243">
                               <span>
-                                Fasilitasi dan Koordinasi : Pembiayaan,
-                                Distribusi Barang dan Jasa, Peningkatan SDM
-                                melalui Sertifikasi Kompetensi.
+                                Fasilitasi dan Koordinasi Pembiayaan, Distribusi
+                                Barang dan Jasa, Peningkatan SDM melalui
+                                Sertifikasi Kompetensi.
                               </span>
                               <br></br>
                             </span>
