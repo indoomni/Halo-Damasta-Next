@@ -77,8 +77,6 @@ jobs:
           APP_PATH: ${{ vars.DEPLOY_PATH }}
         run: |
           scp -o StrictHostKeyChecking=no -r \
-            ci-build-and-push.sh \
-            ci-build-locally.sh \
             ci-logs.sh \
             ci-pull.sh \
             ci-start.sh \
@@ -99,6 +97,6 @@ jobs:
           ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST << EOF
             cd $APP_PATH
             ./ci-pull.sh
-            ./ci-stop.sh staging swarm
+            ./ci-stop.sh staging
             ./ci-start.sh staging swarm
           EOF
