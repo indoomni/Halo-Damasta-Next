@@ -18,7 +18,7 @@ import Footer from '../components/footer'
 const Home = (props) => {
   return (
     <>
-      <div className="home-container1">
+      <div className="home-container10">
         <Head>
           <title>Damasta</title>
           <meta
@@ -136,7 +136,7 @@ const Home = (props) => {
                 </div>
               </div>
               <div>
-                <div className="home-container3">
+                <div className="home-container12">
                   <Script
                     html={` <script defer>
     /*
@@ -585,7 +585,7 @@ const Home = (props) => {
             </div>
           </div>
           <div>
-            <div className="home-container5">
+            <div className="home-container14">
               <Script
                 html={`<style>
   @keyframes scroll-x {
@@ -664,14 +664,14 @@ const Home = (props) => {
             ></Feature>
           </div>
         </div>
-        <div className="home-container6 thq-section-padding">
+        <div className="home-container15 thq-section-padding">
           <img
             alt="Cooperative members discussing digital solutions"
             src="/Damasta/core-laptop-1200w.png"
             className="home-image5 thq-img-ratio-16-9"
           />
           <div className="home-max-width2 thq-section-max-width">
-            <div className="home-container7">
+            <div className="home-container16">
               <h2 className="home-title2 thq-heading-2">
                 Welcome to KOPERASI DAMASTA ABHIPRAYA MANDIRI
               </h2>
@@ -726,7 +726,7 @@ const Home = (props) => {
               </div>
             </div>
             <div>
-              <div className="home-container9">
+              <div className="home-container18">
                 <Script
                   html={` <script>
     /* Quote Slider - Code Embed */
@@ -1803,166 +1803,170 @@ const Home = (props) => {
             </div>
           </div>
         </div>
-        <div id="Syarat" className="home-sections2">
-          <div className="home-section4">
-            <div className="home-content22">
-              <div className="home-heading26">
-                <h2 className="home-text340">Syarat Keanggotaan</h2>
-                <span className="home-text341">
-                  Sesuai Pasal 10 AD Koperasi Damasta Abhipraya Mandiri (Skd),
-                  Anggota Koperasi DAM adalah Koperasi Primer yang telah
-                  berbadan Hukum, dan berdomisili di Kota Bekasi
-                </span>
-              </div>
-              <div className="home-content23">
-                <div className="home-points2">
-                  <Point
-                    text1={
-                      <Fragment>
-                        <span className="home-text342">
-                          {' '}
-                          Mengisi formulir pendaftaran sebagai anggota
-                        </span>
-                      </Fragment>
-                    }
-                  ></Point>
-                  <Point
-                    text=" Membayar Simpanan Pokok sebesar Rp.5.000.000 dan Simpanan Wajib minimal sebesar Rp.100.000 per bulan."
-                    text1={
-                      <Fragment>
-                        <span className="home-text343">
-                          {' '}
-                          Membayar Simpanan Pokok sebesar Rp.5.000.000 dan
-                          Simpanan Wajib minimal sebesar Rp.100.000 per bulan.
-                        </span>
-                      </Fragment>
-                    }
-                  ></Point>
-                  <Point
-                    text=" Berlangganan platform koperasi digital Damasta."
-                    text1={
-                      <Fragment>
-                        <span className="home-text344">
-                          {' '}
-                          Berlangganan platform koperasi digital Damasta.
-                        </span>
-                      </Fragment>
-                    }
-                  ></Point>
-                  <Point
-                    text="  Menyetujui AD/ART serta peraturan-peraturan yang berlaku di Koperasi Damasta Abhipraya Mandiri (Skd)."
-                    text1={
-                      <Fragment>
-                        <span className="home-text345">
-                          {' '}
-                          Menyetujui AD/ART serta peraturan-peraturan yang
-                          berlaku di Koperasi Damasta Abhipraya Mandiri (Skd).
-                        </span>
-                      </Fragment>
-                    }
-                  ></Point>
+        <div className="home-container19">
+          <div id="Syarat" className="home-sections2">
+            <div className="home-section4">
+              <div className="home-content22">
+                <div className="home-heading26">
+                  <h2 className="home-text340">Syarat Keanggotaan</h2>
+                  <span className="home-text341">
+                    Sesuai Pasal 10 AD Koperasi Damasta Abhipraya Mandiri (Skd),
+                    Anggota Koperasi DAM adalah Koperasi Primer yang telah
+                    berbadan Hukum, dan berdomisili di Kota Bekasi
+                  </span>
                 </div>
-                <a
-                  href="https://app.damastacoop.com"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="home-link24"
-                >
-                  <div className="home-get-started2">
-                    <span className="home-sign-up3">Bergabung sekarang</span>
+                <div className="home-content23">
+                  <div className="home-points2">
+                    <Point
+                      text1={
+                        <Fragment>
+                          <span className="home-text342">
+                            {' '}
+                            Mengisi formulir pendaftaran sebagai anggota
+                          </span>
+                        </Fragment>
+                      }
+                    ></Point>
+                    <Point
+                      text=" Membayar Simpanan Pokok sebesar Rp.5.000.000 dan Simpanan Wajib minimal sebesar Rp.100.000 per bulan."
+                      text1={
+                        <Fragment>
+                          <span className="home-text343">
+                            {' '}
+                            Membayar Simpanan Pokok sebesar Rp.5.000.000 dan
+                            Simpanan Wajib minimal sebesar Rp.100.000 per bulan.
+                          </span>
+                        </Fragment>
+                      }
+                    ></Point>
+                    <Point
+                      text=" Berlangganan platform koperasi digital Damasta."
+                      text1={
+                        <Fragment>
+                          <span className="home-text344">
+                            {' '}
+                            Berlangganan platform koperasi digital Damasta.
+                          </span>
+                        </Fragment>
+                      }
+                    ></Point>
+                    <Point
+                      text="  Menyetujui AD/ART serta peraturan-peraturan yang berlaku di Koperasi Damasta Abhipraya Mandiri (Skd)."
+                      text1={
+                        <Fragment>
+                          <span className="home-text345">
+                            {' '}
+                            Menyetujui AD/ART serta peraturan-peraturan yang
+                            berlaku di Koperasi Damasta Abhipraya Mandiri (Skd).
+                          </span>
+                        </Fragment>
+                      }
+                    ></Point>
                   </div>
-                </a>
-              </div>
-            </div>
-            <div className="home-image6"></div>
-          </div>
-          <div className="home-section5">
-            <div className="home-content24">
-              <div className="home-heading27">
-                <h2 className="home-text346">Syarat Kemitraan</h2>
-                <span className="home-text347">
-                  Fungsi Apex DAM bertujuan untuk mewujudkan tata kelola
-                  koperasi yang baik dan sehat, serta dapat menolong dirinya
-                  sendiri. Kerja sama antar koperasi dan/dengan lembaga lainnya
-                  yang memilikii visi yang sama, menjadi bagian penting untuk
-                  koperasi ke depannya menjadi mandiri dan kokoh dalam
-                  menghadapi dinamika ke depan.
-                </span>
-              </div>
-              <div className="home-content25">
-                <div className="home-points3">
-                  <Point
-                    text=" Organisasi atau Badan Usaha yang memiliki  legalitas yang jelas."
-                    text1={
-                      <Fragment>
-                        <span className="home-text348">
-                          {' '}
-                          Organisasi atau Badan Usaha yang memiliki legalitas
-                          yang jelas.
-                        </span>
-                      </Fragment>
-                    }
-                  ></Point>
-                  <Point
-                    text="   Mempunyai tujuan umum yang sama."
-                    text1={
-                      <Fragment>
-                        <span className="home-text349">
-                          {' '}
-                          Mempunyai tujuan umum yang sama.
-                        </span>
-                      </Fragment>
-                    }
-                  ></Point>
-                  <Point
-                    text="   Kesetaraan."
-                    text1={
-                      <Fragment>
-                        <span className="home-text350"> Kesetaraan.</span>
-                      </Fragment>
-                    }
-                  ></Point>
-                  <Point
-                    text="     Saling menghargai dan saling memberi kontribusi."
-                    text1={
-                      <Fragment>
-                        <span className="home-text351">
-                          {' '}
-                          Saling menghargai dan saling memberi kontribusi.
-                        </span>
-                      </Fragment>
-                    }
-                  ></Point>
-                  <Point
-                    text="       Sinergi program-programnya."
-                    text1={
-                      <Fragment>
-                        <span className="home-text352">
-                          {' '}
-                          Sinergi program-programnya.
-                        </span>
-                      </Fragment>
-                    }
-                  ></Point>
-                  <Point
-                    text="       Saling menguntungkan."
-                    text1={
-                      <Fragment>
-                        <span className="home-text353">
-                          {' '}
-                          Saling menguntungkan.
-                        </span>
-                      </Fragment>
-                    }
-                  ></Point>
-                </div>
-                <Link href="/">
-                  <a className="home-link25">
-                    <div className="home-get-started3">
-                      <span className="home-sign-up4">Bergabung sekarang</span>
+                  <a
+                    href="https://app.damastacoop.com"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="home-link24"
+                  >
+                    <div className="home-get-started2">
+                      <span className="home-sign-up3">Bergabung sekarang</span>
                     </div>
                   </a>
-                </Link>
+                </div>
+              </div>
+              <div className="home-image6"></div>
+            </div>
+            <div className="home-section5">
+              <div className="home-content24">
+                <div className="home-heading27">
+                  <h2 className="home-text346">Syarat Kemitraan</h2>
+                  <span className="home-text347">
+                    Fungsi Apex DAM bertujuan untuk mewujudkan tata kelola
+                    koperasi yang baik dan sehat, serta dapat menolong dirinya
+                    sendiri. Kerja sama antar koperasi dan/dengan lembaga
+                    lainnya yang memilikii visi yang sama, menjadi bagian
+                    penting untuk koperasi ke depannya menjadi mandiri dan kokoh
+                    dalam menghadapi dinamika ke depan.
+                  </span>
+                </div>
+                <div className="home-content25">
+                  <div className="home-points3">
+                    <Point
+                      text=" Organisasi atau Badan Usaha yang memiliki  legalitas yang jelas."
+                      text1={
+                        <Fragment>
+                          <span className="home-text348">
+                            {' '}
+                            Organisasi atau Badan Usaha yang memiliki legalitas
+                            yang jelas.
+                          </span>
+                        </Fragment>
+                      }
+                    ></Point>
+                    <Point
+                      text="   Mempunyai tujuan umum yang sama."
+                      text1={
+                        <Fragment>
+                          <span className="home-text349">
+                            {' '}
+                            Mempunyai tujuan umum yang sama.
+                          </span>
+                        </Fragment>
+                      }
+                    ></Point>
+                    <Point
+                      text="   Kesetaraan."
+                      text1={
+                        <Fragment>
+                          <span className="home-text350"> Kesetaraan.</span>
+                        </Fragment>
+                      }
+                    ></Point>
+                    <Point
+                      text="     Saling menghargai dan saling memberi kontribusi."
+                      text1={
+                        <Fragment>
+                          <span className="home-text351">
+                            {' '}
+                            Saling menghargai dan saling memberi kontribusi.
+                          </span>
+                        </Fragment>
+                      }
+                    ></Point>
+                    <Point
+                      text="       Sinergi program-programnya."
+                      text1={
+                        <Fragment>
+                          <span className="home-text352">
+                            {' '}
+                            Sinergi program-programnya.
+                          </span>
+                        </Fragment>
+                      }
+                    ></Point>
+                    <Point
+                      text="       Saling menguntungkan."
+                      text1={
+                        <Fragment>
+                          <span className="home-text353">
+                            {' '}
+                            Saling menguntungkan.
+                          </span>
+                        </Fragment>
+                      }
+                    ></Point>
+                  </div>
+                  <Link href="/">
+                    <a className="home-link25">
+                      <div className="home-get-started3">
+                        <span className="home-sign-up4">
+                          Bergabung sekarang
+                        </span>
+                      </div>
+                    </a>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -1976,14 +1980,21 @@ const Home = (props) => {
               </span>
             </div>
             <div className="home-hero-buttons2">
-              <div className="home-ios-btn2">
-                <img
-                  alt="pastedImage"
-                  src="/pastedimage-zmzg.svg"
-                  className="home-apple2"
-                />
-                <span className="home-caption7">Hubungi kami</span>
-              </div>
+              <a
+                href="https://wa.me/6285179896939"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="home-link26"
+              >
+                <div className="home-ios-btn2">
+                  <img
+                    alt="pastedImage"
+                    src="/pastedimage-zmzg.svg"
+                    className="home-apple2"
+                  />
+                  <span className="home-caption7">Hubungi kami</span>
+                </div>
+              </a>
               <div className="home-android-btn2">
                 <img
                   alt="pastedImage"
@@ -2023,7 +2034,7 @@ const Home = (props) => {
       </div>
       <style jsx>
         {`
-          .home-container1 {
+          .home-container10 {
             width: 100%;
             display: flex;
             min-height: 100vh;
@@ -2248,7 +2259,7 @@ const Home = (props) => {
             font-style: normal;
             font-weight: 500;
           }
-          .home-container3 {
+          .home-container12 {
             display: contents;
           }
           .home-content10 {
@@ -3056,7 +3067,7 @@ const Home = (props) => {
             width: 100%;
             height: 400px;
           }
-          .home-container5 {
+          .home-container14 {
             display: contents;
           }
           .home-features {
@@ -3126,7 +3137,7 @@ const Home = (props) => {
             flex-direction: row;
             justify-content: flex-start;
           }
-          .home-container6 {
+          .home-container15 {
             gap: var(--dl-layout-space-unit);
             height: auto;
             display: flex;
@@ -3150,7 +3161,7 @@ const Home = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .home-container7 {
+          .home-container16 {
             gap: var(--dl-layout-space-halfunit);
             display: flex;
             z-index: 100;
@@ -3250,7 +3261,7 @@ const Home = (props) => {
             width: 19px;
             height: 19px;
           }
-          .home-container9 {
+          .home-container18 {
             display: contents;
           }
           .home-program5-tahun {
@@ -4681,6 +4692,13 @@ const Home = (props) => {
             font-style: normal;
             font-weight: 600;
           }
+          .home-container19 {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background-color: #f3f5fa;
+          }
           .home-sections2 {
             width: 100%;
             max-width: 1200px;
@@ -4935,6 +4953,9 @@ const Home = (props) => {
             flex-direction: row;
             justify-content: center;
           }
+          .home-link26 {
+            display: contents;
+          }
           .home-ios-btn2 {
             gap: var(--dl-layout-space-halfunit);
             fill: white;
@@ -4950,6 +4971,7 @@ const Home = (props) => {
             flex-direction: row;
             padding-bottom: var(--dl-layout-space-oneandhalfunits);
             justify-content: center;
+            text-decoration: none;
             background-color: #000000;
           }
           .home-ios-btn2:hover {
@@ -5423,7 +5445,7 @@ const Home = (props) => {
               width: 100%;
               flex-direction: column;
             }
-            .home-container6 {
+            .home-container15 {
               height: auto;
             }
             .home-image5 {
