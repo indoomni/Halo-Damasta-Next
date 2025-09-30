@@ -5,7 +5,7 @@ ENV=${1:-dev}
 
 case "$ENV" in
   dev)
-    docker-compose down
+    docker compose down
     ;;
   staging)
     if docker service ls -q -f name=damasta-staging_web > /dev/null 2>&1; then
@@ -13,7 +13,7 @@ case "$ENV" in
       docker stack rm damasta-staging
     else
       echo "Stopping staging environment (Standalone mode)..."
-      docker-compose -f docker-compose.staging.yml down
+      docker compose -f docker-compose.staging.yml down
     fi
     ;;
   production)
@@ -22,7 +22,7 @@ case "$ENV" in
       docker stack rm damasta-production
     else
       echo "Stopping production environment (Standalone mode)..."
-      docker-compose -f docker-compose.production.yml down
+      docker compose -f docker-compose.production.yml down
     fi
     ;;
   *)
