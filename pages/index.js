@@ -52,7 +52,7 @@ const Home = (props) => {
             <div className="home-content11">
               <h1 className="home-title1">
                 <span className="home-text10">
-                  Bukan sekedar platform digital.
+                  Banget! Bukan sekedar platform digital.
                 </span>
                 <br className="home-text11"></br>
                 <span className="home-text12">Tapi sebuah gerakan.</span>
@@ -837,7 +837,7 @@ const Home = (props) => {
         <div className="home-get-started2">
           <div className="home-content20">
             <div className="home-heading24">
-              <h2 className="home-text98">Get started with finbest now!</h2>
+              <h2 className="home-text98">Jadi bagian gerakan ini!</h2>
               <span className="home-text99">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore magna.
@@ -2858,11 +2858,11 @@ const Home = (props) => {
             flex-direction: column;
           }
           .home-text98 {
-            color: #c1fffc;
+            color: rgb(193, 255, 252);
             font-size: 64px;
             font-style: normal;
             text-align: center;
-            font-family: Poppins;
+            font-family: 'Poppins';
             font-weight: 600;
           }
           .home-text99 {
