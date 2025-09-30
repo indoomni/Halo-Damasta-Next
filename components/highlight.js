@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import PropTypes from 'prop-types'
 import { useTranslations } from 'next-intl'
@@ -8,7 +8,13 @@ const Highlight = (props) => {
     <>
       <div className="highlight-highlight">
         <span className="highlight-text1">{props.title}</span>
-        <span className="highlight-text2">{props.description}</span>
+        <span className="highlight-text2">
+          {props.text ?? (
+            <Fragment>
+              <span className="highlight-text3"></span>
+            </Fragment>
+          )}
+        </span>
       </div>
       <style jsx>
         {`
@@ -33,6 +39,9 @@ const Highlight = (props) => {
             font-family: Poppins;
             line-height: 24px;
           }
+          .highlight-text3 {
+            display: inline-block;
+          }
           @media (max-width: 767px) {
             .highlight-text1 {
               font-size: 16px;
@@ -47,13 +56,12 @@ const Highlight = (props) => {
 }
 
 Highlight.defaultProps = {
-  description:
-    'Sed do eiusmod tempor incididunt ut labore et dolore magna aliquat enim ad minim veniam, quis nostrud',
+  text: undefined,
   title: 'Everything you get with Finbest',
 }
 
 Highlight.propTypes = {
-  description: PropTypes.string,
+  text: PropTypes.element,
   title: PropTypes.string,
 }
 

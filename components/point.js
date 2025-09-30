@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import PropTypes from 'prop-types'
 import { useTranslations } from 'next-intl'
@@ -12,7 +12,16 @@ const Point = (props) => {
             <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
           </svg>
         </div>
-        <span className="point-text">{props.text}</span>
+        <span className="point-text1">
+          {props.text1 ?? (
+            <Fragment>
+              <span className="point-text2">
+                {' '}
+                5. Sinergi program-programnya.
+              </span>
+            </Fragment>
+          )}
+        </span>
       </div>
       <style jsx>
         {`
@@ -37,12 +46,15 @@ const Point = (props) => {
             width: 12px;
             height: 12px;
           }
-          .point-text {
+          .point-text1 {
             max-width: 535px;
             font-style: normal;
             font-family: 'Poppins';
             font-weight: 600;
             line-height: 24px;
+          }
+          .point-text2 {
+            display: inline-block;
           }
         `}
       </style>
@@ -51,11 +63,11 @@ const Point = (props) => {
 }
 
 Point.defaultProps = {
-  text: '     5.   Sinergi program-programnya.',
+  text1: undefined,
 }
 
 Point.propTypes = {
-  text: PropTypes.string,
+  text1: PropTypes.element,
 }
 
 export default Point

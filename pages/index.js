@@ -6,7 +6,6 @@ import Script from 'dangerous-html/react'
 import { useTranslations } from 'next-intl'
 
 import Announcement from '../components/announcement'
-import Navbar from '../components/navbar'
 import Highlight from '../components/highlight'
 import Point from '../components/point'
 import Accordion from '../components/accordion'
@@ -44,41 +43,147 @@ const Home = (props) => {
                 </a>
               </Link>
             </div>
-            <Navbar
-              imageSrc="https://play.teleporthq.io/static/svg/placeholders/no-image.svg"
-              brandingSrc="/Damasta/logo-damasta-without-tagline-200h.png"
-              link1="Tentang Kami"
-              link2="Program"
-              link3="Persyaratan"
-            ></Navbar>
+            <header className="home-navbar">
+              <div className="home-desktop">
+                <div className="home-main">
+                  <div className="home-branding">
+                    <Link href="/">
+                      <a className="home-link11">
+                        <img
+                          alt="pastedImage"
+                          src="/Damasta/logo-damasta-without-tagline-200h.png"
+                          className="home-finbest"
+                        />
+                      </a>
+                    </Link>
+                  </div>
+                  <div className="home-links1">
+                    <Link href="/">
+                      <a className="home-link13 link">Tentang Kami</a>
+                    </Link>
+                    <a href="#Program" className="home-link14 link">
+                      Program
+                    </a>
+                    <a href="#Syarat" className="home-link15 link">
+                      Persyaratan
+                    </a>
+                  </div>
+                </div>
+                <div className="home-quick-actions">
+                  <a
+                    href="https://app.damastacoop.com/signup"
+                    className="home-log-in link"
+                  >
+                    Sudah punya akun?
+                  </a>
+                  <a href="https://app.damastacoop.com" className="home-link16">
+                    <div className="home-sign-up-btn">
+                      <span className="home-sign-up1">Masuk</span>
+                    </div>
+                  </a>
+                  <img
+                    id="open-mobile-menu"
+                    alt="pastedImage"
+                    src="/pastedimage-8o98.svg"
+                    className="home-hamburger-menu"
+                  />
+                </div>
+              </div>
+              <div id="mobile-menu" className="home-mobile">
+                <div className="home-top1">
+                  <img
+                    alt="image"
+                    src="https://play.teleporthq.io/static/svg/placeholders/no-image.svg"
+                    className="home-image1"
+                  />
+                  <svg
+                    id="close-mobile-menu"
+                    viewBox="0 0 1024 1024"
+                    className="home-icon10"
+                  >
+                    <path d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"></path>
+                  </svg>
+                </div>
+                <div className="home-links2">
+                  <Link href="/">
+                    <a className="home-link17">Features</a>
+                  </Link>
+                  <Link href="/">
+                    <a className="home-link18">How it works</a>
+                  </Link>
+                  <Link href="/">
+                    <a className="home-link19">Prices</a>
+                  </Link>
+                  <Link href="/">
+                    <a className="home-link20">Contact</a>
+                  </Link>
+                  <div className="home-buttons1">
+                    <Link href="/">
+                      <a className="home-link21">
+                        <div className="home-btn1">
+                          <span className="home-text100">Log in</span>
+                        </div>
+                      </a>
+                    </Link>
+                    <Link href="/">
+                      <a className="home-link22">
+                        <div className="home-btn2">
+                          <span className="home-text101">Sign up</span>
+                        </div>
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div className="home-container3">
+                  <Script
+                    html={` <script defer>
+    /*
+    Mobile menu - Code Embed
+    */
+
+    // Mobile menu
+    const mobileMenu = document.querySelector("#mobile-menu");
+
+    // Buttons
+    const closeButton = document.querySelector("#close-mobile-menu");
+    const openButton = document.querySelector("#open-mobile-menu");
+
+    if (mobileMenu && closeButton && openButton) {
+      // On openButton click, set the mobileMenu position left to -100vw
+      openButton.addEventListener("click", function () {
+        mobileMenu.style.transform = "translateX(0%)";
+      });
+
+      // On closeButton click, set the mobileMenu position to 0vw
+      closeButton.addEventListener("click", function () {
+        mobileMenu.style.transform = "translateX(100%)";
+      });
+    }
+  </script>`}
+                  ></Script>
+                </div>
+              </div>
+            </header>
           </header>
           <div className="home-content10">
             <div className="home-content11">
-              <h1 className="home-title">
-                <span className="home-text100">
+              <h1 className="home-title1">
+                <span className="home-text102">
                   Bukan sekedar platform digital.
                 </span>
-                <br className="home-text101"></br>
-                <span className="home-text102">Tapi sebuah gerakan.</span>
+                <br className="home-text103"></br>
+                <span className="home-text104">Tapi sebuah gerakan.</span>
                 <br></br>
               </h1>
               <span className="home-caption1">
-                <span className="home-text104">
-                  DAMASTA lahir dari mimpi bersama - membangun masa depan
-                  digital yang adil, inklusif, dan penuh harapan bagi seluruh
-                  koperasi di Kota Bekasi khususnya dan seluruh Indonesia
-                  umumnya.
-                </span>
-                <br></br>
-                <br></br>
-                <span>
-                  DAMASTA bukan sekadar nama — ini adalah sebuah GERAKAN.
-                  Gerakan untuk membuka akses, memperluas peluang dan
-                  menciptakan kemakmuran bersama bagi
-                </span>
-                <br></br>
-                <span>seluruh koperasi di Kota Bekasi.</span>
-                <br></br>
+                DAMASTA lahir dari mimpi bersama - membangun masa depan digital
+                yang adil, inklusif, dan penuh harapan bagi seluruh koperasi di
+                Kota Bekasi khususnya dan seluruh Indonesia umumnya.DAMASTA
+                bukan sekadar nama — ini adalah sebuah GERAKAN. Gerakan untuk
+                membuka akses, memperluas peluang dan menciptakan kemakmuran
+                bersama bagiseluruh koperasi di Kota Bekasi.
               </span>
               <div className="home-hero-buttons1">
                 <div className="home-ios-btn1">
@@ -100,13 +205,12 @@ const Home = (props) => {
               </div>
             </div>
             <div className="home-images">
-              <div className="home-column1">
-                <img
-                  alt="pastedImage"
-                  src="/Damasta/klik-home-1500h.png"
-                  className="home-pasted-image1"
-                />
-              </div>
+              <div className="home-column1"></div>
+              <img
+                alt="pastedImage"
+                src="/Damasta/klik-home-1500h.png"
+                className="home-pasted-image1"
+              />
               <div className="home-column2">
                 <img
                   alt="pastedImage"
@@ -122,12 +226,12 @@ const Home = (props) => {
               <div className="home-column3">
                 <img
                   alt="pastedImage"
-                  src="/Damasta/logo-damasta-square-1500h.png"
+                  src="/Damasta/pos-product-700w.png"
                   className="home-pasted-image4"
                 />
                 <img
                   alt="pastedImage"
-                  src="/pastedimage-06e.svg"
+                  src="/Damasta/core-tablet-1500h.png"
                   className="home-pasted-image5"
                 />
               </div>
@@ -137,7 +241,7 @@ const Home = (props) => {
         <div className="home-video1">
           <div className="home-content12">
             <div className="home-header1">
-              <h2 className="home-text111">
+              <h2 className="home-text106">
                 Built specifically for people who want faster transactions
               </h2>
             </div>
@@ -152,7 +256,7 @@ const Home = (props) => {
               ></video>
               <div className="home-heading-container">
                 <div className="home-heading11">
-                  <span className="home-text112">
+                  <span className="home-text107">
                     Consectetur adipiscing elit, sed do eiusmod tempor
                     <span
                       dangerouslySetInnerHTML={{
@@ -160,13 +264,13 @@ const Home = (props) => {
                       }}
                     />
                   </span>
-                  <span className="home-text113">
+                  <span className="home-text108">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt.
                   </span>
                 </div>
                 <div className="home-explore1">
-                  <span className="home-text114">
+                  <span className="home-text109">
                     Explore pricing plans -&gt;
                   </span>
                 </div>
@@ -211,9 +315,9 @@ const Home = (props) => {
         </div>
         <div className="home-sections1">
           <div className="home-section1">
-            <div className="home-image1">
+            <div className="home-image2">
               <div className="home-image-highlight">
-                <span className="home-text115">
+                <span className="home-text110">
                   <span>
                     always know your in and out
                     <span
@@ -227,12 +331,27 @@ const Home = (props) => {
               </div>
             </div>
             <div className="home-content13">
-              <h2 className="home-text118">Everything you get with Finbest</h2>
+              <h2 className="home-text113">Everything you get with Finbest</h2>
               <Highlight
+                text={
+                  <Fragment>
+                    <span className="home-text114">
+                      Sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliquat enim ad minim veniam, quis nostrud
+                    </span>
+                  </Fragment>
+                }
                 title="Lorem ipsum dolor sit amet, consectetur "
                 description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliquat enim ad minim veniam, quis nostrud"
               ></Highlight>
               <Highlight
+                text={
+                  <Fragment>
+                    <span className="home-text115">
+                      Sed do eiusmod tempor incididunt ut labore et dolore
+                    </span>
+                  </Fragment>
+                }
                 title="Lorem ipsum dolor sit amet, consectetur "
                 description="Sed do eiusmod tempor incididunt ut labore et dolore"
               ></Highlight>
@@ -244,33 +363,60 @@ const Home = (props) => {
           <div className="home-section2">
             <div className="home-content14">
               <div className="home-heading12">
-                <h2 className="home-text120">
+                <h2 className="home-text117">
                   Keep track with all transactions
                 </h2>
-                <span className="home-text121">
+                <span className="home-text118">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt.
                 </span>
               </div>
               <div className="home-content15">
                 <div className="home-points1">
-                  <Point></Point>
-                  <Point text="Quis nostrud exercitation ullamco"></Point>
-                  <Point text="Reprehenderit qui in ea voluptate velit"></Point>
+                  <Point
+                    text1={
+                      <Fragment>
+                        <span className="home-text119">
+                          {' '}
+                          5. Sinergi program-programnya.
+                        </span>
+                      </Fragment>
+                    }
+                  ></Point>
+                  <Point
+                    text="Quis nostrud exercitation ullamco"
+                    text1={
+                      <Fragment>
+                        <span className="home-text120">
+                          Quis nostrud exercitation ullamco
+                        </span>
+                      </Fragment>
+                    }
+                  ></Point>
+                  <Point
+                    text="Reprehenderit qui in ea voluptate velit"
+                    text1={
+                      <Fragment>
+                        <span className="home-text121">
+                          Reprehenderit qui in ea voluptate velit
+                        </span>
+                      </Fragment>
+                    }
+                  ></Point>
                 </div>
                 <Link href="/">
-                  <a className="home-link2">
+                  <a className="home-link23">
                     <div className="home-get-started1">
-                      <span className="home-sign-up1">Get started now</span>
+                      <span className="home-sign-up2">Get started now</span>
                     </div>
                   </a>
                 </Link>
               </div>
             </div>
-            <div className="home-image2"></div>
+            <div className="home-image3"></div>
           </div>
           <div className="home-section3">
-            <div className="home-image3">
+            <div className="home-image4">
               <div className="home-image-overlay"></div>
             </div>
             <div className="home-content16">
@@ -279,17 +425,17 @@ const Home = (props) => {
                 <br></br>
               </h2>
               <Accordion
-                text6={
+                text={
                   <Fragment>
                     <span className="home-text125">
-                      Aliquam quaerat voluptatem
+                      Nemo enim ipsam voluptatem quia voluptas
                     </span>
                   </Fragment>
                 }
-                text={
+                text6={
                   <Fragment>
                     <span className="home-text126">
-                      Nemo enim ipsam voluptatem quia voluptas
+                      Aliquam quaerat voluptatem
                     </span>
                   </Fragment>
                 }
@@ -314,43 +460,228 @@ const Home = (props) => {
             />
           </div>
         </div>
+        <div className="home-header76 thq-section-padding">
+          <div className="home-max-width1 thq-section-max-width">
+            <div className="home-column4 thq-section-padding">
+              <div className="home-content17">
+                <h2 className="home-text129">
+                  Solusi untuk pengurus, anggota dan unit usaha koperasi
+                </h2>
+                <Highlight
+                  text={
+                    <Fragment>
+                      <span className="home-text130">
+                        <span>
+                          Sistem
+                          <span
+                            dangerouslySetInnerHTML={{
+                              __html: ' ',
+                            }}
+                          />
+                        </span>
+                        <span className="home-text132">core banking</span>
+                        <span>
+                          {' '}
+                          koperasi untuk pengurus dan pengawas untuk melakukan
+                          pelayanan dan pengawasan koperasi. 
+                        </span>
+                      </span>
+                    </Fragment>
+                  }
+                  title="Aplikasi JDpos"
+                  description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliquat enim ad minim veniam, quis nostrud"
+                ></Highlight>
+                <Highlight
+                  text={
+                    <Fragment>
+                      <span className="home-text134">
+                        Aplikasi untuk unit usaha milik koperasi dan anggota,
+                        terhubung secara real-time dengan JDpos dan ekosistem
+                        lain.
+                      </span>
+                    </Fragment>
+                  }
+                  title="JDpos"
+                  description="Sed do eiusmod tempor incididunt ut labore et dolore"
+                ></Highlight>
+                <div className="home-explore3">
+                  <span>Explore pricing plans -&gt;</span>
+                </div>
+              </div>
+            </div>
+            <div className="home-content18">
+              <div className="home-column-container1 thq-mask-image-vertical thq-animated-group-container-vertical">
+                <div className="thq-animated-group-vertical">
+                  <img
+                    alt="Cooperative members embracing technology"
+                    src="/Damasta/klik-bisnis-700w.png"
+                    className="home-placeholder-image10 thq-img-ratio-1-1 thq-img-scale"
+                  />
+                  <img
+                    alt="Cooperative members engaging in a meeting"
+                    src="/Damasta/klik-transfer-700w.png"
+                    className="home-placeholder-image11 thq-img-ratio-1-1 thq-img-scale"
+                  />
+                  <img
+                    alt="Cooperative members discussing digital solutions"
+                    src="/Damasta/klik-700w.png"
+                    className="home-placeholder-image12 thq-img-ratio-1-1 thq-img-scale"
+                  />
+                </div>
+                <div className="thq-animated-group-vertical">
+                  <img
+                    alt="Cooperative members embracing technology"
+                    src="/Damasta/pos-home-600h.png"
+                    className="home-placeholder-image13 thq-img-ratio-1-1 thq-img-scale"
+                  />
+                  <img
+                    alt="Cooperative members engaging in a meeting"
+                    src="/Damasta/pos-login-700w.png"
+                    className="home-placeholder-image14 thq-img-ratio-1-1 thq-img-scale"
+                  />
+                  <img
+                    alt="Cooperative members discussing digital solutions"
+                    src="/Damasta/pos-product-700w.png"
+                    className="home-placeholder-image15 thq-img-ratio-1-1 thq-img-scale"
+                  />
+                </div>
+              </div>
+              <div className="home-column-container2 thq-mask-image-vertical thq-animated-group-container-vertical">
+                <div className="thq-animated-group-vertical-reverse">
+                  <img
+                    alt="Cooperative members collaborating on a project"
+                    src="/Damasta/klik-home-1500h.png"
+                    className="home-placeholder-image16 thq-img-ratio-1-1 thq-img-scale"
+                  />
+                  <img
+                    alt="Cooperative members networking at an event"
+                    src="/Damasta/klik-profile-700w.png"
+                    className="home-placeholder-image17 thq-img-ratio-1-1 thq-img-scale"
+                  />
+                  <img
+                    alt="Cooperative members strategizing for growth"
+                    src="/Damasta/klik-bisnis-700w.png"
+                    className="home-placeholder-image18 thq-img-ratio-1-1 thq-img-scale"
+                  />
+                </div>
+                <div className="thq-animated-group-vertical-reverse">
+                  <img
+                    alt="Cooperative members collaborating on a project"
+                    src="/Damasta/pos-home-600h.png"
+                    className="home-placeholder-image19 thq-img-ratio-1-1 thq-img-scale"
+                  />
+                  <img
+                    alt="Cooperative members networking at an event"
+                    src="/Damasta/pos-login-700w.png"
+                    className="home-placeholder-image20 thq-img-ratio-1-1 thq-img-scale"
+                  />
+                  <img
+                    alt="Cooperative members strategizing for growth"
+                    src="/Damasta/pos-product-700w.png"
+                    className="home-placeholder-image21 thq-img-ratio-1-1 thq-img-scale"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className="home-container5">
+              <Script
+                html={`<style>
+  @keyframes scroll-x {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - 16px));
+    }
+  }
+
+  @keyframes scroll-y {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - 16px));
+    }
+  }
+</style>
+`}
+              ></Script>
+            </div>
+          </div>
+        </div>
         <div className="home-features">
           <div className="home-header2">
             <div className="home-tag1">
-              <span className="home-text129">Features</span>
+              <span className="home-text136">Fitur &amp; Ekosistem</span>
             </div>
             <div className="home-heading13">
-              <h2 className="home-text130">Everything you get with Finbest</h2>
-              <span className="home-text131">
+              <h2 className="home-text137">
+                <span>Halo, </span>
+                <span>Damasta!</span>
+              </h2>
+              <span className="home-text140">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt.
               </span>
             </div>
           </div>
           <div className="home-feature-list">
-            <Feature></Feature>
             <Feature
-              title="Multiple Devices"
+              title="Anggota"
+              description="Informasi anggota dengan aplikasi web dan WhatsApp."
+            ></Feature>
+            <Feature
+              title="Notifikasi"
               thumbnail="/vector6113-r6dl.svg"
+              description="Otomatis ingatkan anggota atas kewajiban simpanan wajib dan tagihan-tagihan."
             ></Feature>
             <Feature
-              title="Analytics"
+              title="Core banking"
               thumbnail="/vector6113-6zj.svg"
+              description="Kelola anggota, transaksi dan laporan-laporan dalam satu aplikasi untuk pengurus."
             ></Feature>
             <Feature
-              title="Virtual Card"
+              title="Pembiayaan"
               thumbnail="/vector6113-lvvs.svg"
+              description="Mitra institusi keuangan berlisensi untuk membantu pemodalan koperasi."
             ></Feature>
             <Feature
-              title="Safe Transactions"
+              title="Transaksi real-time"
               thumbnail="/vector6114-cupp.svg"
+              description="Transaksi dapat dimonitor langsung secara real-time."
             ></Feature>
             <Feature
-              title="Milestones"
+              title="Sisa Hasil Usaha"
               thumbnail="/vector6114-6m1e.svg"
+              description="Penghitungan dan pembagian SHU secara otomatis."
             ></Feature>
-            <Feature title="Trade" thumbnail="/vector6114-yjl.svg"></Feature>
-            <Feature title="Wallet" thumbnail="/vector6113-lvvs.svg"></Feature>
+            <Feature
+              title="Supply Chain"
+              thumbnail="/vector6114-yjl.svg"
+              description="Mitra supplier setingkat nasional, distributor dan agen."
+            ></Feature>
+          </div>
+        </div>
+        <div className="home-container6 thq-section-padding">
+          <img
+            alt="Cooperative members discussing digital solutions"
+            src="/Damasta/core-laptop-1200w.png"
+            className="home-image5 thq-img-ratio-16-9"
+          />
+          <div className="home-max-width2 thq-section-max-width">
+            <div className="home-container7">
+              <h2 className="home-title2 thq-heading-2">
+                Welcome to KOPERASI DAMASTA ABHIPRAYA MANDIRI
+              </h2>
+              <h3 className="home-text141 thq-heading-3">
+                Empowering cooperatives through digitalization and innovation
+              </h3>
+            </div>
+            <button type="button" className="thq-button-filled">
+              <span>Learn More</span>
+            </button>
           </div>
         </div>
         <div className="home-testimonials">
@@ -361,7 +692,7 @@ const Home = (props) => {
               className="home-logo"
             />
           </div>
-          <div className="home-content17">
+          <div className="home-content19">
             <div id="quotes" className="home-quotes">
               <div className="quote active-quote">
                 <Quote rootClassName="quoteroot-class-name"></Quote>
@@ -382,20 +713,20 @@ const Home = (props) => {
                 ></Quote>
               </div>
             </div>
-            <div className="home-buttons">
+            <div className="home-buttons2">
               <div id="quote-before" className="home-left">
-                <svg viewBox="0 0 1024 1024" className="home-icon10">
+                <svg viewBox="0 0 1024 1024" className="home-icon12">
                   <path d="M854 470v84h-520l238 240-60 60-342-342 342-342 60 60-238 240h520z"></path>
                 </svg>
               </div>
               <div id="quote-next" className="home-right">
-                <svg viewBox="0 0 1024 1024" className="home-icon12">
+                <svg viewBox="0 0 1024 1024" className="home-icon14">
                   <path d="M512 170l342 342-342 342-60-60 238-240h-520v-84h520l-238-240z"></path>
                 </svg>
               </div>
             </div>
             <div>
-              <div className="home-container3">
+              <div className="home-container9">
                 <Script
                   html={` <script>
     /* Quote Slider - Code Embed */
@@ -431,25 +762,25 @@ const Home = (props) => {
             </div>
           </div>
         </div>
-        <div className="home-program5-tahun">
-          <div className="home-content18">
+        <div id="Program" className="home-program5-tahun">
+          <div className="home-content20">
             <div className="home-header3">
               <div className="home-tag2">
-                <span className="home-text132">
+                <span className="home-text143">
                   <span>Program</span>
                   <br></br>
                 </span>
               </div>
               <div className="home-heading14">
-                <h2 className="home-text135">Program 5 Tahun</h2>
+                <h2 className="home-text146">Program 5 Tahun</h2>
               </div>
             </div>
             <div className="home-rows">
-              <div className="home-column4">
+              <div className="home-column5">
                 <Question
                   title={
                     <Fragment>
-                      <span className="home-text136">
+                      <span className="home-text147">
                         Digitalisasi Koperasi
                       </span>
                     </Fragment>
@@ -471,7 +802,7 @@ const Home = (props) => {
                             }}
                           />
                         </span>
-                        <span className="home-text138">
+                        <span className="home-text149">
                           PT Sinergitas Untuk Negeri
                         </span>
                         <span>
@@ -505,7 +836,7 @@ const Home = (props) => {
                 <Question
                   title={
                     <Fragment>
-                      <span className="home-text145">Pembiayaan</span>
+                      <span className="home-text156">Pembiayaan</span>
                     </Fragment>
                   }
                   description={
@@ -537,7 +868,7 @@ const Home = (props) => {
                 <Question
                   title={
                     <Fragment>
-                      <span className="home-text149">
+                      <span className="home-text160">
                         Logistik dan Distribusi
                         <span
                           dangerouslySetInnerHTML={{
@@ -575,7 +906,7 @@ const Home = (props) => {
                 <Question
                   title={
                     <Fragment>
-                      <span className="home-text153">
+                      <span className="home-text164">
                         Pendampingan dan Penguatan Kelembagaan Koperasi dan UMKM
                         <span
                           dangerouslySetInnerHTML={{
@@ -625,11 +956,11 @@ const Home = (props) => {
                   }
                 ></Question>
               </div>
-              <div className="home-column5">
+              <div className="home-column6">
                 <Question
                   title={
                     <Fragment>
-                      <span className="home-text157">
+                      <span className="home-text168">
                         Program Perlindungan Sosial Ketenagakerjaan
                       </span>
                     </Fragment>
@@ -686,7 +1017,7 @@ const Home = (props) => {
                 <Question
                   title={
                     <Fragment>
-                      <span className="home-text164">Bisnis Sektor Riil</span>
+                      <span className="home-text175">Bisnis Sektor Riil</span>
                     </Fragment>
                   }
                   description={
@@ -738,47 +1069,50 @@ const Home = (props) => {
           </div>
         </div>
         <div className="home-roadmap">
-          <div className="home-content19">
+          <div className="home-content21">
             <div className="home-header4">
               <div className="home-tag3">
-                <span className="home-text168">Roadmap</span>
+                <span className="home-text179">Roadmap</span>
               </div>
               <div className="home-heading15">
-                <h2 className="home-text169">Rencana Bisnis 2025-2026 </h2>
+                <h2 className="home-text180">
+                  <span>Rencana Bisnis</span>
+                  <br></br>
+                  <span>2025-2026 </span>
+                </h2>
               </div>
             </div>
             <div className="home-pricing-plans">
               <div className="home-plans1">
                 <div className="home-plan1">
-                  <div className="home-top1">
+                  <div className="home-top2">
                     <div className="home-heading16">
-                      <span className="home-text170">Semester I - 2025</span>
-                      <span className="home-text171">
+                      <span className="home-text184">Semester I - 2025</span>
+                      <span className="home-text185">
                         Sed ut perspiciatis unde omnis iste natus error sit.
                       </span>
                     </div>
                     <div className="home-cost1">
-                      <span className="home-text172">Free</span>
+                      <span className="home-text186">Free</span>
                     </div>
                   </div>
                   <div className="home-bottom1">
-                    <div className="home-check-list1">
+                    <div className="home-check-list10">
                       <Check
-                        feature="Penguatan infrastuktur Pemodalan dan Operasinal Koperasi DAM"
                         text={
                           <Fragment>
-                            <span className="home-text173">
+                            <span className="home-text187">
                               Penguatan infrastuktur Pemodalan dan Operasional
                               Koperasi DAM.
                             </span>
                           </Fragment>
                         }
+                        feature="Penguatan infrastuktur Pemodalan dan Operasinal Koperasi DAM"
                       ></Check>
                       <Check
-                        feature="Perencanaan dan Pengembangan IT Core System (Platform Digital Damasta) sebagai pendukung utama, bekerjasama dengan PT Sinergitas Untuk Negeri"
                         text={
                           <Fragment>
-                            <span className="home-text174">
+                            <span className="home-text188">
                               Perencanaan dan Pengembangan IT Core System
                               (platform digital Damasta) sebagai pendukung
                               utama, bekerjasama dengan PT Sinergitas Untuk
@@ -786,43 +1120,44 @@ const Home = (props) => {
                             </span>
                           </Fragment>
                         }
+                        feature="Perencanaan dan Pengembangan IT Core System (Platform Digital Damasta) sebagai pendukung utama, bekerjasama dengan PT Sinergitas Untuk Negeri"
                       ></Check>
                       <Check
-                        feature="Voluptas sit aspernatur aut odit"
                         text={
                           <Fragment>
-                            <span className="home-text175">
+                            <span className="home-text189">
                               <span>Penyusunan program prioritas DAM.</span>
                               <br></br>
                             </span>
                           </Fragment>
                         }
+                        feature="Voluptas sit aspernatur aut odit"
                       ></Check>
                     </div>
-                    <div className="home-button1">
-                      <span className="home-text178">Get Standard</span>
+                    <div className="home-button11">
+                      <span className="home-text192">Get Standard</span>
                     </div>
                   </div>
                 </div>
                 <div className="home-plan2">
-                  <div className="home-top2">
+                  <div className="home-top3">
                     <div className="home-heading17">
-                      <span className="home-text179">Semester II - 2025</span>
-                      <span className="home-text180">
+                      <span className="home-text193">Semester II - 2025</span>
+                      <span className="home-text194">
                         Sed ut perspiciatis unde omnis iste natus error sit.
                       </span>
                     </div>
                     <div className="home-cost2">
-                      <span className="home-text181">$8</span>
-                      <span className="home-text182">/month</span>
+                      <span className="home-text195">$8</span>
+                      <span className="home-text196">/month</span>
                     </div>
                   </div>
                   <div className="home-bottom2">
-                    <div className="home-check-list2">
+                    <div className="home-check-list11">
                       <Check
                         text={
                           <Fragment>
-                            <span className="home-text183">
+                            <span className="home-text197">
                               <span>
                                 Penguatan Infrastruktur Lembaga Pendukung.
                               </span>
@@ -832,10 +1167,9 @@ const Home = (props) => {
                         }
                       ></Check>
                       <Check
-                        feature="Quis nostrud exercitation ulla"
                         text={
                           <Fragment>
-                            <span className="home-text186">
+                            <span className="home-text200">
                               <span>
                                 Sosialisasi Program kepada Calon Anggota dan
                                 Mitra.
@@ -844,12 +1178,12 @@ const Home = (props) => {
                             </span>
                           </Fragment>
                         }
+                        feature="Quis nostrud exercitation ulla"
                       ></Check>
                       <Check
-                        feature="Duis aute irure dolor intuit"
                         text={
                           <Fragment>
-                            <span className="home-text189">
+                            <span className="home-text203">
                               <span>
                                 Fasilitasi Non Keuangan kepada Anggota.
                               </span>
@@ -857,69 +1191,70 @@ const Home = (props) => {
                             </span>
                           </Fragment>
                         }
+                        feature="Duis aute irure dolor intuit"
                       ></Check>
-                      <Check
-                        feature="Voluptas sit aspernatur aut odit"
-                        text={
-                          <Fragment>
-                            <span className="home-text192">
-                              <span>Fasilitasi Pembiayaan.</span>
-                              <br></br>
-                            </span>
-                          </Fragment>
-                        }
-                      ></Check>
-                      <Check
-                        feature="Corporis suscipit laboriosam"
-                        text={
-                          <Fragment>
-                            <span className="home-text195">
-                              <span>
-                                Fasilitasi Distribusi Barang dan Jasa.
-                              </span>
-                              <br></br>
-                            </span>
-                          </Fragment>
-                        }
-                      ></Check>
-                      <Check
-                        feature="Corporis suscipit laboriosam"
-                        text={
-                          <Fragment>
-                            <span className="home-text198">
-                              <span>
-                                Pendampingan Teknis dan Inkubasi kepada Anggota.
-                              </span>
-                              <br></br>
-                            </span>
-                          </Fragment>
-                        }
-                      ></Check>
-                    </div>
-                    <div className="home-button2">
-                      <span className="home-text201">Get Standard</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="home-plan3">
-                  <div className="home-top3">
-                    <div className="home-heading18">
-                      <span className="home-text202">Semester II - 2025</span>
-                      <span className="home-text203">
-                        Sed ut perspiciatis unde omnis iste natus error sit.
-                      </span>
-                    </div>
-                    <div className="home-cost3">
-                      <span className="home-text204">$8</span>
-                      <span className="home-text205">/month</span>
-                    </div>
-                  </div>
-                  <div className="home-bottom3">
-                    <div className="home-check-list3">
                       <Check
                         text={
                           <Fragment>
                             <span className="home-text206">
+                              <span>Fasilitasi Pembiayaan.</span>
+                              <br></br>
+                            </span>
+                          </Fragment>
+                        }
+                        feature="Voluptas sit aspernatur aut odit"
+                      ></Check>
+                      <Check
+                        text={
+                          <Fragment>
+                            <span className="home-text209">
+                              <span>
+                                Fasilitasi Distribusi Barang dan Jasa.
+                              </span>
+                              <br></br>
+                            </span>
+                          </Fragment>
+                        }
+                        feature="Corporis suscipit laboriosam"
+                      ></Check>
+                      <Check
+                        text={
+                          <Fragment>
+                            <span className="home-text212">
+                              <span>
+                                Pendampingan Teknis dan Inkubasi kepada Anggota.
+                              </span>
+                              <br></br>
+                            </span>
+                          </Fragment>
+                        }
+                        feature="Corporis suscipit laboriosam"
+                      ></Check>
+                    </div>
+                    <div className="home-button12">
+                      <span className="home-text215">Get Standard</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="home-plan3">
+                  <div className="home-top4">
+                    <div className="home-heading18">
+                      <span className="home-text216">Semester II - 2025</span>
+                      <span className="home-text217">
+                        Sed ut perspiciatis unde omnis iste natus error sit.
+                      </span>
+                    </div>
+                    <div className="home-cost3">
+                      <span className="home-text218">$8</span>
+                      <span className="home-text219">/month</span>
+                    </div>
+                  </div>
+                  <div className="home-bottom3">
+                    <div className="home-check-list12">
+                      <Check
+                        text={
+                          <Fragment>
+                            <span className="home-text220">
                               <span>
                                 Penguatan Infrastruktur Lembaga Pendukung.
                               </span>
@@ -929,10 +1264,9 @@ const Home = (props) => {
                         }
                       ></Check>
                       <Check
-                        feature="Quis nostrud exercitation ulla"
                         text={
                           <Fragment>
-                            <span className="home-text209">
+                            <span className="home-text223">
                               <span>
                                 Sosialisasi Program kepada Calon Anggota dan
                                 Mitra.
@@ -941,12 +1275,12 @@ const Home = (props) => {
                             </span>
                           </Fragment>
                         }
+                        feature="Quis nostrud exercitation ulla"
                       ></Check>
                       <Check
-                        feature="Duis aute irure dolor intuit"
                         text={
                           <Fragment>
-                            <span className="home-text212">
+                            <span className="home-text226">
                               <span>
                                 Fasilitasi Non Keuangan kepada Anggota.
                               </span>
@@ -954,23 +1288,23 @@ const Home = (props) => {
                             </span>
                           </Fragment>
                         }
+                        feature="Duis aute irure dolor intuit"
                       ></Check>
                       <Check
-                        feature="Voluptas sit aspernatur aut odit"
                         text={
                           <Fragment>
-                            <span className="home-text215">
+                            <span className="home-text229">
                               <span>Fasilitasi Pembiayaan.</span>
                               <br></br>
                             </span>
                           </Fragment>
                         }
+                        feature="Voluptas sit aspernatur aut odit"
                       ></Check>
                       <Check
-                        feature="Corporis suscipit laboriosam"
                         text={
                           <Fragment>
-                            <span className="home-text218">
+                            <span className="home-text232">
                               <span>
                                 Fasilitasi Distribusi Barang dan Jasa.
                               </span>
@@ -978,12 +1312,12 @@ const Home = (props) => {
                             </span>
                           </Fragment>
                         }
+                        feature="Corporis suscipit laboriosam"
                       ></Check>
                       <Check
-                        feature="Corporis suscipit laboriosam"
                         text={
                           <Fragment>
-                            <span className="home-text221">
+                            <span className="home-text235">
                               <span>
                                 Pendampingan Teknis dan Inkubasi kepada Anggota.
                               </span>
@@ -991,32 +1325,33 @@ const Home = (props) => {
                             </span>
                           </Fragment>
                         }
+                        feature="Corporis suscipit laboriosam"
                       ></Check>
                     </div>
-                    <div className="home-button3">
-                      <span className="home-text224">Get Standard</span>
+                    <div className="home-button13">
+                      <span className="home-text238">Get Standard</span>
                     </div>
                   </div>
                 </div>
                 <div className="home-plan4">
-                  <div className="home-top4">
+                  <div className="home-top5">
                     <div className="home-heading19">
-                      <span className="home-text225">Semester II - 2026</span>
-                      <span className="home-text226">
+                      <span className="home-text239">Semester II - 2026</span>
+                      <span className="home-text240">
                         Sed ut perspiciatis unde omnis iste natus error sit.
                       </span>
                     </div>
                     <div className="home-cost4">
-                      <span className="home-text227">$16</span>
-                      <span className="home-text228">/month</span>
+                      <span className="home-text241">$16</span>
+                      <span className="home-text242">/month</span>
                     </div>
                   </div>
                   <div className="home-bottom4">
-                    <div className="home-check-list4">
+                    <div className="home-check-list13">
                       <Check
                         text={
                           <Fragment>
-                            <span className="home-text229">
+                            <span className="home-text243">
                               <span>
                                 Fasilitasi dan Koordinasi : Pembiayaan,
                                 Distribusi Barang dan Jasa, Peningkatan SDM
@@ -1028,10 +1363,9 @@ const Home = (props) => {
                         }
                       ></Check>
                       <Check
-                        feature="Quis nostrud exercitation ulla"
                         text={
                           <Fragment>
-                            <span className="home-text232">
+                            <span className="home-text246">
                               <span>
                                 Perencanaan dan Persiapan Bisnis Sektor Riil
                                 melibatkan jaringan Apex, memanfaatkan lahan
@@ -1041,12 +1375,12 @@ const Home = (props) => {
                             </span>
                           </Fragment>
                         }
+                        feature="Quis nostrud exercitation ulla"
                       ></Check>
                       <Check
-                        feature="Duis aute irure dolor intuit"
                         text={
                           <Fragment>
-                            <span className="home-text235">
+                            <span className="home-text249">
                               <span>
                                 Menjadi Pilot Project Apex Koperasi di
                                 Indonesia.
@@ -1055,10 +1389,11 @@ const Home = (props) => {
                             </span>
                           </Fragment>
                         }
+                        feature="Duis aute irure dolor intuit"
                       ></Check>
                     </div>
-                    <div className="home-button4">
-                      <span className="home-text238">Get Standard</span>
+                    <div className="home-button14">
+                      <span className="home-text252">Get Standard</span>
                     </div>
                   </div>
                 </div>
@@ -1067,41 +1402,41 @@ const Home = (props) => {
                 <div className="home-overlay2">
                   <div className="home-header5">
                     <div className="home-heading20">
-                      <span className="home-text239">Expand</span>
-                      <span className="home-text240">
+                      <span className="home-text253">Expand</span>
+                      <span className="home-text254">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt.
                       </span>
                     </div>
-                    <div className="home-check-list5">
+                    <div className="home-check-list14">
                       <div className="home-check1">
-                        <svg viewBox="0 0 1024 1024" className="home-icon14">
+                        <svg viewBox="0 0 1024 1024" className="home-icon16">
                           <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
                         </svg>
-                        <span className="home-text241">
+                        <span className="home-text255">
                           Sed ut perspiciatis unde
                         </span>
                       </div>
                       <div className="home-check2">
-                        <svg viewBox="0 0 1024 1024" className="home-icon16">
+                        <svg viewBox="0 0 1024 1024" className="home-icon18">
                           <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
                         </svg>
-                        <span className="home-text242">
+                        <span className="home-text256">
                           Quis nostrud exercitation ulla
                         </span>
                       </div>
                       <div className="home-check3">
-                        <svg viewBox="0 0 1024 1024" className="home-icon18">
+                        <svg viewBox="0 0 1024 1024" className="home-icon20">
                           <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
                         </svg>
-                        <span className="home-text243">
+                        <span className="home-text257">
                           Duis aute irure dolor intuit
                         </span>
                       </div>
                     </div>
                   </div>
-                  <div className="home-button5">
-                    <span className="home-text244">
+                  <div className="home-button15">
+                    <span className="home-text258">
                       <span>Contact us</span>
                       <br></br>
                     </span>
@@ -1111,277 +1446,348 @@ const Home = (props) => {
             </div>
             <div className="home-plans2">
               <div className="home-plan5">
-                <div className="home-top5">
+                <div className="home-top6">
                   <div className="home-heading21">
-                    <span className="home-text247">Standard</span>
-                    <span className="home-text248">
+                    <span className="home-text261">Semester I - 2025</span>
+                    <span className="home-text262">
                       Sed ut perspiciatis unde omnis iste natus error sit.
                     </span>
                   </div>
                   <div className="home-cost5">
-                    <span className="home-text249">Free</span>
+                    <span className="home-text263">Free</span>
                   </div>
                 </div>
                 <div className="home-bottom5">
-                  <div className="home-check-list6">
+                  <div className="home-check-list15">
                     <Check
                       text={
                         <Fragment>
-                          <span className="home-text250">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore
-                            eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum.
+                          <span className="home-text264">
+                            Penguatan infrastuktur Pemodalan dan Operasional
+                            Koperasi DAM.
                           </span>
                         </Fragment>
                       }
+                      feature="Penguatan infrastuktur Pemodalan dan Operasinal Koperasi DAM"
+                      rootClassName="checkroot-class-name2"
                     ></Check>
                     <Check
-                      feature="Quis nostrud exercitation ulla"
                       text={
                         <Fragment>
-                          <span className="home-text251">
-                            Quis nostrud exercitation ulla
+                          <span className="home-text265">
+                            Perencanaan dan Pengembangan IT Core System
+                            (platform digital Damasta) sebagai pendukung utama,
+                            bekerjasama dengan PT Sinergitas Untuk Negeri.
                           </span>
                         </Fragment>
                       }
+                      feature="Perencanaan dan Pengembangan IT Core System (Platform Digital Damasta) sebagai pendukung utama, bekerjasama dengan PT Sinergitas Untuk Negeri"
                     ></Check>
                     <Check
-                      feature="Duis aute irure dolor intuit"
                       text={
                         <Fragment>
-                          <span className="home-text252">
-                            Duis aute irure dolor intuit
+                          <span className="home-text266">
+                            <span>Penyusunan program prioritas DAM.</span>
+                            <br></br>
                           </span>
                         </Fragment>
                       }
-                    ></Check>
-                    <Check
                       feature="Voluptas sit aspernatur aut odit"
-                      text={
-                        <Fragment>
-                          <span className="home-text253">
-                            Voluptas sit aspernatur aut odit
-                          </span>
-                        </Fragment>
-                      }
-                    ></Check>
-                    <Check
-                      feature="Corporis suscipit laboriosam"
-                      text={
-                        <Fragment>
-                          <span className="home-text254">
-                            Corporis suscipit laboriosam
-                          </span>
-                        </Fragment>
-                      }
                     ></Check>
                   </div>
-                  <div className="home-button6">
-                    <span className="home-text255">Get Standard</span>
+                  <div className="home-button16">
+                    <span className="home-text269">Get Standard</span>
                   </div>
                 </div>
               </div>
               <div className="home-plan6">
-                <div className="home-top6">
+                <div className="home-top7">
                   <div className="home-heading22">
-                    <span className="home-text256">Plus</span>
-                    <span className="home-text257">
+                    <span className="home-text270">Semester II - 2025</span>
+                    <span className="home-text271">
                       Sed ut perspiciatis unde omnis iste natus error sit.
                     </span>
                   </div>
                   <div className="home-cost6">
-                    <span className="home-text258">$8</span>
-                    <span className="home-text259">/month</span>
+                    <span className="home-text272">$8</span>
+                    <span className="home-text273">/month</span>
                   </div>
                 </div>
                 <div className="home-bottom6">
-                  <div className="home-check-list7">
+                  <div className="home-check-list16">
                     <Check
                       text={
                         <Fragment>
-                          <span className="home-text260">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore
-                            eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum.
+                          <span className="home-text274">
+                            <span>
+                              Penguatan Infrastruktur Lembaga Pendukung.
+                            </span>
+                            <br></br>
                           </span>
                         </Fragment>
                       }
                     ></Check>
                     <Check
+                      text={
+                        <Fragment>
+                          <span className="home-text277">
+                            <span>
+                              Sosialisasi Program kepada Calon Anggota dan
+                              Mitra.
+                            </span>
+                            <br></br>
+                          </span>
+                        </Fragment>
+                      }
                       feature="Quis nostrud exercitation ulla"
+                    ></Check>
+                    <Check
                       text={
                         <Fragment>
-                          <span className="home-text261">
-                            Quis nostrud exercitation ulla
+                          <span className="home-text280">
+                            <span>Fasilitasi Non Keuangan kepada Anggota.</span>
+                            <br></br>
                           </span>
                         </Fragment>
                       }
-                    ></Check>
-                    <Check
                       feature="Duis aute irure dolor intuit"
+                    ></Check>
+                    <Check
                       text={
                         <Fragment>
-                          <span className="home-text262">
-                            Duis aute irure dolor intuit
+                          <span className="home-text283">
+                            <span>Fasilitasi Pembiayaan.</span>
+                            <br></br>
                           </span>
                         </Fragment>
                       }
-                    ></Check>
-                    <Check
                       feature="Voluptas sit aspernatur aut odit"
-                      text={
-                        <Fragment>
-                          <span className="home-text263">
-                            Voluptas sit aspernatur aut odit
-                          </span>
-                        </Fragment>
-                      }
                     ></Check>
                     <Check
-                      feature="Corporis suscipit laboriosam"
                       text={
                         <Fragment>
-                          <span className="home-text264">
-                            Corporis suscipit laboriosam
+                          <span className="home-text286">
+                            <span>Fasilitasi Distribusi Barang dan Jasa.</span>
+                            <br></br>
                           </span>
                         </Fragment>
                       }
+                      feature="Corporis suscipit laboriosam"
+                    ></Check>
+                    <Check
+                      text={
+                        <Fragment>
+                          <span className="home-text289">
+                            <span>
+                              Pendampingan Teknis dan Inkubasi kepada Anggota.
+                            </span>
+                            <br></br>
+                          </span>
+                        </Fragment>
+                      }
+                      feature="Corporis suscipit laboriosam"
                     ></Check>
                   </div>
-                  <div className="home-button7">
-                    <span className="home-text265">Get Plus</span>
+                  <div className="home-button17">
+                    <span className="home-text292">Get Standard</span>
                   </div>
                 </div>
               </div>
               <div className="home-plan7">
-                <div className="home-top7">
+                <div className="home-top8">
                   <div className="home-heading23">
-                    <span className="home-text266">Premium</span>
-                    <span className="home-text267">
+                    <span className="home-text293">Semester II - 2025</span>
+                    <span className="home-text294">
                       Sed ut perspiciatis unde omnis iste natus error sit.
                     </span>
                   </div>
                   <div className="home-cost7">
-                    <span className="home-text268">$16</span>
-                    <span className="home-text269">/month</span>
+                    <span className="home-text295">$8</span>
+                    <span className="home-text296">/month</span>
                   </div>
                 </div>
                 <div className="home-bottom7">
-                  <div className="home-check-list8">
+                  <div className="home-check-list17">
                     <Check
                       text={
                         <Fragment>
-                          <span className="home-text270">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore
-                            eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum.
+                          <span className="home-text297">
+                            <span>
+                              Penguatan Infrastruktur Lembaga Pendukung.
+                            </span>
+                            <br></br>
                           </span>
                         </Fragment>
                       }
                     ></Check>
                     <Check
+                      text={
+                        <Fragment>
+                          <span className="home-text300">
+                            <span>
+                              Sosialisasi Program kepada Calon Anggota dan
+                              Mitra.
+                            </span>
+                            <br></br>
+                          </span>
+                        </Fragment>
+                      }
                       feature="Quis nostrud exercitation ulla"
+                    ></Check>
+                    <Check
                       text={
                         <Fragment>
-                          <span className="home-text271">
-                            Quis nostrud exercitation ulla
+                          <span className="home-text303">
+                            <span>Fasilitasi Non Keuangan kepada Anggota.</span>
+                            <br></br>
                           </span>
                         </Fragment>
                       }
-                    ></Check>
-                    <Check
                       feature="Duis aute irure dolor intuit"
+                    ></Check>
+                    <Check
                       text={
                         <Fragment>
-                          <span className="home-text272">
-                            Duis aute irure dolor intuit
+                          <span className="home-text306">
+                            <span>Fasilitasi Pembiayaan.</span>
+                            <br></br>
                           </span>
                         </Fragment>
                       }
-                    ></Check>
-                    <Check
                       feature="Voluptas sit aspernatur aut odit"
-                      text={
-                        <Fragment>
-                          <span className="home-text273">
-                            Voluptas sit aspernatur aut odit
-                          </span>
-                        </Fragment>
-                      }
                     ></Check>
                     <Check
-                      feature="Corporis suscipit laboriosam"
                       text={
                         <Fragment>
-                          <span className="home-text274">
-                            Corporis suscipit laboriosam
+                          <span className="home-text309">
+                            <span>Fasilitasi Distribusi Barang dan Jasa.</span>
+                            <br></br>
                           </span>
                         </Fragment>
                       }
+                      feature="Corporis suscipit laboriosam"
+                    ></Check>
+                    <Check
+                      text={
+                        <Fragment>
+                          <span className="home-text312">
+                            <span>
+                              Pendampingan Teknis dan Inkubasi kepada Anggota.
+                            </span>
+                            <br></br>
+                          </span>
+                        </Fragment>
+                      }
+                      feature="Corporis suscipit laboriosam"
                     ></Check>
                   </div>
-                  <div className="home-button8">
-                    <span className="home-text275">Get Plus</span>
+                  <div className="home-button18">
+                    <span className="home-text315">Get Standard</span>
+                  </div>
+                </div>
+              </div>
+              <div className="home-plan8">
+                <div className="home-top9">
+                  <div className="home-heading24">
+                    <span className="home-text316">Semester II - 2026</span>
+                    <span className="home-text317">
+                      Sed ut perspiciatis unde omnis iste natus error sit.
+                    </span>
+                  </div>
+                  <div className="home-cost8">
+                    <span className="home-text318">$16</span>
+                    <span className="home-text319">/month</span>
+                  </div>
+                </div>
+                <div className="home-bottom8">
+                  <div className="home-check-list18">
+                    <Check
+                      text={
+                        <Fragment>
+                          <span className="home-text320">
+                            <span>
+                              Fasilitasi dan Koordinasi : Pembiayaan, Distribusi
+                              Barang dan Jasa, Peningkatan SDM melalui
+                              Sertifikasi Kompetensi.
+                            </span>
+                            <br></br>
+                          </span>
+                        </Fragment>
+                      }
+                    ></Check>
+                    <Check
+                      text={
+                        <Fragment>
+                          <span className="home-text323">
+                            <span>
+                              Perencanaan dan Persiapan Bisnis Sektor Riil
+                              melibatkan jaringan Apex, memanfaatkan lahan
+                              seluas 1 hektar di Cikalong Kulon, Cianjur.
+                            </span>
+                            <br></br>
+                          </span>
+                        </Fragment>
+                      }
+                      feature="Quis nostrud exercitation ulla"
+                    ></Check>
+                    <Check
+                      text={
+                        <Fragment>
+                          <span className="home-text326">
+                            <span>
+                              Menjadi Pilot Project Apex Koperasi di Indonesia.
+                            </span>
+                            <br></br>
+                          </span>
+                        </Fragment>
+                      }
+                      feature="Duis aute irure dolor intuit"
+                    ></Check>
+                  </div>
+                  <div className="home-button19">
+                    <span className="home-text329">Get Standard</span>
                   </div>
                 </div>
               </div>
               <div className="home-expand2">
                 <div className="home-overlay3">
                   <div className="home-header6">
-                    <div className="home-heading24">
-                      <span className="home-text276">Expand</span>
-                      <span className="home-text277">
+                    <div className="home-heading25">
+                      <span className="home-text330">Expand</span>
+                      <span className="home-text331">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt.
                       </span>
                     </div>
-                    <div className="home-check-list9">
+                    <div className="home-check-list19">
                       <div className="home-check4">
-                        <svg viewBox="0 0 1024 1024" className="home-icon20">
+                        <svg viewBox="0 0 1024 1024" className="home-icon22">
                           <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
                         </svg>
-                        <span className="home-text278">
+                        <span className="home-text332">
                           Sed ut perspiciatis unde
                         </span>
                       </div>
                       <div className="home-check5">
-                        <svg viewBox="0 0 1024 1024" className="home-icon22">
+                        <svg viewBox="0 0 1024 1024" className="home-icon24">
                           <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
                         </svg>
-                        <span className="home-text279">
+                        <span className="home-text333">
                           Quis nostrud exercitation ulla
                         </span>
                       </div>
                       <div className="home-check6">
-                        <svg viewBox="0 0 1024 1024" className="home-icon24">
+                        <svg viewBox="0 0 1024 1024" className="home-icon26">
                           <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
                         </svg>
-                        <span className="home-text280">
+                        <span className="home-text334">
                           Duis aute irure dolor intuit
                         </span>
                       </div>
                     </div>
                   </div>
-                  <div className="home-button9">
-                    <span className="home-text281">
+                  <div className="home-button20">
+                    <span className="home-text335">
                       <span>Contact us</span>
                       <br></br>
                     </span>
@@ -1391,46 +1797,90 @@ const Home = (props) => {
             </div>
           </div>
           <div className="home-help">
-            <span className="home-text284">Ingin membantu?</span>
-            <div className="home-explore3">
-              <span className="home-text285">Bergabung dengan kami -&gt;</span>
+            <span className="home-text338">Ingin membantu?</span>
+            <div className="home-explore4">
+              <span className="home-text339">Bergabung dengan kami -&gt;</span>
             </div>
           </div>
         </div>
-        <div className="home-sections2">
+        <div id="Syarat" className="home-sections2">
           <div className="home-section4">
-            <div className="home-content20">
-              <div className="home-heading25">
-                <h2 className="home-text286">Syarat Keanggotaan</h2>
-                <span className="home-text287">
+            <div className="home-content22">
+              <div className="home-heading26">
+                <h2 className="home-text340">Syarat Keanggotaan</h2>
+                <span className="home-text341">
                   Sesuai Pasal 10 AD Koperasi Damasta Abhipraya Mandiri (Skd),
                   Anggota Koperasi DAM adalah Koperasi Primer yang telah
                   berbadan Hukum, dan berdomisili di Kota Bekasi
                 </span>
               </div>
-              <div className="home-content21">
+              <div className="home-content23">
                 <div className="home-points2">
-                  <Point></Point>
-                  <Point text=" Membayar Simpanan Pokok sebesar Rp.5.000.000 dan Simpanan Wajib minimal sebesar Rp.100.000 per bulan."></Point>
-                  <Point text=" Berlangganan platform koperasi digital Damasta."></Point>
-                  <Point text="  Menyetujui AD/ART serta peraturan-peraturan yang berlaku di Koperasi Damasta Abhipraya Mandiri (Skd)."></Point>
+                  <Point
+                    text1={
+                      <Fragment>
+                        <span className="home-text342">
+                          {' '}
+                          Mengisi formulir pendaftaran sebagai anggota
+                        </span>
+                      </Fragment>
+                    }
+                  ></Point>
+                  <Point
+                    text=" Membayar Simpanan Pokok sebesar Rp.5.000.000 dan Simpanan Wajib minimal sebesar Rp.100.000 per bulan."
+                    text1={
+                      <Fragment>
+                        <span className="home-text343">
+                          {' '}
+                          Membayar Simpanan Pokok sebesar Rp.5.000.000 dan
+                          Simpanan Wajib minimal sebesar Rp.100.000 per bulan.
+                        </span>
+                      </Fragment>
+                    }
+                  ></Point>
+                  <Point
+                    text=" Berlangganan platform koperasi digital Damasta."
+                    text1={
+                      <Fragment>
+                        <span className="home-text344">
+                          {' '}
+                          Berlangganan platform koperasi digital Damasta.
+                        </span>
+                      </Fragment>
+                    }
+                  ></Point>
+                  <Point
+                    text="  Menyetujui AD/ART serta peraturan-peraturan yang berlaku di Koperasi Damasta Abhipraya Mandiri (Skd)."
+                    text1={
+                      <Fragment>
+                        <span className="home-text345">
+                          {' '}
+                          Menyetujui AD/ART serta peraturan-peraturan yang
+                          berlaku di Koperasi Damasta Abhipraya Mandiri (Skd).
+                        </span>
+                      </Fragment>
+                    }
+                  ></Point>
                 </div>
-                <Link href="/">
-                  <a className="home-link3">
-                    <div className="home-get-started2">
-                      <span className="home-sign-up2">Bergabung sekarang</span>
-                    </div>
-                  </a>
-                </Link>
+                <a
+                  href="https://app.damastacoop.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="home-link24"
+                >
+                  <div className="home-get-started2">
+                    <span className="home-sign-up3">Bergabung sekarang</span>
+                  </div>
+                </a>
               </div>
             </div>
-            <div className="home-image4"></div>
+            <div className="home-image6"></div>
           </div>
           <div className="home-section5">
-            <div className="home-content22">
-              <div className="home-heading26">
-                <h2 className="home-text288">Syarat Kemitraan</h2>
-                <span className="home-text289">
+            <div className="home-content24">
+              <div className="home-heading27">
+                <h2 className="home-text346">Syarat Kemitraan</h2>
+                <span className="home-text347">
                   Fungsi Apex DAM bertujuan untuk mewujudkan tata kelola
                   koperasi yang baik dan sehat, serta dapat menolong dirinya
                   sendiri. Kerja sama antar koperasi dan/dengan lembaga lainnya
@@ -1439,26 +1889,90 @@ const Home = (props) => {
                   menghadapi dinamika ke depan.
                 </span>
               </div>
-              <div className="home-content23">
+              <div className="home-content25">
                 <div className="home-points3">
-                  <Point text=" Organisasi atau Badan Usaha yang memiliki  legalitas yang jelas."></Point>
-                  <Point text="   Mempunyai tujuan umum yang sama."></Point>
-                  <Point text="   Kesetaraan."></Point>
-                  <Point text="     Saling menghargai dan saling memberi kontribusi."></Point>
-                  <Point text="       Sinergi program-programnya."></Point>
-                  <Point text="       Saling menguntungkan."></Point>
+                  <Point
+                    text=" Organisasi atau Badan Usaha yang memiliki  legalitas yang jelas."
+                    text1={
+                      <Fragment>
+                        <span className="home-text348">
+                          {' '}
+                          Organisasi atau Badan Usaha yang memiliki legalitas
+                          yang jelas.
+                        </span>
+                      </Fragment>
+                    }
+                  ></Point>
+                  <Point
+                    text="   Mempunyai tujuan umum yang sama."
+                    text1={
+                      <Fragment>
+                        <span className="home-text349">
+                          {' '}
+                          Mempunyai tujuan umum yang sama.
+                        </span>
+                      </Fragment>
+                    }
+                  ></Point>
+                  <Point
+                    text="   Kesetaraan."
+                    text1={
+                      <Fragment>
+                        <span className="home-text350"> Kesetaraan.</span>
+                      </Fragment>
+                    }
+                  ></Point>
+                  <Point
+                    text="     Saling menghargai dan saling memberi kontribusi."
+                    text1={
+                      <Fragment>
+                        <span className="home-text351">
+                          {' '}
+                          Saling menghargai dan saling memberi kontribusi.
+                        </span>
+                      </Fragment>
+                    }
+                  ></Point>
+                  <Point
+                    text="       Sinergi program-programnya."
+                    text1={
+                      <Fragment>
+                        <span className="home-text352">
+                          {' '}
+                          Sinergi program-programnya.
+                        </span>
+                      </Fragment>
+                    }
+                  ></Point>
+                  <Point
+                    text="       Saling menguntungkan."
+                    text1={
+                      <Fragment>
+                        <span className="home-text353">
+                          {' '}
+                          Saling menguntungkan.
+                        </span>
+                      </Fragment>
+                    }
+                  ></Point>
                 </div>
+                <Link href="/">
+                  <a className="home-link25">
+                    <div className="home-get-started3">
+                      <span className="home-sign-up4">Bergabung sekarang</span>
+                    </div>
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
         </div>
-        <div className="home-get-started3">
-          <div className="home-content24">
-            <div className="home-heading27">
-              <h2 className="home-text290">Jadi bagian gerakan ini!</h2>
-              <span className="home-text291">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore magna.
+        <div className="home-get-started4">
+          <div className="home-content26">
+            <div className="home-heading28">
+              <h2 className="home-text354">Jadi bagian gerakan ini!</h2>
+              <span className="home-text355">
+                Hubungi kami untuk mendapatkan informasi lebih lanjut.
               </span>
             </div>
             <div className="home-hero-buttons2">
@@ -1468,7 +1982,7 @@ const Home = (props) => {
                   src="/pastedimage-zmzg.svg"
                   className="home-apple2"
                 />
-                <span className="home-caption7">Download for iOS</span>
+                <span className="home-caption7">Hubungi kami</span>
               </div>
               <div className="home-android-btn2">
                 <img
@@ -1484,7 +1998,7 @@ const Home = (props) => {
         <Footer
           text2={
             <Fragment>
-              <span className="home-text292">
+              <span className="home-text356">
                 <span>KOPERASI DAMASTA ABHIPRAYA MANDIRI (Skd)</span>
                 <br></br>
               </span>
@@ -1492,7 +2006,7 @@ const Home = (props) => {
           }
           text21={
             <Fragment>
-              <span className="home-text295">
+              <span className="home-text359">
                 <span>Jl. Letnan Arsyad No. 23 RT006/012</span>
                 <br></br>
                 <span>Kel. Kayuringin Jaya</span>
@@ -1538,6 +2052,205 @@ const Home = (props) => {
           .home-component10 {
             text-decoration: none;
           }
+          .home-navbar {
+            width: 100%;
+            display: flex;
+            position: relative;
+            max-width: 1200px;
+            align-items: flex-start;
+            padding-top: var(--dl-layout-space-twounits);
+            padding-left: var(--dl-layout-space-unit);
+            padding-right: var(--dl-layout-space-unit);
+            flex-direction: row;
+            padding-bottom: var(--dl-layout-space-twounits);
+            justify-content: space-between;
+          }
+          .home-desktop {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+          }
+          .home-main {
+            gap: var(--dl-layout-space-fiveunits);
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+          }
+          .home-branding {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+          }
+          .home-link11 {
+            display: contents;
+          }
+          .home-finbest {
+            width: 148px;
+            height: 37px;
+            text-decoration: none;
+          }
+          .home-links1 {
+            gap: var(--dl-layout-space-threeunits);
+            display: flex;
+            align-items: flex-start;
+            padding-top: 12px;
+            border-radius: 6px;
+            flex-direction: row;
+            padding-bottom: 12px;
+            justify-content: center;
+          }
+          .home-link13 {
+            display: none;
+          }
+          .home-link14 {
+            text-decoration: none;
+          }
+          .home-link15 {
+            text-decoration: none;
+          }
+          .home-quick-actions {
+            gap: var(--dl-layout-space-oneandhalfunits);
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+          }
+          .home-log-in {
+            text-decoration: none;
+          }
+          .home-link16 {
+            display: contents;
+          }
+          .home-sign-up-btn {
+            display: flex;
+            transition: 0.3s;
+            align-items: flex-start;
+            padding-top: var(--dl-layout-space-unit);
+            padding-left: var(--dl-layout-space-oneandhalfunits);
+            border-radius: var(--dl-layout-radius-radius8);
+            padding-right: var(--dl-layout-space-oneandhalfunits);
+            flex-direction: row;
+            padding-bottom: var(--dl-layout-space-unit);
+            justify-content: center;
+            text-decoration: none;
+            background-color: #ade2df;
+          }
+          .home-sign-up-btn:hover {
+            background-color: rgba(173, 226, 223, 0.5);
+          }
+          .home-sign-up1 {
+            font-style: normal;
+            font-weight: 500;
+          }
+          .home-hamburger-menu {
+            width: 20px;
+            height: 12px;
+            display: none;
+          }
+          .home-mobile {
+            gap: var(--dl-layout-space-fourunits);
+            top: 0px;
+            left: 0px;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            padding: var(--dl-layout-space-threeunits);
+            z-index: 200;
+            position: fixed;
+            transform: translateX(100%);
+            transition: 0.3s;
+            align-items: flex-start;
+            flex-direction: column;
+            background-color: #ffffff;
+          }
+          .home-top1 {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+          }
+          .home-image1 {
+            width: 150px;
+            object-fit: cover;
+          }
+          .home-icon10 {
+            width: 28px;
+            height: 28px;
+          }
+          .home-links2 {
+            gap: var(--dl-layout-space-halfunit);
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .home-link17 {
+            text-decoration: none;
+          }
+          .home-link18 {
+            text-decoration: none;
+          }
+          .home-link19 {
+            text-decoration: none;
+          }
+          .home-link20 {
+            text-decoration: none;
+          }
+          .home-buttons1 {
+            gap: var(--dl-layout-space-halfunit);
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            padding-top: var(--dl-layout-space-unit);
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-unit);
+            justify-content: center;
+          }
+          .home-link21 {
+            display: contents;
+          }
+          .home-btn1 {
+            width: 100%;
+            display: flex;
+            padding: var(--dl-layout-space-unit);
+            align-items: center;
+            border-radius: var(--dl-layout-radius-radius8);
+            flex-direction: column;
+            justify-content: center;
+            text-decoration: none;
+            background-color: #ade2df;
+          }
+          .home-text100 {
+            font-style: normal;
+            font-weight: 500;
+          }
+          .home-link22 {
+            display: contents;
+          }
+          .home-btn2 {
+            width: 100%;
+            display: flex;
+            padding: var(--dl-layout-space-unit);
+            align-items: center;
+            border-radius: var(--dl-layout-radius-radius8);
+            flex-direction: column;
+            justify-content: center;
+            text-decoration: none;
+            background-color: #ade2df;
+          }
+          .home-text101 {
+            font-style: normal;
+            font-weight: 500;
+          }
+          .home-container3 {
+            display: contents;
+          }
           .home-content10 {
             flex: 1;
             width: 100%;
@@ -1561,20 +2274,20 @@ const Home = (props) => {
             padding-bottom: var(--dl-layout-space-sixunits);
             justify-content: center;
           }
-          .home-title {
+          .home-title1 {
             font-size: 64px;
             font-style: normal;
             font-family: 'Poppins';
             font-weight: 600;
             line-height: 76px;
           }
-          .home-text100 {
-            color: #ade2df;
-          }
-          .home-text101 {
-            color: #ade2df;
-          }
           .home-text102 {
+            color: #ade2df;
+          }
+          .home-text103 {
+            color: #ade2df;
+          }
+          .home-text104 {
             color: #124b80;
           }
           .home-caption1 {
@@ -1586,7 +2299,7 @@ const Home = (props) => {
           }
           .home-hero-buttons1 {
             gap: var(--dl-layout-space-unit);
-            display: flex;
+            display: none;
             z-index: 15;
             margin-top: var(--dl-layout-space-unit);
             align-items: center;
@@ -1666,6 +2379,7 @@ const Home = (props) => {
           }
           .home-column1 {
             gap: var(--dl-layout-space-oneandhalfunits);
+            border: 2px dashed rgba(120, 120, 120, 0.4);
             height: 100%;
             display: flex;
             align-items: center;
@@ -1730,7 +2444,7 @@ const Home = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .home-text111 {
+          .home-text106 {
             width: 640px;
             font-size: 40px;
             font-style: normal;
@@ -1771,14 +2485,14 @@ const Home = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .home-text112 {
+          .home-text107 {
             font-size: 24px;
             font-style: normal;
             font-family: Poppins;
             font-weight: 600;
             line-height: 36px;
           }
-          .home-text113 {
+          .home-text108 {
             color: #eaeaea;
             width: 600px;
             font-family: Poppins;
@@ -1800,12 +2514,12 @@ const Home = (props) => {
             color: rgba(255, 255, 255, 0.5);
             border-color: rgba(255, 255, 255, 0.3);
           }
-          .home-text114 {
+          .home-text109 {
             width: Size-XSmall;
           }
           .home-stats {
             width: 100%;
-            display: flex;
+            display: none;
             z-index: 10;
             max-width: 1200px;
             align-items: center;
@@ -1899,10 +2613,12 @@ const Home = (props) => {
           }
           .home-sections1 {
             width: 100%;
-            display: flex;
+            display: none;
             max-width: 1200px;
             align-items: center;
             padding-top: var(--dl-layout-space-sixunits);
+            border-color: var(--dl-color-gray-black);
+            border-width: 1px;
             padding-left: var(--dl-layout-space-oneandhalfunits);
             padding-right: var(--dl-layout-space-oneandhalfunits);
             flex-direction: column;
@@ -1917,7 +2633,7 @@ const Home = (props) => {
             flex-direction: row;
             justify-content: center;
           }
-          .home-image1 {
+          .home-image2 {
             width: 400px;
             height: 540px;
             display: flex;
@@ -1945,7 +2661,7 @@ const Home = (props) => {
             justify-content: center;
             background-color: #375ee0;
           }
-          .home-text115 {
+          .home-text110 {
             color: rgb(193, 255, 252);
             width: 100%;
             max-width: 90px;
@@ -1961,13 +2677,19 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .home-text118 {
+          .home-text113 {
             font-size: 40px;
             max-width: 535px;
             font-style: normal;
             font-family: Poppins;
             font-weight: 600;
             line-height: 56px;
+          }
+          .home-text114 {
+            display: inline-block;
+          }
+          .home-text115 {
+            display: inline-block;
           }
           .home-explore2 {
             cursor: pointer;
@@ -2008,7 +2730,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .home-text120 {
+          .home-text117 {
             font-size: 40px;
             max-width: 535px;
             font-style: normal;
@@ -2016,7 +2738,7 @@ const Home = (props) => {
             font-weight: 600;
             line-height: 56px;
           }
-          .home-text121 {
+          .home-text118 {
             font-size: 18px;
             max-width: 535px;
             font-family: Poppins;
@@ -2036,7 +2758,16 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .home-link2 {
+          .home-text119 {
+            display: inline-block;
+          }
+          .home-text120 {
+            display: inline-block;
+          }
+          .home-text121 {
+            display: inline-block;
+          }
+          .home-link23 {
             display: contents;
           }
           .home-get-started1 {
@@ -2056,11 +2787,11 @@ const Home = (props) => {
           .home-get-started1:hover {
             background-color: rgba(173, 226, 223, 0.5);
           }
-          .home-sign-up1 {
+          .home-sign-up2 {
             font-style: normal;
             font-weight: 500;
           }
-          .home-image2 {
+          .home-image3 {
             width: 370px;
             height: 600px;
             display: flex;
@@ -2084,7 +2815,7 @@ const Home = (props) => {
             padding-bottom: var(--dl-layout-space-sixunits);
             justify-content: center;
           }
-          .home-image3 {
+          .home-image4 {
             width: 400px;
             height: 590px;
             display: flex;
@@ -2134,7 +2865,7 @@ const Home = (props) => {
           }
           .home-banner-container {
             width: 100%;
-            display: flex;
+            display: none;
             align-items: center;
             padding-left: var(--dl-layout-space-unit);
             padding-right: var(--dl-layout-space-unit);
@@ -2203,6 +2934,131 @@ const Home = (props) => {
           .home-pasted-image6 {
             display: none;
           }
+          .home-header76 {
+            display: none;
+          }
+          .home-max-width1 {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+          }
+          .home-column4 {
+            gap: var(--dl-layout-space-oneandhalfunits);
+            width: 50%;
+            display: flex;
+            align-items: flex-start;
+            animation-name: fadeInLeft;
+            flex-direction: column;
+            animation-delay: 0s;
+            justify-content: center;
+            animation-duration: 300ms;
+            animation-direction: normal;
+            animation-iteration-count: 1;
+            animation-timing-function: ease;
+          }
+          .home-content17 {
+            gap: var(--dl-layout-space-oneandhalfunits);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .home-text129 {
+            font-size: 40px;
+            max-width: 535px;
+            font-style: normal;
+            font-family: 'Poppins';
+            font-weight: 600;
+            line-height: 56px;
+          }
+          .home-text130 {
+            display: inline-block;
+          }
+          .home-text132 {
+            font-style: italic;
+          }
+          .home-text134 {
+            display: inline-block;
+          }
+          .home-explore3 {
+            cursor: pointer;
+            display: flex;
+            margin-top: var(--dl-layout-space-unit);
+            transition: 0.3s;
+            align-items: flex-start;
+            border-width: 0px;
+            flex-direction: column;
+            padding-bottom: 4px;
+            border-bottom-width: 1px;
+          }
+          .home-explore3:hover {
+            color: rgba(0, 0, 0, 0.5);
+            border-color: rgba(0, 0, 0, 0.3);
+          }
+          .home-content18 {
+            gap: var(--dl-layout-space-unit);
+            width: 50%;
+            height: 900px;
+            display: flex;
+          }
+          .home-column-container1 {
+            width: 50%;
+          }
+          .home-placeholder-image10 {
+            width: 100%;
+            height: 400px;
+          }
+          .home-placeholder-image11 {
+            width: 100%;
+            height: 400px;
+          }
+          .home-placeholder-image12 {
+            width: 100%;
+            height: 400px;
+          }
+          .home-placeholder-image13 {
+            width: 100%;
+            height: 400px;
+          }
+          .home-placeholder-image14 {
+            width: 100%;
+            height: 400px;
+          }
+          .home-placeholder-image15 {
+            width: 100%;
+            height: 400px;
+          }
+          .home-column-container2 {
+            width: 50%;
+          }
+          .home-placeholder-image16 {
+            width: 100%;
+            height: 400px;
+          }
+          .home-placeholder-image17 {
+            width: 100%;
+            height: 400px;
+          }
+          .home-placeholder-image18 {
+            width: 100%;
+            height: 400px;
+          }
+          .home-placeholder-image19 {
+            width: 100%;
+            height: 400px;
+          }
+          .home-placeholder-image20 {
+            width: 100%;
+            height: 400px;
+          }
+          .home-placeholder-image21 {
+            width: 100%;
+            height: 400px;
+          }
+          .home-container5 {
+            display: contents;
+          }
           .home-features {
             gap: var(--dl-layout-space-fiveunits);
             width: 100%;
@@ -2236,7 +3092,7 @@ const Home = (props) => {
             justify-content: center;
             background-color: #d6f1f0;
           }
-          .home-text129 {
+          .home-text136 {
             font-style: normal;
             font-weight: 500;
           }
@@ -2247,7 +3103,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .home-text130 {
+          .home-text137 {
             width: 100%;
             font-size: 40px;
             max-width: 400px;
@@ -2255,8 +3111,9 @@ const Home = (props) => {
             font-weight: 600;
             line-height: 56px;
           }
-          .home-text131 {
+          .home-text140 {
             width: 100%;
+            display: none;
             font-size: 18px;
             max-width: 600px;
             line-height: 27px;
@@ -2269,9 +3126,46 @@ const Home = (props) => {
             flex-direction: row;
             justify-content: flex-start;
           }
+          .home-container6 {
+            gap: var(--dl-layout-space-unit);
+            height: auto;
+            display: flex;
+            position: relative;
+            align-items: center;
+            flex-direction: column;
+            padding-bottom: 0px;
+          }
+          .home-image5 {
+            width: auto;
+            height: auto;
+            display: block;
+            max-width: 80%;
+          }
+          .home-max-width2 {
+            gap: var(--dl-layout-space-oneandhalfunits);
+            width: 100%;
+            height: 100%;
+            display: none;
+            z-index: 100;
+            align-items: center;
+            flex-direction: column;
+          }
+          .home-container7 {
+            gap: var(--dl-layout-space-halfunit);
+            display: flex;
+            z-index: 100;
+            align-items: center;
+            flex-direction: column;
+          }
+          .home-title2 {
+            text-align: center;
+          }
+          .home-text141 {
+            text-align: center;
+          }
           .home-testimonials {
             width: 100%;
-            display: flex;
+            display: none;
             max-width: 900px;
             align-items: stretch;
             padding-top: var(--dl-layout-space-sixunits);
@@ -2294,7 +3188,7 @@ const Home = (props) => {
             width: 25px;
             height: 24px;
           }
-          .home-content17 {
+          .home-content19 {
             display: flex;
             position: relative;
             align-items: stretch;
@@ -2305,7 +3199,7 @@ const Home = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .home-buttons {
+          .home-buttons2 {
             width: 100%;
             display: flex;
             z-index: 100;
@@ -2332,7 +3226,7 @@ const Home = (props) => {
             fill: #000;
             border-color: #000;
           }
-          .home-icon10 {
+          .home-icon12 {
             width: 19px;
             height: 19px;
           }
@@ -2352,11 +3246,11 @@ const Home = (props) => {
             fill: #000;
             border-color: #000;
           }
-          .home-icon12 {
+          .home-icon14 {
             width: 19px;
             height: 19px;
           }
-          .home-container3 {
+          .home-container9 {
             display: contents;
           }
           .home-program5-tahun {
@@ -2371,7 +3265,7 @@ const Home = (props) => {
             padding-bottom: var(--dl-layout-space-sixunits);
             background-color: #f3f5fa;
           }
-          .home-content18 {
+          .home-content20 {
             gap: var(--dl-layout-space-fiveunits);
             width: 100%;
             display: flex;
@@ -2398,7 +3292,7 @@ const Home = (props) => {
             justify-content: center;
             background-color: #d6f1f0;
           }
-          .home-text132 {
+          .home-text143 {
             font-style: normal;
             font-weight: 500;
           }
@@ -2409,7 +3303,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .home-text135 {
+          .home-text146 {
             width: 100%;
             font-size: 40px;
             max-width: 600px;
@@ -2425,13 +3319,13 @@ const Home = (props) => {
             align-items: flex-start;
             flex-direction: row;
           }
-          .home-column4 {
+          .home-column5 {
             width: 100%;
             display: flex;
             align-items: center;
             flex-direction: column;
           }
-          .home-text136 {
+          .home-text147 {
             display: inline-block;
           }
           .home-description4 {
@@ -2440,10 +3334,10 @@ const Home = (props) => {
             font-family: Poppins;
             line-height: 24px;
           }
-          .home-text138 {
+          .home-text149 {
             font-weight: 700;
           }
-          .home-text145 {
+          .home-text156 {
             display: inline-block;
           }
           .home-description5 {
@@ -2452,7 +3346,7 @@ const Home = (props) => {
             font-family: Poppins;
             line-height: 24px;
           }
-          .home-text149 {
+          .home-text160 {
             display: inline-block;
           }
           .home-description6 {
@@ -2461,7 +3355,7 @@ const Home = (props) => {
             font-family: Poppins;
             line-height: 24px;
           }
-          .home-text153 {
+          .home-text164 {
             display: inline-block;
           }
           .home-description7 {
@@ -2470,13 +3364,13 @@ const Home = (props) => {
             font-family: Poppins;
             line-height: 24px;
           }
-          .home-column5 {
+          .home-column6 {
             width: 100%;
             display: flex;
             align-items: center;
             flex-direction: column;
           }
-          .home-text157 {
+          .home-text168 {
             display: inline-block;
           }
           .home-description8 {
@@ -2485,7 +3379,7 @@ const Home = (props) => {
             font-family: Poppins;
             line-height: 24px;
           }
-          .home-text164 {
+          .home-text175 {
             display: inline-block;
           }
           .home-description9 {
@@ -2506,7 +3400,7 @@ const Home = (props) => {
             padding-bottom: var(--dl-layout-space-sixunits);
             background-color: #f3f5fa;
           }
-          .home-content19 {
+          .home-content21 {
             gap: var(--dl-layout-space-fiveunits);
             width: 100%;
             display: flex;
@@ -2533,7 +3427,7 @@ const Home = (props) => {
             justify-content: center;
             background-color: #d6f1f0;
           }
-          .home-text168 {
+          .home-text179 {
             font-style: normal;
             font-weight: 500;
           }
@@ -2544,7 +3438,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .home-text169 {
+          .home-text180 {
             width: 100%;
             font-size: 40px;
             max-width: 600px;
@@ -2570,8 +3464,10 @@ const Home = (props) => {
           }
           .home-plans1 {
             flex: 1;
+            width: 100%;
             height: 100%;
             display: grid;
+            overflow: hidden;
             padding-top: var(--dl-layout-space-twounits);
             padding-left: TwoUnits;
             padding-bottom: var(--dl-layout-space-twounits);
@@ -2582,7 +3478,9 @@ const Home = (props) => {
             width: 100%;
             height: 100%;
             display: flex;
-            max-width: 300px;
+            position: relative;
+            max-width: 20%;
+            min-width: 260px;
             align-items: flex-start;
             border-color: #dbdbdb;
             padding-left: var(--dl-layout-space-twounits);
@@ -2591,7 +3489,7 @@ const Home = (props) => {
             justify-content: flex-start;
             border-right-width: 1px;
           }
-          .home-top1 {
+          .home-top2 {
             gap: var(--dl-layout-space-oneandhalfunits);
             display: flex;
             align-items: flex-start;
@@ -2608,13 +3506,13 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .home-text170 {
+          .home-text184 {
             font-size: 20px;
             font-style: normal;
             font-family: 'Poppins';
             font-weight: 600;
           }
-          .home-text171 {
+          .home-text185 {
             display: none;
             font-family: 'Poppins';
             line-height: 24px;
@@ -2626,7 +3524,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .home-text172 {
+          .home-text186 {
             font-size: 40px;
             font-style: normal;
             font-family: 'Poppins';
@@ -2642,7 +3540,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: space-between;
           }
-          .home-check-list1 {
+          .home-check-list10 {
             gap: var(--dl-layout-space-halfunit);
             width: 100%;
             display: flex;
@@ -2651,16 +3549,16 @@ const Home = (props) => {
             padding-bottom: var(--dl-layout-space-threeunits);
             justify-content: flex-start;
           }
-          .home-text173 {
+          .home-text187 {
             display: inline-block;
           }
-          .home-text174 {
+          .home-text188 {
             display: inline-block;
           }
-          .home-text175 {
+          .home-text189 {
             display: inline-block;
           }
-          .home-button1 {
+          .home-button11 {
             width: 100%;
             cursor: pointer;
             display: none;
@@ -2675,10 +3573,10 @@ const Home = (props) => {
             justify-content: center;
             background-color: #ade2df;
           }
-          .home-button1:hover {
+          .home-button11:hover {
             background-color: rgba(173, 226, 223, 0.5);
           }
-          .home-text178 {
+          .home-text192 {
             font-style: normal;
             font-weight: 500;
           }
@@ -2686,124 +3584,9 @@ const Home = (props) => {
             width: 100%;
             height: 100%;
             display: flex;
-            max-width: 300px;
-            align-items: flex-start;
-            border-color: #dbdbdb;
-            padding-left: var(--dl-layout-space-twounits);
-            padding-right: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            justify-content: space-between;
-            border-right-width: 1px;
-          }
-          .home-top2 {
-            gap: var(--dl-layout-space-oneandhalfunits);
-            display: flex;
-            align-items: flex-start;
-            border-color: #dbdbdb;
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-twounits);
-            justify-content: flex-start;
-            border-bottom-width: 1px;
-          }
-          .home-heading17 {
-            gap: var(--dl-layout-space-unit);
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: flex-start;
-          }
-          .home-text179 {
-            font-size: 20px;
-            font-style: normal;
-            font-family: 'Poppins';
-            font-weight: 600;
-          }
-          .home-text180 {
-            display: none;
-            font-family: Poppins;
-            line-height: 24px;
-          }
-          .home-cost2 {
-            gap: var(--dl-layout-space-halfunit);
-            width: 100%;
-            display: none;
-            align-items: flex-end;
-            flex-direction: row;
-            justify-content: flex-start;
-          }
-          .home-text181 {
-            font-size: 40px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 600;
-            line-height: 40px;
-          }
-          .home-text182 {
-            font-family: Poppins;
-          }
-          .home-bottom2 {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: flex-start;
-            padding-top: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            justify-content: space-between;
-          }
-          .home-check-list2 {
-            gap: var(--dl-layout-space-halfunit);
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-threeunits);
-            justify-content: flex-start;
-          }
-          .home-text183 {
-            display: inline-block;
-          }
-          .home-text186 {
-            display: inline-block;
-          }
-          .home-text189 {
-            display: inline-block;
-          }
-          .home-text192 {
-            display: inline-block;
-          }
-          .home-text195 {
-            display: inline-block;
-          }
-          .home-text198 {
-            display: inline-block;
-          }
-          .home-button2 {
-            width: 100%;
-            cursor: pointer;
-            display: none;
-            transition: 0.3s;
-            align-items: center;
-            padding-top: var(--dl-layout-space-oneandhalfunits);
-            padding-left: var(--dl-layout-space-twounits);
-            border-radius: var(--dl-layout-radius-radius8);
-            padding-right: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-oneandhalfunits);
-            justify-content: center;
-            background-color: #ade2df;
-          }
-          .home-button2:hover {
-            background-color: rgba(173, 226, 223, 0.5);
-          }
-          .home-text201 {
-            font-style: normal;
-            font-weight: 500;
-          }
-          .home-plan3 {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            max-width: 300px;
+            position: relative;
+            max-width: 20%;
+            min-width: 260px;
             align-items: flex-start;
             border-color: #dbdbdb;
             padding-left: var(--dl-layout-space-twounits);
@@ -2822,25 +3605,25 @@ const Home = (props) => {
             justify-content: flex-start;
             border-bottom-width: 1px;
           }
-          .home-heading18 {
+          .home-heading17 {
             gap: var(--dl-layout-space-unit);
             display: flex;
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
           }
-          .home-text202 {
+          .home-text193 {
             font-size: 20px;
             font-style: normal;
             font-family: 'Poppins';
             font-weight: 600;
           }
-          .home-text203 {
+          .home-text194 {
             display: none;
             font-family: Poppins;
             line-height: 24px;
           }
-          .home-cost3 {
+          .home-cost2 {
             gap: var(--dl-layout-space-halfunit);
             width: 100%;
             display: none;
@@ -2848,17 +3631,17 @@ const Home = (props) => {
             flex-direction: row;
             justify-content: flex-start;
           }
-          .home-text204 {
+          .home-text195 {
             font-size: 40px;
             font-style: normal;
             font-family: Poppins;
             font-weight: 600;
             line-height: 40px;
           }
-          .home-text205 {
+          .home-text196 {
             font-family: Poppins;
           }
-          .home-bottom3 {
+          .home-bottom2 {
             width: 100%;
             height: 100%;
             display: flex;
@@ -2867,7 +3650,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: space-between;
           }
-          .home-check-list3 {
+          .home-check-list11 {
             gap: var(--dl-layout-space-halfunit);
             width: 100%;
             display: flex;
@@ -2875,6 +3658,15 @@ const Home = (props) => {
             flex-direction: column;
             padding-bottom: var(--dl-layout-space-threeunits);
             justify-content: flex-start;
+          }
+          .home-text197 {
+            display: inline-block;
+          }
+          .home-text200 {
+            display: inline-block;
+          }
+          .home-text203 {
+            display: inline-block;
           }
           .home-text206 {
             display: inline-block;
@@ -2885,16 +3677,7 @@ const Home = (props) => {
           .home-text212 {
             display: inline-block;
           }
-          .home-text215 {
-            display: inline-block;
-          }
-          .home-text218 {
-            display: inline-block;
-          }
-          .home-text221 {
-            display: inline-block;
-          }
-          .home-button3 {
+          .home-button12 {
             width: 100%;
             cursor: pointer;
             display: none;
@@ -2909,10 +3692,129 @@ const Home = (props) => {
             justify-content: center;
             background-color: #ade2df;
           }
-          .home-button3:hover {
+          .home-button12:hover {
             background-color: rgba(173, 226, 223, 0.5);
           }
-          .home-text224 {
+          .home-text215 {
+            font-style: normal;
+            font-weight: 500;
+          }
+          .home-plan3 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: relative;
+            max-width: 20%;
+            min-width: 260px;
+            align-items: flex-start;
+            border-color: #dbdbdb;
+            padding-left: var(--dl-layout-space-twounits);
+            padding-right: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            justify-content: space-between;
+            border-right-width: 1px;
+          }
+          .home-top4 {
+            gap: var(--dl-layout-space-oneandhalfunits);
+            display: flex;
+            align-items: flex-start;
+            border-color: #dbdbdb;
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-twounits);
+            justify-content: flex-start;
+            border-bottom-width: 1px;
+          }
+          .home-heading18 {
+            gap: var(--dl-layout-space-unit);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .home-text216 {
+            font-size: 20px;
+            font-style: normal;
+            font-family: 'Poppins';
+            font-weight: 600;
+          }
+          .home-text217 {
+            display: none;
+            font-family: Poppins;
+            line-height: 24px;
+          }
+          .home-cost3 {
+            gap: var(--dl-layout-space-halfunit);
+            width: 100%;
+            display: none;
+            align-items: flex-end;
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+          .home-text218 {
+            font-size: 40px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 600;
+            line-height: 40px;
+          }
+          .home-text219 {
+            font-family: Poppins;
+          }
+          .home-bottom3 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+            padding-top: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .home-check-list12 {
+            gap: var(--dl-layout-space-halfunit);
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-threeunits);
+            justify-content: flex-start;
+          }
+          .home-text220 {
+            display: inline-block;
+          }
+          .home-text223 {
+            display: inline-block;
+          }
+          .home-text226 {
+            display: inline-block;
+          }
+          .home-text229 {
+            display: inline-block;
+          }
+          .home-text232 {
+            display: inline-block;
+          }
+          .home-text235 {
+            display: inline-block;
+          }
+          .home-button13 {
+            width: 100%;
+            cursor: pointer;
+            display: none;
+            transition: 0.3s;
+            align-items: center;
+            padding-top: var(--dl-layout-space-oneandhalfunits);
+            padding-left: var(--dl-layout-space-twounits);
+            border-radius: var(--dl-layout-radius-radius8);
+            padding-right: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-oneandhalfunits);
+            justify-content: center;
+            background-color: #ade2df;
+          }
+          .home-button13:hover {
+            background-color: rgba(173, 226, 223, 0.5);
+          }
+          .home-text238 {
             font-style: normal;
             font-weight: 500;
           }
@@ -2920,14 +3822,16 @@ const Home = (props) => {
             width: 100%;
             height: 100%;
             display: flex;
-            max-width: 300px;
+            position: relative;
+            max-width: 20%;
+            min-width: 260px;
             align-items: flex-start;
             padding-left: var(--dl-layout-space-twounits);
             padding-right: var(--dl-layout-space-twounits);
             flex-direction: column;
             justify-content: space-between;
           }
-          .home-top4 {
+          .home-top5 {
             gap: var(--dl-layout-space-oneandhalfunits);
             display: flex;
             align-items: flex-start;
@@ -2944,13 +3848,13 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .home-text225 {
+          .home-text239 {
             font-size: 20px;
             font-style: normal;
             font-family: 'Poppins';
             font-weight: 600;
           }
-          .home-text226 {
+          .home-text240 {
             display: none;
             font-family: Poppins;
             line-height: 24px;
@@ -2963,14 +3867,14 @@ const Home = (props) => {
             flex-direction: row;
             justify-content: flex-start;
           }
-          .home-text227 {
+          .home-text241 {
             font-size: 40px;
             font-style: normal;
             font-family: Poppins;
             font-weight: 600;
             line-height: 40px;
           }
-          .home-text228 {
+          .home-text242 {
             font-family: Poppins;
           }
           .home-bottom4 {
@@ -2982,7 +3886,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: space-between;
           }
-          .home-check-list4 {
+          .home-check-list13 {
             gap: var(--dl-layout-space-halfunit);
             width: 100%;
             display: flex;
@@ -2991,16 +3895,16 @@ const Home = (props) => {
             padding-bottom: var(--dl-layout-space-threeunits);
             justify-content: flex-start;
           }
-          .home-text229 {
+          .home-text243 {
             display: inline-block;
           }
-          .home-text232 {
+          .home-text246 {
             display: inline-block;
           }
-          .home-text235 {
+          .home-text249 {
             display: inline-block;
           }
-          .home-button4 {
+          .home-button14 {
             width: 100%;
             cursor: pointer;
             display: none;
@@ -3015,10 +3919,10 @@ const Home = (props) => {
             justify-content: center;
             background-color: #ade2df;
           }
-          .home-button4:hover {
+          .home-button14:hover {
             background-color: rgba(173, 226, 223, 0.5);
           }
-          .home-text238 {
+          .home-text252 {
             font-style: normal;
             font-weight: 500;
           }
@@ -3057,13 +3961,13 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .home-text239 {
+          .home-text253 {
             color: #ffffff;
             font-size: 20px;
             font-style: normal;
             font-weight: 600;
           }
-          .home-text240 {
+          .home-text254 {
             color: #c1fffc;
             font-size: 24px;
             font-style: normal;
@@ -3071,7 +3975,7 @@ const Home = (props) => {
             font-weight: 500;
             line-height: 31px;
           }
-          .home-check-list5 {
+          .home-check-list14 {
             gap: var(--dl-layout-space-halfunit);
             width: 100%;
             display: flex;
@@ -3087,12 +3991,12 @@ const Home = (props) => {
             flex-direction: row;
             justify-content: flex-start;
           }
-          .home-icon14 {
+          .home-icon16 {
             fill: #ffffff;
             width: 18px;
             height: 18px;
           }
-          .home-text241 {
+          .home-text255 {
             color: #ffffff;
             font-size: 14px;
             font-family: Poppins;
@@ -3106,12 +4010,12 @@ const Home = (props) => {
             flex-direction: row;
             justify-content: flex-start;
           }
-          .home-icon16 {
+          .home-icon18 {
             fill: #ffffff;
             width: 18px;
             height: 18px;
           }
-          .home-text242 {
+          .home-text256 {
             color: rgb(255, 255, 255);
             font-size: 14px;
             font-family: Poppins;
@@ -3125,18 +4029,18 @@ const Home = (props) => {
             flex-direction: row;
             justify-content: flex-start;
           }
-          .home-icon18 {
+          .home-icon20 {
             fill: #ffffff;
             width: 18px;
             height: 18px;
           }
-          .home-text243 {
+          .home-text257 {
             color: rgb(255, 255, 255);
             font-size: 14px;
             font-family: Poppins;
             line-height: 24px;
           }
-          .home-button5 {
+          .home-button15 {
             width: 100%;
             cursor: pointer;
             display: flex;
@@ -3151,10 +4055,10 @@ const Home = (props) => {
             justify-content: center;
             background-color: #000000;
           }
-          .home-button5:hover {
+          .home-button15:hover {
             background-color: rgba(0, 0, 0, 0.5);
           }
-          .home-text244 {
+          .home-text258 {
             color: rgb(255, 255, 255);
             font-style: normal;
             font-weight: 500;
@@ -3179,7 +4083,7 @@ const Home = (props) => {
             justify-content: flex-start;
             border-right-width: 1px;
           }
-          .home-top5 {
+          .home-top6 {
             gap: var(--dl-layout-space-oneandhalfunits);
             display: flex;
             align-items: flex-start;
@@ -3196,27 +4100,28 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .home-text247 {
+          .home-text261 {
             font-size: 20px;
             font-style: normal;
-            font-family: Poppins;
+            font-family: 'Poppins';
             font-weight: 600;
           }
-          .home-text248 {
-            font-family: Poppins;
+          .home-text262 {
+            display: none;
+            font-family: 'Poppins';
             line-height: 24px;
           }
           .home-cost5 {
             width: 100%;
-            display: flex;
+            display: none;
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
           }
-          .home-text249 {
+          .home-text263 {
             font-size: 40px;
             font-style: normal;
-            font-family: Poppins;
+            font-family: 'Poppins';
             font-weight: 600;
             line-height: 40px;
           }
@@ -3229,7 +4134,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: space-between;
           }
-          .home-check-list6 {
+          .home-check-list15 {
             gap: var(--dl-layout-space-halfunit);
             width: 100%;
             display: flex;
@@ -3237,139 +4142,20 @@ const Home = (props) => {
             flex-direction: column;
             padding-bottom: var(--dl-layout-space-threeunits);
             justify-content: flex-start;
-          }
-          .home-text250 {
-            display: inline-block;
-          }
-          .home-text251 {
-            display: inline-block;
-          }
-          .home-text252 {
-            display: inline-block;
-          }
-          .home-text253 {
-            display: inline-block;
-          }
-          .home-text254 {
-            display: inline-block;
-          }
-          .home-button6 {
-            width: 100%;
-            cursor: pointer;
-            display: flex;
-            transition: 0.3s;
-            align-items: center;
-            padding-top: var(--dl-layout-space-oneandhalfunits);
-            padding-left: var(--dl-layout-space-twounits);
-            border-radius: var(--dl-layout-radius-radius8);
-            padding-right: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-oneandhalfunits);
-            justify-content: center;
-            background-color: #ade2df;
-          }
-          .home-button6:hover {
-            background-color: rgba(173, 226, 223, 0.5);
-          }
-          .home-text255 {
-            font-style: normal;
-            font-weight: 500;
-          }
-          .home-plan6 {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            max-width: 300px;
-            align-items: flex-start;
-            border-color: #dbdbdb;
-            padding-left: var(--dl-layout-space-twounits);
-            padding-right: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            justify-content: space-between;
-            border-right-width: 1px;
-          }
-          .home-top6 {
-            gap: var(--dl-layout-space-oneandhalfunits);
-            display: flex;
-            align-items: flex-start;
-            border-color: #dbdbdb;
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-twounits);
-            justify-content: flex-start;
-            border-bottom-width: 1px;
-          }
-          .home-heading22 {
-            gap: var(--dl-layout-space-unit);
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: flex-start;
-          }
-          .home-text256 {
-            font-size: 20px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 600;
-          }
-          .home-text257 {
-            font-family: Poppins;
-            line-height: 24px;
-          }
-          .home-cost6 {
-            gap: var(--dl-layout-space-halfunit);
-            width: 100%;
-            display: flex;
-            align-items: flex-end;
-            flex-direction: row;
-            justify-content: flex-start;
-          }
-          .home-text258 {
-            font-size: 40px;
-            font-style: normal;
-            font-family: Poppins;
-            font-weight: 600;
-            line-height: 40px;
-          }
-          .home-text259 {
-            font-family: Poppins;
-          }
-          .home-bottom6 {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: flex-start;
-            padding-top: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            justify-content: space-between;
-          }
-          .home-check-list7 {
-            gap: var(--dl-layout-space-halfunit);
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-threeunits);
-            justify-content: flex-start;
-          }
-          .home-text260 {
-            display: inline-block;
-          }
-          .home-text261 {
-            display: inline-block;
-          }
-          .home-text262 {
-            display: inline-block;
-          }
-          .home-text263 {
-            display: inline-block;
           }
           .home-text264 {
             display: inline-block;
           }
-          .home-button7 {
+          .home-text265 {
+            display: inline-block;
+          }
+          .home-text266 {
+            display: inline-block;
+          }
+          .home-button16 {
             width: 100%;
             cursor: pointer;
-            display: flex;
+            display: none;
             transition: 0.3s;
             align-items: center;
             padding-top: var(--dl-layout-space-oneandhalfunits);
@@ -3381,14 +4167,14 @@ const Home = (props) => {
             justify-content: center;
             background-color: #ade2df;
           }
-          .home-button7:hover {
+          .home-button16:hover {
             background-color: rgba(173, 226, 223, 0.5);
           }
-          .home-text265 {
+          .home-text269 {
             font-style: normal;
             font-weight: 500;
           }
-          .home-plan7 {
+          .home-plan6 {
             width: 100%;
             height: 100%;
             display: flex;
@@ -3411,42 +4197,43 @@ const Home = (props) => {
             justify-content: flex-start;
             border-bottom-width: 1px;
           }
-          .home-heading23 {
+          .home-heading22 {
             gap: var(--dl-layout-space-unit);
             display: flex;
             align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
           }
-          .home-text266 {
+          .home-text270 {
             font-size: 20px;
             font-style: normal;
-            font-family: Poppins;
+            font-family: 'Poppins';
             font-weight: 600;
           }
-          .home-text267 {
+          .home-text271 {
+            display: none;
             font-family: Poppins;
             line-height: 24px;
           }
-          .home-cost7 {
+          .home-cost6 {
             gap: var(--dl-layout-space-halfunit);
             width: 100%;
-            display: flex;
+            display: none;
             align-items: flex-end;
             flex-direction: row;
             justify-content: flex-start;
           }
-          .home-text268 {
+          .home-text272 {
             font-size: 40px;
             font-style: normal;
             font-family: Poppins;
             font-weight: 600;
             line-height: 40px;
           }
-          .home-text269 {
+          .home-text273 {
             font-family: Poppins;
           }
-          .home-bottom7 {
+          .home-bottom6 {
             width: 100%;
             height: 100%;
             display: flex;
@@ -3455,7 +4242,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: space-between;
           }
-          .home-check-list8 {
+          .home-check-list16 {
             gap: var(--dl-layout-space-halfunit);
             width: 100%;
             display: flex;
@@ -3464,25 +4251,28 @@ const Home = (props) => {
             padding-bottom: var(--dl-layout-space-threeunits);
             justify-content: flex-start;
           }
-          .home-text270 {
-            display: inline-block;
-          }
-          .home-text271 {
-            display: inline-block;
-          }
-          .home-text272 {
-            display: inline-block;
-          }
-          .home-text273 {
-            display: inline-block;
-          }
           .home-text274 {
             display: inline-block;
           }
-          .home-button8 {
+          .home-text277 {
+            display: inline-block;
+          }
+          .home-text280 {
+            display: inline-block;
+          }
+          .home-text283 {
+            display: inline-block;
+          }
+          .home-text286 {
+            display: inline-block;
+          }
+          .home-text289 {
+            display: inline-block;
+          }
+          .home-button17 {
             width: 100%;
             cursor: pointer;
-            display: flex;
+            display: none;
             transition: 0.3s;
             align-items: center;
             padding-top: var(--dl-layout-space-oneandhalfunits);
@@ -3494,10 +4284,235 @@ const Home = (props) => {
             justify-content: center;
             background-color: #ade2df;
           }
-          .home-button8:hover {
+          .home-button17:hover {
             background-color: rgba(173, 226, 223, 0.5);
           }
-          .home-text275 {
+          .home-text292 {
+            font-style: normal;
+            font-weight: 500;
+          }
+          .home-plan7 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            max-width: 300px;
+            align-items: flex-start;
+            border-color: #dbdbdb;
+            padding-left: var(--dl-layout-space-twounits);
+            padding-right: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            justify-content: space-between;
+            border-right-width: 1px;
+          }
+          .home-top8 {
+            gap: var(--dl-layout-space-oneandhalfunits);
+            display: flex;
+            align-items: flex-start;
+            border-color: #dbdbdb;
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-twounits);
+            justify-content: flex-start;
+            border-bottom-width: 1px;
+          }
+          .home-heading23 {
+            gap: var(--dl-layout-space-unit);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .home-text293 {
+            font-size: 20px;
+            font-style: normal;
+            font-family: 'Poppins';
+            font-weight: 600;
+          }
+          .home-text294 {
+            display: none;
+            font-family: Poppins;
+            line-height: 24px;
+          }
+          .home-cost7 {
+            gap: var(--dl-layout-space-halfunit);
+            width: 100%;
+            display: none;
+            align-items: flex-end;
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+          .home-text295 {
+            font-size: 40px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 600;
+            line-height: 40px;
+          }
+          .home-text296 {
+            font-family: Poppins;
+          }
+          .home-bottom7 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+            padding-top: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .home-check-list17 {
+            gap: var(--dl-layout-space-halfunit);
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-threeunits);
+            justify-content: flex-start;
+          }
+          .home-text297 {
+            display: inline-block;
+          }
+          .home-text300 {
+            display: inline-block;
+          }
+          .home-text303 {
+            display: inline-block;
+          }
+          .home-text306 {
+            display: inline-block;
+          }
+          .home-text309 {
+            display: inline-block;
+          }
+          .home-text312 {
+            display: inline-block;
+          }
+          .home-button18 {
+            width: 100%;
+            cursor: pointer;
+            display: none;
+            transition: 0.3s;
+            align-items: center;
+            padding-top: var(--dl-layout-space-oneandhalfunits);
+            padding-left: var(--dl-layout-space-twounits);
+            border-radius: var(--dl-layout-radius-radius8);
+            padding-right: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-oneandhalfunits);
+            justify-content: center;
+            background-color: #ade2df;
+          }
+          .home-button18:hover {
+            background-color: rgba(173, 226, 223, 0.5);
+          }
+          .home-text315 {
+            font-style: normal;
+            font-weight: 500;
+          }
+          .home-plan8 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            max-width: 300px;
+            align-items: flex-start;
+            border-color: #dbdbdb;
+            padding-left: var(--dl-layout-space-twounits);
+            padding-right: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            justify-content: space-between;
+            border-right-width: 1px;
+          }
+          .home-top9 {
+            gap: var(--dl-layout-space-oneandhalfunits);
+            display: flex;
+            align-items: flex-start;
+            border-color: #dbdbdb;
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-twounits);
+            justify-content: flex-start;
+            border-bottom-width: 1px;
+          }
+          .home-heading24 {
+            gap: var(--dl-layout-space-unit);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+          .home-text316 {
+            font-size: 20px;
+            font-style: normal;
+            font-family: 'Poppins';
+            font-weight: 600;
+          }
+          .home-text317 {
+            display: none;
+            font-family: Poppins;
+            line-height: 24px;
+          }
+          .home-cost8 {
+            gap: var(--dl-layout-space-halfunit);
+            width: 100%;
+            display: none;
+            align-items: flex-end;
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+          .home-text318 {
+            font-size: 40px;
+            font-style: normal;
+            font-family: Poppins;
+            font-weight: 600;
+            line-height: 40px;
+          }
+          .home-text319 {
+            font-family: Poppins;
+          }
+          .home-bottom8 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+            padding-top: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .home-check-list18 {
+            gap: var(--dl-layout-space-halfunit);
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-threeunits);
+            justify-content: flex-start;
+          }
+          .home-text320 {
+            display: inline-block;
+          }
+          .home-text323 {
+            display: inline-block;
+          }
+          .home-text326 {
+            display: inline-block;
+          }
+          .home-button19 {
+            width: 100%;
+            cursor: pointer;
+            display: none;
+            transition: 0.3s;
+            align-items: center;
+            padding-top: var(--dl-layout-space-oneandhalfunits);
+            padding-left: var(--dl-layout-space-twounits);
+            border-radius: var(--dl-layout-radius-radius8);
+            padding-right: var(--dl-layout-space-twounits);
+            flex-direction: column;
+            padding-bottom: var(--dl-layout-space-oneandhalfunits);
+            justify-content: center;
+            background-color: #ade2df;
+          }
+          .home-button19:hover {
+            background-color: rgba(173, 226, 223, 0.5);
+          }
+          .home-text329 {
             font-style: normal;
             font-weight: 500;
           }
@@ -3527,7 +4542,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .home-heading24 {
+          .home-heading25 {
             gap: var(--dl-layout-space-unit);
             width: 100%;
             display: flex;
@@ -3536,13 +4551,13 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: flex-start;
           }
-          .home-text276 {
+          .home-text330 {
             color: #ffffff;
             font-size: 20px;
             font-style: normal;
             font-weight: 600;
           }
-          .home-text277 {
+          .home-text331 {
             color: #c1fffc;
             font-size: 24px;
             font-style: normal;
@@ -3550,7 +4565,7 @@ const Home = (props) => {
             font-weight: 500;
             line-height: 31px;
           }
-          .home-check-list9 {
+          .home-check-list19 {
             gap: var(--dl-layout-space-halfunit);
             width: 100%;
             display: flex;
@@ -3566,12 +4581,12 @@ const Home = (props) => {
             flex-direction: row;
             justify-content: flex-start;
           }
-          .home-icon20 {
+          .home-icon22 {
             fill: #ffffff;
             width: 18px;
             height: 18px;
           }
-          .home-text278 {
+          .home-text332 {
             color: #ffffff;
             font-size: 14px;
             font-family: Poppins;
@@ -3585,12 +4600,12 @@ const Home = (props) => {
             flex-direction: row;
             justify-content: flex-start;
           }
-          .home-icon22 {
+          .home-icon24 {
             fill: #ffffff;
             width: 18px;
             height: 18px;
           }
-          .home-text279 {
+          .home-text333 {
             color: rgb(255, 255, 255);
             font-size: 14px;
             font-family: Poppins;
@@ -3604,18 +4619,18 @@ const Home = (props) => {
             flex-direction: row;
             justify-content: flex-start;
           }
-          .home-icon24 {
+          .home-icon26 {
             fill: #ffffff;
             width: 18px;
             height: 18px;
           }
-          .home-text280 {
+          .home-text334 {
             color: rgb(255, 255, 255);
             font-size: 14px;
             font-family: Poppins;
             line-height: 24px;
           }
-          .home-button9 {
+          .home-button20 {
             width: 100%;
             cursor: pointer;
             display: flex;
@@ -3630,10 +4645,10 @@ const Home = (props) => {
             justify-content: center;
             background-color: #000000;
           }
-          .home-button9:hover {
+          .home-button20:hover {
             background-color: rgba(0, 0, 0, 0.5);
           }
-          .home-text281 {
+          .home-text335 {
             color: rgb(255, 255, 255);
             font-style: normal;
             font-weight: 500;
@@ -3645,10 +4660,10 @@ const Home = (props) => {
             padding-top: var(--dl-layout-space-threeunits);
             flex-direction: row;
           }
-          .home-text284 {
+          .home-text338 {
             font-family: 'Poppins';
           }
-          .home-explore3 {
+          .home-explore4 {
             cursor: pointer;
             display: flex;
             transition: 0.3s;
@@ -3658,23 +4673,23 @@ const Home = (props) => {
             padding-bottom: 4px;
             border-bottom-width: 1px;
           }
-          .home-explore3:hover {
+          .home-explore4:hover {
             color: rgba(0, 0, 0, 0.5);
             border-color: rgba(0, 0, 0, 0.3);
           }
-          .home-text285 {
+          .home-text339 {
             font-style: normal;
             font-weight: 600;
           }
           .home-sections2 {
             width: 100%;
-            display: flex;
             max-width: 1200px;
             align-items: center;
             padding-top: var(--dl-layout-space-sixunits);
             padding-left: var(--dl-layout-space-oneandhalfunits);
             padding-right: var(--dl-layout-space-oneandhalfunits);
             flex-direction: column;
+            padding-bottom: var(--dl-layout-space-sixunits);
             background-color: #f3f5fa;
           }
           .home-section4 {
@@ -3685,23 +4700,23 @@ const Home = (props) => {
             align-items: center;
             padding-top: var(--dl-layout-space-sixunits);
             flex-direction: row;
-            justify-content: center;
+            justify-content: flex-start;
           }
-          .home-content20 {
+          .home-content22 {
             gap: var(--dl-layout-space-oneandhalfunits);
             display: flex;
             align-items: flex-start;
             flex-direction: column;
             justify-content: center;
           }
-          .home-heading25 {
+          .home-heading26 {
             gap: var(--dl-layout-space-unit);
             display: flex;
             align-items: flex-start;
             flex-direction: column;
             justify-content: center;
           }
-          .home-text286 {
+          .home-text340 {
             font-size: 40px;
             max-width: 535px;
             font-style: normal;
@@ -3709,13 +4724,13 @@ const Home = (props) => {
             font-weight: 600;
             line-height: 56px;
           }
-          .home-text287 {
+          .home-text341 {
             font-size: 18px;
             max-width: 535px;
             font-family: 'Poppins';
             line-height: 27px;
           }
-          .home-content21 {
+          .home-content23 {
             gap: var(--dl-layout-space-threeunits);
             display: flex;
             align-items: flex-start;
@@ -3729,7 +4744,19 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .home-link3 {
+          .home-text342 {
+            display: inline-block;
+          }
+          .home-text343 {
+            display: inline-block;
+          }
+          .home-text344 {
+            display: inline-block;
+          }
+          .home-text345 {
+            display: inline-block;
+          }
+          .home-link24 {
             display: contents;
           }
           .home-get-started2 {
@@ -3749,11 +4776,11 @@ const Home = (props) => {
           .home-get-started2:hover {
             background-color: rgba(173, 226, 223, 0.5);
           }
-          .home-sign-up2 {
+          .home-sign-up3 {
             font-style: normal;
             font-weight: 500;
           }
-          .home-image4 {
+          .home-image6 {
             width: 370px;
             height: 600px;
             display: flex;
@@ -3762,7 +4789,7 @@ const Home = (props) => {
             flex-direction: row;
             background-size: contain;
             justify-content: flex-end;
-            background-image: url('/Damasta/core-handphone-1500h.png');
+            background-image: url('/Damasta/core-tablet-1500h.png');
             background-repeat: no-repeat;
             background-position: center;
           }
@@ -3773,13 +4800,10 @@ const Home = (props) => {
             z-index: 10;
             align-items: center;
             padding-top: var(--dl-layout-space-sixunits);
-            padding-left: var(--dl-layout-space-fourunits);
-            padding-right: var(--dl-layout-space-fourunits);
             flex-direction: row;
-            padding-bottom: var(--dl-layout-space-sixunits);
             justify-content: center;
           }
-          .home-content22 {
+          .home-content24 {
             gap: var(--dl-layout-space-oneandhalfunits);
             width: 100%;
             display: flex;
@@ -3787,15 +4811,14 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .home-heading26 {
+          .home-heading27 {
             gap: var(--dl-layout-space-unit);
-            width: 100%;
             display: flex;
             align-items: flex-start;
             flex-direction: column;
             justify-content: center;
           }
-          .home-text288 {
+          .home-text346 {
             font-size: 40px;
             max-width: 535px;
             font-style: normal;
@@ -3803,13 +4826,12 @@ const Home = (props) => {
             font-weight: 600;
             line-height: 56px;
           }
-          .home-text289 {
-            width: 100%;
+          .home-text347 {
             font-size: 18px;
             font-family: 'Poppins';
             line-height: 27px;
           }
-          .home-content23 {
+          .home-content25 {
             gap: var(--dl-layout-space-threeunits);
             display: flex;
             align-items: flex-start;
@@ -3824,7 +4846,49 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: center;
           }
+          .home-text348 {
+            display: inline-block;
+          }
+          .home-text349 {
+            display: inline-block;
+          }
+          .home-text350 {
+            display: inline-block;
+          }
+          .home-text351 {
+            display: inline-block;
+          }
+          .home-text352 {
+            display: inline-block;
+          }
+          .home-text353 {
+            display: inline-block;
+          }
+          .home-link25 {
+            display: contents;
+          }
           .home-get-started3 {
+            display: none;
+            transition: 0.3s;
+            align-items: flex-start;
+            padding-top: var(--dl-layout-space-oneandhalfunits);
+            padding-left: var(--dl-layout-space-twounits);
+            border-radius: var(--dl-layout-radius-radius8);
+            padding-right: var(--dl-layout-space-twounits);
+            flex-direction: row;
+            padding-bottom: var(--dl-layout-space-oneandhalfunits);
+            justify-content: center;
+            text-decoration: none;
+            background-color: #ade2df;
+          }
+          .home-get-started3:hover {
+            background-color: rgba(173, 226, 223, 0.5);
+          }
+          .home-sign-up4 {
+            font-style: normal;
+            font-weight: 500;
+          }
+          .home-get-started4 {
             width: 100%;
             display: flex;
             align-items: center;
@@ -3835,20 +4899,20 @@ const Home = (props) => {
             padding-bottom: var(--dl-layout-space-sixunits);
             background-color: #375ee0;
           }
-          .home-content24 {
+          .home-content26 {
             gap: var(--dl-layout-space-threeunits);
             display: flex;
             max-width: 600px;
             align-items: center;
             flex-direction: column;
           }
-          .home-heading27 {
+          .home-heading28 {
             gap: var(--dl-layout-space-unit);
             display: flex;
             align-items: center;
             flex-direction: column;
           }
-          .home-text290 {
+          .home-text354 {
             color: rgb(193, 255, 252);
             font-size: 64px;
             font-style: normal;
@@ -3856,11 +4920,11 @@ const Home = (props) => {
             font-family: 'Poppins';
             font-weight: 600;
           }
-          .home-text291 {
-            color: #ffffff;
+          .home-text355 {
+            color: rgb(255, 255, 255);
             font-size: 20px;
             text-align: center;
-            font-family: Poppins;
+            font-family: 'Poppins';
             line-height: 30px;
           }
           .home-hero-buttons2 {
@@ -3894,10 +4958,11 @@ const Home = (props) => {
           .home-apple2 {
             width: 16px;
             height: 20px;
+            display: none;
           }
           .home-caption7 {
             font-style: normal;
-            font-family: Poppins;
+            font-family: 'Poppins';
             font-weight: 500;
           }
           .home-android-btn2 {
@@ -3905,7 +4970,7 @@ const Home = (props) => {
             fill: white;
             color: white;
             cursor: pointer;
-            display: flex;
+            display: none;
             transition: 0.3s;
             align-items: center;
             padding-top: var(--dl-layout-space-oneandhalfunits);
@@ -3929,13 +4994,30 @@ const Home = (props) => {
             font-family: Poppins;
             font-weight: 500;
           }
-          .home-text292 {
+          .home-text356 {
             display: inline-block;
           }
-          .home-text295 {
+          .home-text359 {
             display: inline-block;
           }
           @media (max-width: 991px) {
+            .home-navbar {
+              align-items: center;
+              padding-left: var(--dl-layout-space-oneandhalfunits);
+              padding-right: var(--dl-layout-space-oneandhalfunits);
+            }
+            .home-links1 {
+              display: none;
+            }
+            .home-log-in {
+              display: none;
+            }
+            .home-sign-up-btn {
+              display: none;
+            }
+            .home-hamburger-menu {
+              display: flex;
+            }
             .home-content10 {
               flex-direction: column;
             }
@@ -3945,20 +5027,17 @@ const Home = (props) => {
               padding-top: var(--dl-layout-space-unit);
               padding-bottom: 0px;
             }
-            .home-title {
+            .home-title1 {
               font-size: 50px;
               text-align: left;
               line-height: 58px;
             }
-            .home-text100 {
+            .home-text102 {
               font-size: 50px;
               text-align: left;
               line-height: 58px;
             }
             .home-caption1 {
-              font-size: 16px;
-            }
-            .home-text104 {
               font-size: 16px;
             }
             .home-hero-buttons1 {
@@ -3983,7 +5062,7 @@ const Home = (props) => {
               width: 200px;
             }
             .home-pasted-image3 {
-              width: 200px;
+              width: 321px;
             }
             .home-pasted-image4 {
               width: 200px;
@@ -4063,11 +5142,30 @@ const Home = (props) => {
             .home-content16 {
               margin-top: 0px;
             }
+            .home-max-width1 {
+              flex-direction: column;
+            }
+            .home-column4 {
+              width: 100%;
+              padding-left: var(--dl-layout-space-fiveunits);
+              padding-right: var(--dl-layout-space-fiveunits);
+            }
+            .home-content17 {
+              gap: var(--dl-layout-space-unit);
+            }
+            .home-explore3 {
+              margin-top: var(--dl-layout-space-halfunit);
+            }
+            .home-content18 {
+              width: 100%;
+              height: 100vh;
+              justify-content: center;
+            }
             .home-roadmap {
               padding-top: var(--dl-layout-space-fourunits);
               padding-bottom: var(--dl-layout-space-fourunits);
             }
-            .home-content19 {
+            .home-content21 {
               gap: var(--dl-layout-space-threeunits);
             }
             .home-header4 {
@@ -4077,6 +5175,7 @@ const Home = (props) => {
               grid-template-columns: none;
             }
             .home-plans1 {
+              overflow: auto;
               padding-left: var(--dl-layout-space-unit);
               padding-right: var(--dl-layout-space-unit);
             }
@@ -4094,23 +5193,23 @@ const Home = (props) => {
               gap: var(--dl-layout-space-halfunit);
               max-width: 600px;
             }
-            .home-text239 {
+            .home-text253 {
               font-size: 18px;
             }
-            .home-text240 {
+            .home-text254 {
               font-size: 20px;
               line-height: 26px;
             }
-            .home-text241 {
+            .home-text255 {
               line-height: 21px;
             }
-            .home-text242 {
+            .home-text256 {
               line-height: 21px;
             }
-            .home-text243 {
+            .home-text257 {
               line-height: 21px;
             }
-            .home-button5 {
+            .home-button15 {
               margin-top: var(--dl-layout-space-threeunits);
             }
             .home-overlay3 {
@@ -4120,76 +5219,83 @@ const Home = (props) => {
             .home-header6 {
               gap: var(--dl-layout-space-oneandhalfunits);
             }
-            .home-heading24 {
+            .home-heading25 {
               gap: var(--dl-layout-space-halfunit);
               max-width: 600px;
             }
-            .home-text276 {
+            .home-text330 {
               font-size: 18px;
             }
-            .home-text277 {
+            .home-text331 {
               font-size: 20px;
               line-height: 26px;
             }
-            .home-text278 {
+            .home-text332 {
               line-height: 21px;
             }
-            .home-text279 {
+            .home-text333 {
               line-height: 21px;
             }
-            .home-text280 {
+            .home-text334 {
               line-height: 21px;
             }
-            .home-button9 {
+            .home-button20 {
               margin-top: var(--dl-layout-space-threeunits);
             }
             .home-section4 {
               padding-top: var(--dl-layout-space-fourunits);
-              border-color: #dbdbdb;
               flex-direction: column;
-              border-top-width: 1px;
-            }
-            .home-content20 {
-              gap: var(--dl-layout-space-unit);
-            }
-            .home-content21 {
-              gap: var(--dl-layout-space-twounits);
-            }
-            .home-section5 {
-              padding-top: var(--dl-layout-space-fourunits);
-              border-color: #dbdbdb;
-              flex-direction: column;
-              border-top-width: 1px;
             }
             .home-content22 {
               gap: var(--dl-layout-space-unit);
+              max-width: 560px;
             }
             .home-content23 {
               gap: var(--dl-layout-space-twounits);
             }
-            .home-get-started3 {
+            .home-section5 {
+              padding-top: var(--dl-layout-space-fourunits);
+              flex-direction: column;
+            }
+            .home-content24 {
+              gap: var(--dl-layout-space-unit);
+              max-width: 560px;
+            }
+            .home-content25 {
+              gap: var(--dl-layout-space-twounits);
+            }
+            .home-get-started4 {
               padding-top: var(--dl-layout-space-fourunits);
               padding-bottom: var(--dl-layout-space-fourunits);
             }
-            .home-content24 {
+            .home-content26 {
               gap: var(--dl-layout-space-oneandhalfunits);
             }
-            .home-heading27 {
+            .home-heading28 {
               gap: var(--dl-layout-space-halfunit);
             }
-            .home-text290 {
+            .home-text354 {
               font-size: 40px;
             }
-            .home-text291 {
+            .home-text355 {
               font-size: 18px;
             }
           }
           @media (max-width: 767px) {
-            .home-title {
+            .home-navbar {
+              align-items: center;
+            }
+            .home-mobile {
+              padding-top: var(--dl-layout-space-twounits);
+              padding-left: var(--dl-layout-space-oneandhalfunits);
+              padding-right: var(--dl-layout-space-oneandhalfunits);
+              padding-bottom: var(--dl-layout-space-twounits);
+            }
+            .home-title1 {
               font-size: 40px;
               line-height: 48px;
             }
-            .home-text100 {
+            .home-text102 {
               font-size: 40px;
               line-height: 48px;
             }
@@ -4197,14 +5303,10 @@ const Home = (props) => {
               font-size: 16px;
               line-height: 24px;
             }
-            .home-text104 {
-              font-size: 16px;
-              line-height: 24px;
-            }
             .home-images {
               bottom: -250px;
             }
-            .home-text111 {
+            .home-text106 {
               width: 100%;
               font-size: 32px;
               max-width: 640px;
@@ -4215,11 +5317,11 @@ const Home = (props) => {
             .home-heading11 {
               gap: var(--dl-layout-space-halfunit);
             }
-            .home-text112 {
+            .home-text107 {
               font-size: 20px;
               line-height: 30px;
             }
-            .home-text113 {
+            .home-text108 {
               width: 100%;
               max-width: 600px;
             }
@@ -4244,15 +5346,15 @@ const Home = (props) => {
               font-size: 16px;
               line-height: 24px;
             }
+            .home-text113 {
+              font-size: 32px;
+              line-height: 44px;
+            }
+            .home-text117 {
+              font-size: 32px;
+              line-height: 44px;
+            }
             .home-text118 {
-              font-size: 32px;
-              line-height: 44px;
-            }
-            .home-text120 {
-              font-size: 32px;
-              line-height: 44px;
-            }
-            .home-text121 {
               font-size: 16px;
               line-height: 24px;
             }
@@ -4289,20 +5391,30 @@ const Home = (props) => {
               position: absolute;
               align-self: flex-end;
             }
+            .home-column4 {
+              padding-top: var(--dl-layout-space-threeunits);
+              padding-left: var(--dl-layout-space-threeunits);
+              padding-right: var(--dl-layout-space-threeunits);
+              padding-bottom: var(--dl-layout-space-threeunits);
+            }
+            .home-text129 {
+              font-size: 32px;
+              line-height: 44px;
+            }
             .home-features {
               gap: var(--dl-layout-space-threeunits);
             }
             .home-header2 {
               gap: var(--dl-layout-space-unit);
             }
-            .home-text129 {
+            .home-text136 {
               font-size: 14px;
             }
-            .home-text130 {
+            .home-text137 {
               font-size: 32px;
               line-height: 44px;
             }
-            .home-text131 {
+            .home-text140 {
               font-size: 16px;
               line-height: 24px;
             }
@@ -4310,6 +5422,12 @@ const Home = (props) => {
               gap: var(--dl-layout-space-twounits);
               width: 100%;
               flex-direction: column;
+            }
+            .home-container6 {
+              height: auto;
+            }
+            .home-image5 {
+              height: auto;
             }
             .home-testimonials {
               width: 100%;
@@ -4333,25 +5451,47 @@ const Home = (props) => {
             .home-program5-tahun {
               width: 100%;
             }
-            .home-content18 {
+            .home-content20 {
               gap: var(--dl-layout-space-twounits);
             }
-            .home-text132 {
+            .home-text143 {
               font-size: 14px;
             }
-            .home-text135 {
+            .home-text146 {
               font-size: 32px;
               line-height: 44px;
             }
             .home-rows {
               flex-direction: column;
             }
-            .home-text169 {
+            .home-text180 {
               font-size: 32px;
               line-height: 44px;
             }
-            .home-pricing-plans {
+            .home-plans1 {
               display: none;
+              place-items: center;
+            }
+            .home-top2 {
+              padding-top: var(--dl-layout-space-twounits);
+            }
+            .home-check-list10 {
+              padding-bottom: var(--dl-layout-space-twounits);
+            }
+            .home-top3 {
+              padding-top: var(--dl-layout-space-twounits);
+            }
+            .home-check-list11 {
+              padding-bottom: var(--dl-layout-space-twounits);
+            }
+            .home-top4 {
+              padding-top: var(--dl-layout-space-twounits);
+            }
+            .home-check-list12 {
+              padding-bottom: var(--dl-layout-space-twounits);
+            }
+            .home-top5 {
+              padding-top: var(--dl-layout-space-twounits);
             }
             .home-plans2 {
               gap: var(--dl-layout-space-oneandhalfunits);
@@ -4367,19 +5507,11 @@ const Home = (props) => {
               padding-bottom: var(--dl-layout-space-threeunits);
               background-color: #ffffff;
             }
-            .home-top5 {
+            .home-top6 {
               width: 100%;
-              padding-bottom: var(--dl-layout-space-oneandhalfunits);
             }
-            .home-heading21 {
-              gap: var(--dl-layout-space-halfunit);
-            }
-            .home-text247 {
-              font-size: 18px;
-            }
-            .home-text249 {
-              font-size: 32px;
-              line-height: 32px;
+            .home-check-list15 {
+              padding-bottom: 0px;
             }
             .home-plan6 {
               max-width: 100%;
@@ -4392,22 +5524,11 @@ const Home = (props) => {
               background-color: #ffffff;
               border-right-width: 1px;
             }
-            .home-top6 {
+            .home-top7 {
               width: 100%;
-              padding-bottom: var(--dl-layout-space-oneandhalfunits);
             }
-            .home-heading22 {
-              gap: var(--dl-layout-space-halfunit);
-            }
-            .home-text256 {
-              font-size: 18px;
-            }
-            .home-text258 {
-              font-size: 32px;
-              line-height: 32px;
-            }
-            .home-text265 {
-              font-weight: 500;
+            .home-check-list16 {
+              padding-bottom: 0px;
             }
             .home-plan7 {
               max-width: 100%;
@@ -4420,32 +5541,33 @@ const Home = (props) => {
               background-color: #ffffff;
               border-right-width: 1px;
             }
-            .home-top7 {
+            .home-top8 {
               width: 100%;
-              padding-bottom: var(--dl-layout-space-oneandhalfunits);
             }
-            .home-heading23 {
-              gap: var(--dl-layout-space-halfunit);
+            .home-check-list17 {
+              padding-bottom: 0px;
             }
-            .home-text266 {
-              font-size: 18px;
-              font-style: normal;
-              font-family: Poppins;
-              font-weight: 600;
+            .home-plan8 {
+              max-width: 100%;
+              padding-top: var(--dl-layout-space-threeunits);
+              border-width: 1px;
+              padding-left: var(--dl-layout-space-oneandhalfunits);
+              border-radius: 16px;
+              padding-right: var(--dl-layout-space-oneandhalfunits);
+              padding-bottom: var(--dl-layout-space-threeunits);
+              background-color: #ffffff;
+              border-right-width: 1px;
             }
-            .home-text268 {
-              font-size: 32px;
-              font-style: normal;
-              font-family: Poppins;
-              font-weight: 600;
-              line-height: 32px;
+            .home-top9 {
+              width: 100%;
             }
-            .home-text275 {
-              font-weight: 500;
+            .home-check-list18 {
+              padding-bottom: 0px;
             }
             .home-expand2 {
               flex: 0 0 auto;
               width: 100%;
+              display: none;
               border-radius: 16px;
               background-color: #375ee0;
             }
@@ -4456,26 +5578,29 @@ const Home = (props) => {
               background-repeat: no-repeat;
               background-position: top right;
             }
-            .home-text286 {
+            .home-text340 {
               font-size: 32px;
               line-height: 44px;
             }
-            .home-text287 {
+            .home-text341 {
               font-size: 16px;
               line-height: 24px;
             }
             .home-get-started2 {
               display: none;
             }
-            .home-text288 {
+            .home-text346 {
               font-size: 32px;
               line-height: 44px;
             }
-            .home-text289 {
+            .home-text347 {
               font-size: 16px;
               line-height: 24px;
             }
             .home-get-started3 {
+              display: none;
+            }
+            .home-get-started4 {
               display: none;
             }
           }
@@ -4508,18 +5633,23 @@ const Home = (props) => {
             .home-pasted-image5 {
               width: 150px;
             }
-            .home-image1 {
+            .home-image2 {
               width: 100%;
               max-width: 400px;
             }
-            .home-image3 {
+            .home-image4 {
               width: 100%;
               max-width: 400px;
             }
             .home-pasted-image6 {
               height: 225px;
             }
-            .home-buttons {
+            .home-column4 {
+              padding-top: var(--dl-layout-space-oneandhalfunits);
+              padding-left: var(--dl-layout-space-oneandhalfunits);
+              padding-right: var(--dl-layout-space-oneandhalfunits);
+            }
+            .home-buttons2 {
               margin-top: -40px;
             }
             .home-left {
@@ -4527,6 +5657,13 @@ const Home = (props) => {
             }
             .home-right {
               padding: var(--dl-layout-space-halfunit);
+            }
+            .home-text180 {
+              font-size: 32px;
+              font-style: normal;
+              font-family: Poppins;
+              font-weight: 600;
+              line-height: 44px;
             }
             .home-help {
               align-items: center;

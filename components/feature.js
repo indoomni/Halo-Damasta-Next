@@ -53,11 +53,11 @@ const Feature = (props) => {
           .feature-title {
             font-size: 20px;
             font-style: normal;
-            font-family: Poppins;
+            font-family: 'Poppins';
             font-weight: 600;
           }
           .feature-description {
-            font-family: Poppins;
+            font-family: 'Poppins';
           }
           @media (max-width: 767px) {
             .feature-feature {

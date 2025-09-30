@@ -20,7 +20,7 @@ const Footer = (props) => {
               <span className="footer-text10">
                 {props.text2 ?? (
                   <Fragment>
-                    <span className="footer-text13">
+                    <span className="footer-text22">
                       <span>KOPERASI DAMASTA ABHIPRAYA MANDIRI (Skd)</span>
                       <br></br>
                     </span>
@@ -30,7 +30,7 @@ const Footer = (props) => {
               <span className="footer-text11">
                 {props.text21 ?? (
                   <Fragment>
-                    <span className="footer-text16">
+                    <span className="footer-text13">
                       <span>Jl. Letnan Arsyad No. 23 RT006/012</span>
                       <br></br>
                       <span>Kel. Kayuringin Jaya</span>
@@ -138,7 +138,7 @@ const Footer = (props) => {
             gap: var(--dl-layout-space-unit);
             flex: 0 0 auto;
             width: 100%;
-            display: flex;
+            display: none;
             max-width: 265px;
             align-items: flex-start;
             flex-direction: row;
@@ -146,7 +146,7 @@ const Footer = (props) => {
           }
           .footer-links {
             gap: var(--dl-layout-space-fiveunits);
-            display: flex;
+            display: none;
             z-index: 15;
             align-items: flex-start;
             flex-direction: row;
@@ -300,7 +300,7 @@ const Footer = (props) => {
           .footer-text13 {
             display: inline-block;
           }
-          .footer-text16 {
+          .footer-text22 {
             display: inline-block;
           }
           @media (max-width: 991px) {
@@ -367,6 +367,8 @@ const Footer = (props) => {
 }
 
 Footer.defaultProps = {
+  text21: undefined,
+  text2: undefined,
   link9: 'Careers',
   link1: 'Responsive Prototypes',
   link: 'Responsive Web Design',
@@ -383,11 +385,11 @@ Footer.defaultProps = {
   header: 'Solutions',
   link6: 'Team',
   link4: 'Static Website Generator',
-  text2: undefined,
-  text21: undefined,
 }
 
 Footer.propTypes = {
+  text21: PropTypes.element,
+  text2: PropTypes.element,
   link9: PropTypes.string,
   link1: PropTypes.string,
   link: PropTypes.string,
@@ -404,8 +406,6 @@ Footer.propTypes = {
   header: PropTypes.string,
   link6: PropTypes.string,
   link4: PropTypes.string,
-  text2: PropTypes.element,
-  text21: PropTypes.element,
 }
 
 export default Footer
