@@ -1799,7 +1799,9 @@ const Home = (props) => {
           <div className="home-help">
             <span className="home-text338">Ingin membantu?</span>
             <div className="home-explore4">
-              <span className="home-text339">Bergabung dengan kami -&gt;</span>
+              <a href="#Hubungi" className="home-link24">
+                Bergabung dengan kami -&gt;
+              </a>
             </div>
           </div>
         </div>
@@ -1808,8 +1810,8 @@ const Home = (props) => {
             <div className="home-section4">
               <div className="home-content22">
                 <div className="home-heading26">
-                  <h2 className="home-text340">Syarat Keanggotaan</h2>
-                  <span className="home-text341">
+                  <h2 className="home-text339">Syarat Keanggotaan</h2>
+                  <span className="home-text340">
                     Sesuai Pasal 10 AD Koperasi Damasta Abhipraya Mandiri (Skd),
                     Anggota Koperasi DAM adalah Koperasi Primer yang telah
                     berbadan Hukum, dan berdomisili di Kota Bekasi
@@ -1820,7 +1822,7 @@ const Home = (props) => {
                     <Point
                       text1={
                         <Fragment>
-                          <span className="home-text342">
+                          <span className="home-text341">
                             {' '}
                             Mengisi formulir pendaftaran sebagai anggota
                           </span>
@@ -1831,7 +1833,7 @@ const Home = (props) => {
                       text=" Membayar Simpanan Pokok sebesar Rp.5.000.000 dan Simpanan Wajib minimal sebesar Rp.100.000 per bulan."
                       text1={
                         <Fragment>
-                          <span className="home-text343">
+                          <span className="home-text342">
                             {' '}
                             Membayar Simpanan Pokok sebesar Rp.5.000.000 dan
                             Simpanan Wajib minimal sebesar Rp.100.000 per bulan.
@@ -1843,7 +1845,7 @@ const Home = (props) => {
                       text=" Berlangganan platform koperasi digital Damasta."
                       text1={
                         <Fragment>
-                          <span className="home-text344">
+                          <span className="home-text343">
                             {' '}
                             Berlangganan platform koperasi digital Damasta.
                           </span>
@@ -1854,7 +1856,7 @@ const Home = (props) => {
                       text="  Menyetujui AD/ART serta peraturan-peraturan yang berlaku di Koperasi Damasta Abhipraya Mandiri (Skd)."
                       text1={
                         <Fragment>
-                          <span className="home-text345">
+                          <span className="home-text344">
                             {' '}
                             Menyetujui AD/ART serta peraturan-peraturan yang
                             berlaku di Koperasi Damasta Abhipraya Mandiri (Skd).
@@ -1867,7 +1869,7 @@ const Home = (props) => {
                     href="https://app.damastacoop.com"
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="home-link24"
+                    className="home-link25"
                   >
                     <div className="home-get-started2">
                       <span className="home-sign-up3">Bergabung sekarang</span>
@@ -1880,8 +1882,8 @@ const Home = (props) => {
             <div className="home-section5">
               <div className="home-content24">
                 <div className="home-heading27">
-                  <h2 className="home-text346">Syarat Kemitraan</h2>
-                  <span className="home-text347">
+                  <h2 className="home-text345">Syarat Kemitraan</h2>
+                  <span className="home-text346">
                     Fungsi Apex DAM bertujuan untuk mewujudkan tata kelola
                     koperasi yang baik dan sehat, serta dapat menolong dirinya
                     sendiri. Kerja sama antar koperasi dan/dengan lembaga
@@ -1896,7 +1898,7 @@ const Home = (props) => {
                       text=" Organisasi atau Badan Usaha yang memiliki  legalitas yang jelas."
                       text1={
                         <Fragment>
-                          <span className="home-text348">
+                          <span className="home-text347">
                             {' '}
                             Organisasi atau Badan Usaha yang memiliki legalitas
                             yang jelas.
@@ -1908,7 +1910,7 @@ const Home = (props) => {
                       text="   Mempunyai tujuan umum yang sama."
                       text1={
                         <Fragment>
-                          <span className="home-text349">
+                          <span className="home-text348">
                             {' '}
                             Mempunyai tujuan umum yang sama.
                           </span>
@@ -1919,7 +1921,7 @@ const Home = (props) => {
                       text="   Kesetaraan."
                       text1={
                         <Fragment>
-                          <span className="home-text350"> Kesetaraan.</span>
+                          <span className="home-text349"> Kesetaraan.</span>
                         </Fragment>
                       }
                     ></Point>
@@ -1927,7 +1929,7 @@ const Home = (props) => {
                       text="     Saling menghargai dan saling memberi kontribusi."
                       text1={
                         <Fragment>
-                          <span className="home-text351">
+                          <span className="home-text350">
                             {' '}
                             Saling menghargai dan saling memberi kontribusi.
                           </span>
@@ -1938,7 +1940,7 @@ const Home = (props) => {
                       text="       Sinergi program-programnya."
                       text1={
                         <Fragment>
-                          <span className="home-text352">
+                          <span className="home-text351">
                             {' '}
                             Sinergi program-programnya.
                           </span>
@@ -1949,7 +1951,7 @@ const Home = (props) => {
                       text="       Saling menguntungkan."
                       text1={
                         <Fragment>
-                          <span className="home-text353">
+                          <span className="home-text352">
                             {' '}
                             Saling menguntungkan.
                           </span>
@@ -1958,7 +1960,7 @@ const Home = (props) => {
                     ></Point>
                   </div>
                   <Link href="/">
-                    <a className="home-link25">
+                    <a className="home-link26">
                       <div className="home-get-started3">
                         <span className="home-sign-up4">
                           Bergabung sekarang
@@ -1971,11 +1973,11 @@ const Home = (props) => {
             </div>
           </div>
         </div>
-        <div className="home-get-started4">
+        <div id="Hubungi" className="home-get-started4">
           <div className="home-content26">
             <div className="home-heading28">
-              <h2 className="home-text354">Jadi bagian gerakan ini!</h2>
-              <span className="home-text355">
+              <h2 className="home-text353">Jadi bagian gerakan ini!</h2>
+              <span className="home-text354">
                 Hubungi kami untuk mendapatkan informasi lebih lanjut.
               </span>
             </div>
@@ -1984,7 +1986,7 @@ const Home = (props) => {
                 href="https://wa.me/6285179896939"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="home-link26"
+                className="home-link27"
               >
                 <div className="home-ios-btn2">
                   <img
@@ -2009,7 +2011,7 @@ const Home = (props) => {
         <Footer
           text2={
             <Fragment>
-              <span className="home-text356">
+              <span className="home-text355">
                 <span>KOPERASI DAMASTA ABHIPRAYA MANDIRI (Skd)</span>
                 <br></br>
               </span>
@@ -2017,7 +2019,7 @@ const Home = (props) => {
           }
           text21={
             <Fragment>
-              <span className="home-text359">
+              <span className="home-text358">
                 <span>Jl. Letnan Arsyad No. 23 RT006/012</span>
                 <br></br>
                 <span>Kel. Kayuringin Jaya</span>
@@ -4688,9 +4690,10 @@ const Home = (props) => {
             color: rgba(0, 0, 0, 0.5);
             border-color: rgba(0, 0, 0, 0.3);
           }
-          .home-text339 {
+          .home-link24 {
             font-style: normal;
             font-weight: 600;
+            text-decoration: none;
           }
           .home-container19 {
             width: 100%;
@@ -4734,7 +4737,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .home-text340 {
+          .home-text339 {
             font-size: 40px;
             max-width: 535px;
             font-style: normal;
@@ -4742,7 +4745,7 @@ const Home = (props) => {
             font-weight: 600;
             line-height: 56px;
           }
-          .home-text341 {
+          .home-text340 {
             font-size: 18px;
             max-width: 535px;
             font-family: 'Poppins';
@@ -4762,6 +4765,9 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: center;
           }
+          .home-text341 {
+            display: inline-block;
+          }
           .home-text342 {
             display: inline-block;
           }
@@ -4771,10 +4777,7 @@ const Home = (props) => {
           .home-text344 {
             display: inline-block;
           }
-          .home-text345 {
-            display: inline-block;
-          }
-          .home-link24 {
+          .home-link25 {
             display: contents;
           }
           .home-get-started2 {
@@ -4836,7 +4839,7 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .home-text346 {
+          .home-text345 {
             font-size: 40px;
             max-width: 535px;
             font-style: normal;
@@ -4844,7 +4847,7 @@ const Home = (props) => {
             font-weight: 600;
             line-height: 56px;
           }
-          .home-text347 {
+          .home-text346 {
             font-size: 18px;
             font-family: 'Poppins';
             line-height: 27px;
@@ -4864,6 +4867,9 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: center;
           }
+          .home-text347 {
+            display: inline-block;
+          }
           .home-text348 {
             display: inline-block;
           }
@@ -4879,10 +4885,7 @@ const Home = (props) => {
           .home-text352 {
             display: inline-block;
           }
-          .home-text353 {
-            display: inline-block;
-          }
-          .home-link25 {
+          .home-link26 {
             display: contents;
           }
           .home-get-started3 {
@@ -4930,7 +4933,7 @@ const Home = (props) => {
             align-items: center;
             flex-direction: column;
           }
-          .home-text354 {
+          .home-text353 {
             color: rgb(193, 255, 252);
             font-size: 64px;
             font-style: normal;
@@ -4938,7 +4941,7 @@ const Home = (props) => {
             font-family: 'Poppins';
             font-weight: 600;
           }
-          .home-text355 {
+          .home-text354 {
             color: rgb(255, 255, 255);
             font-size: 20px;
             text-align: center;
@@ -4953,7 +4956,7 @@ const Home = (props) => {
             flex-direction: row;
             justify-content: center;
           }
-          .home-link26 {
+          .home-link27 {
             display: contents;
           }
           .home-ios-btn2 {
@@ -5016,10 +5019,10 @@ const Home = (props) => {
             font-family: Poppins;
             font-weight: 500;
           }
-          .home-text356 {
+          .home-text355 {
             display: inline-block;
           }
-          .home-text359 {
+          .home-text358 {
             display: inline-block;
           }
           @media (max-width: 991px) {
@@ -5296,10 +5299,10 @@ const Home = (props) => {
             .home-heading28 {
               gap: var(--dl-layout-space-halfunit);
             }
-            .home-text354 {
+            .home-text353 {
               font-size: 40px;
             }
-            .home-text355 {
+            .home-text354 {
               font-size: 18px;
             }
           }
@@ -5600,22 +5603,22 @@ const Home = (props) => {
               background-repeat: no-repeat;
               background-position: top right;
             }
-            .home-text340 {
+            .home-text339 {
               font-size: 32px;
               line-height: 44px;
             }
-            .home-text341 {
+            .home-text340 {
               font-size: 16px;
               line-height: 24px;
             }
             .home-get-started2 {
               display: none;
             }
-            .home-text346 {
+            .home-text345 {
               font-size: 32px;
               line-height: 44px;
             }
-            .home-text347 {
+            .home-text346 {
               font-size: 16px;
               line-height: 24px;
             }
