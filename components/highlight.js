@@ -24,7 +24,7 @@ const Highlight = (props) => {
             font-size: 18px;
             max-width: 535px;
             font-style: normal;
-            font-family: Poppins;
+            font-family: 'Poppins';
             font-weight: 600;
             line-height: 27px;
           }

@@ -363,7 +363,8 @@ Navbar.defaultProps = {
   text1: 'Features',
   text12: 'Prices',
   link4: 'Contact\n',
-  brandingSrc: '/Damasta/logo-damasta-without-tagline-200h.png',
+  brandingSrc:
+    'https://play.teleporthq.io/static/svg/placeholders/no-image.svg',
   link1: 'Features',
   text131: 'Log in',
   imageAlt: 'image',
