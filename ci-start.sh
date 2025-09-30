@@ -8,7 +8,7 @@ case "$ENV" in
   dev)
     # Dev is always standalone
     echo "Starting development environment..."
-    docker compose up --build
+    docker compose -p damasta-dev up --build # Assuming 'damasta-dev' for dev environment
     ;;
   staging)
     if [ "$MODE" == "swarm" ]; then
@@ -16,7 +16,7 @@ case "$ENV" in
       docker stack deploy -c docker-compose.staging.yml damasta-staging
     else
       echo "Starting staging environment (Standalone mode)..."
-      docker compose -f docker-compose.staging.yml up -d
+      docker compose -f docker-compose.staging.yml -p damasta-staging up -d
       # --build
     fi
     ;;
@@ -26,7 +26,7 @@ case "$ENV" in
       docker stack deploy -c docker-compose.production.yml damasta-production
     else
       echo "Starting production environment (Standalone mode)..."
-      docker compose -f docker-compose.production.yml up -d
+      docker compose -f docker-compose.production.yml -p damasta-production up -d
       # --build
     fi
     ;;
