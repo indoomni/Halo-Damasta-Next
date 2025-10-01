@@ -91,11 +91,15 @@ const Home = (props) => {
               </div>
               <div id="mobile-menu" className="home-mobile">
                 <div className="home-top1">
-                  <img
-                    alt="image"
-                    src="https://play.teleporthq.io/static/svg/placeholders/no-image.svg"
-                    className="home-image1"
-                  />
+                  <Link href="/">
+                    <a className="home-link17">
+                      <img
+                        alt="image"
+                        src="/Damasta/logo-damasta-without-tagline-200h.png"
+                        className="home-image1"
+                      />
+                    </a>
+                  </Link>
                   <svg
                     id="close-mobile-menu"
                     viewBox="0 0 1024 1024"
@@ -106,32 +110,28 @@ const Home = (props) => {
                 </div>
                 <div className="home-links2">
                   <Link href="/">
-                    <a className="home-link17">Features</a>
+                    <a className="home-link19">Tentang Kami</a>
                   </Link>
-                  <Link href="/">
-                    <a className="home-link18">How it works</a>
-                  </Link>
-                  <Link href="/">
-                    <a className="home-link19">Prices</a>
-                  </Link>
-                  <Link href="/">
-                    <a className="home-link20">Contact</a>
-                  </Link>
+                  <a href="#Program" className="home-link20">
+                    Program
+                  </a>
+                  <a href="#Syarat">Persyaratan</a>
                   <div className="home-buttons1">
                     <Link href="/">
-                      <a className="home-link21">
-                        <div className="home-btn1">
-                          <span className="home-text100">Log in</span>
-                        </div>
-                      </a>
-                    </Link>
-                    <Link href="/">
                       <a className="home-link22">
-                        <div className="home-btn2">
-                          <span className="home-text101">Sign up</span>
+                        <div className="home-btn1">
+                          <span className="home-text100">Daftar</span>
                         </div>
                       </a>
                     </Link>
+                    <a
+                      href="https://app.damastacoop.com"
+                      className="home-link23"
+                    >
+                      <div className="home-btn2">
+                        <span className="home-text101">Masuk</span>
+                      </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -405,7 +405,7 @@ const Home = (props) => {
                   ></Point>
                 </div>
                 <Link href="/">
-                  <a className="home-link23">
+                  <a className="home-link24">
                     <div className="home-get-started1">
                       <span className="home-sign-up2">Get started now</span>
                     </div>
@@ -1799,7 +1799,7 @@ const Home = (props) => {
           <div className="home-help">
             <span className="home-text338">Ingin membantu?</span>
             <div className="home-explore4">
-              <a href="#Hubungi" className="home-link24">
+              <a href="#Hubungi" className="home-link25">
                 Bergabung dengan kami -&gt;
               </a>
             </div>
@@ -1869,7 +1869,7 @@ const Home = (props) => {
                     href="https://app.damastacoop.com"
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="home-link25"
+                    className="home-link26"
                   >
                     <div className="home-get-started2">
                       <span className="home-sign-up3">Bergabung sekarang</span>
@@ -1960,7 +1960,7 @@ const Home = (props) => {
                     ></Point>
                   </div>
                   <Link href="/">
-                    <a className="home-link26">
+                    <a className="home-link27">
                       <div className="home-get-started3">
                         <span className="home-sign-up4">
                           Bergabung sekarang
@@ -1986,7 +1986,7 @@ const Home = (props) => {
                 href="https://wa.me/6285179896939"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="home-link27"
+                className="home-link28"
               >
                 <div className="home-ios-btn2">
                   <img
@@ -2188,9 +2188,13 @@ const Home = (props) => {
             flex-direction: row;
             justify-content: space-between;
           }
+          .home-link17 {
+            display: contents;
+          }
           .home-image1 {
             width: 150px;
             object-fit: cover;
+            text-decoration: none;
           }
           .home-icon10 {
             width: 28px;
@@ -2204,13 +2208,8 @@ const Home = (props) => {
             flex-direction: column;
             justify-content: center;
           }
-          .home-link17 {
-            text-decoration: none;
-          }
-          .home-link18 {
-            text-decoration: none;
-          }
           .home-link19 {
+            display: none;
             text-decoration: none;
           }
           .home-link20 {
@@ -2226,12 +2225,12 @@ const Home = (props) => {
             padding-bottom: var(--dl-layout-space-unit);
             justify-content: center;
           }
-          .home-link21 {
+          .home-link22 {
             display: contents;
           }
           .home-btn1 {
             width: 100%;
-            display: flex;
+            display: none;
             padding: var(--dl-layout-space-unit);
             align-items: center;
             border-radius: var(--dl-layout-radius-radius8);
@@ -2244,7 +2243,7 @@ const Home = (props) => {
             font-style: normal;
             font-weight: 500;
           }
-          .home-link22 {
+          .home-link23 {
             display: contents;
           }
           .home-btn2 {
@@ -2782,7 +2781,7 @@ const Home = (props) => {
           .home-text121 {
             display: inline-block;
           }
-          .home-link23 {
+          .home-link24 {
             display: contents;
           }
           .home-get-started1 {
@@ -4692,7 +4691,7 @@ const Home = (props) => {
             color: rgba(0, 0, 0, 0.5);
             border-color: rgba(0, 0, 0, 0.3);
           }
-          .home-link24 {
+          .home-link25 {
             font-style: normal;
             font-weight: 600;
             text-decoration: none;
@@ -4779,7 +4778,7 @@ const Home = (props) => {
           .home-text344 {
             display: inline-block;
           }
-          .home-link25 {
+          .home-link26 {
             display: contents;
           }
           .home-get-started2 {
@@ -4887,7 +4886,7 @@ const Home = (props) => {
           .home-text352 {
             display: inline-block;
           }
-          .home-link26 {
+          .home-link27 {
             display: contents;
           }
           .home-get-started3 {
@@ -4958,7 +4957,7 @@ const Home = (props) => {
             flex-direction: row;
             justify-content: center;
           }
-          .home-link27 {
+          .home-link28 {
             display: contents;
           }
           .home-ios-btn2 {
@@ -5044,6 +5043,9 @@ const Home = (props) => {
             }
             .home-hamburger-menu {
               display: flex;
+            }
+            .home-btn1 {
+              display: none;
             }
             .home-content10 {
               flex-direction: column;
@@ -5632,6 +5634,9 @@ const Home = (props) => {
             }
           }
           @media (max-width: 479px) {
+            .home-btn1 {
+              padding-bottom: 16px;
+            }
             .home-hero-buttons1 {
               width: 100%;
               flex-direction: column;
