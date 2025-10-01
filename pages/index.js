@@ -5629,9 +5629,6 @@ const Home = (props) => {
             .home-get-started3 {
               display: none;
             }
-            .home-get-started4 {
-              display: none;
-            }
           }
           @media (max-width: 479px) {
             .home-btn1 {
