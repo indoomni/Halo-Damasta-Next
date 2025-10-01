@@ -2055,6 +2055,7 @@ const Home = (props) => {
           .home-heading10 {
             width: 100%;
             display: flex;
+            z-index: 100;
             position: relative;
             align-items: center;
             flex-direction: column;
@@ -2268,6 +2269,7 @@ const Home = (props) => {
             flex: 1;
             width: 100%;
             display: flex;
+            z-index: 10;
             position: relative;
             max-width: 1200px;
             align-items: center;
